@@ -137,7 +137,7 @@
 									for(i=0; i<data.length; i++){
 											html += '<tr href="#" style="cursor: pointer;" title="Order nasabah" id="orderCNasabah" data="'+data[i].id_calon_debitur+'" >'+
 															'<td>'+data[i].no_ktp+'</td>'+
-															'<td class="text-primary" style="font-weight:bold;">'+data[i].nama_lengkap+'</td>'+
+															'<td class="text-primary" style="font-weight:bold;">'+data[i].nama_identitas+'</td>'+
 															'<td>'+data[i].jenis_debitur+'</td>'+
 															'<td>'+data[i].nama_gadis_ibu_kandung+'</td>'
 															'</tr>'
@@ -154,6 +154,7 @@
 						        text:'Server bermasalah, periksa koneksi internet anda.',
 						        icon: "error",
 						        type: "error"
+						        
 						    });
             	}
             }

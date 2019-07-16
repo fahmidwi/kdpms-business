@@ -52,7 +52,7 @@
 									Personal Info calon nasabah
 								</b><br><br>
 								<div class="row">
-									<div class="col-md-12">
+									<!-- <div class="col-md-12">
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Nama Lengkap</label>
 											<div class="col-sm-9" style="border-bottom: 1px solid grey">
@@ -60,7 +60,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="col-md-12">
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Nama Identitas</label>
@@ -222,7 +222,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-md-12">
+									<!-- <div class="col-md-12">
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Jumlah kepemilikan tanah  & bangunan</label>
 											<div class="col-sm-9" style="border-bottom: 1px solid grey">
@@ -230,7 +230,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="col-md-12">
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Jumlah kendaraan</label>
@@ -340,7 +340,7 @@
 									Personal Info Pasangan
 								</b><br><br>
 								<div class="row">
-									<div class="col-md-12">
+									<!-- <div class="col-md-12">
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Nama Lengkap</label>
 											<div class="col-sm-9" style="border-bottom: 1px solid grey">
@@ -348,7 +348,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="col-md-12">
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Nama Identitas</label>
@@ -529,7 +529,7 @@
 									Personal Info Penjamin
 								</b><br><br>
 								<div class="row">
-									<div class="col-md-12">
+									<!-- <div class="col-md-12">
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Nama Lengkap</label>
 											<div class="col-sm-9" style="border-bottom: 1px solid grey">
@@ -537,7 +537,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="col-md-12">
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Nama Identitas</label>

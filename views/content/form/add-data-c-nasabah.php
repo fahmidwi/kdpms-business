@@ -51,7 +51,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row">
+								<!-- <div class="row">
 									<div class="col-md-12">
 										<div class="form-group row">
 											<label class="col-sm-2 col-form-label">Nama Lengkap</label>
@@ -60,13 +60,13 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Nama Identitas</label>
 											<div class="col-sm-9">
-												<input type="text" class="form-control" name="nama_identitas_cn" placeholder="Masuka Nama Lengkap" />
+												<input type="text" class="form-control" name="nama_identitas_cn" placeholder="Masuka Nama Sesuai KTP" />
 											</div>
 										</div>
 									</div>
@@ -74,7 +74,7 @@
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Nama panggilan</label>
 											<div class="col-sm-9">
-												<input type="text" class="form-control" name="nama_panggilan_cn" placeholder="Masukan Nama Identitas" />
+												<input type="text" class="form-control" name="nama_panggilan_cn" placeholder="Masukan Nama Panggilan" />
 											</div>
 										</div>
 									</div>
@@ -239,7 +239,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row">
+								<!-- <div class="row">
 									<div class="col-md-12">
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Jumlah Kepemilikan tanah</label>
@@ -249,7 +249,7 @@
 											<div class="col-sm-4"><p style="margin-top:5px;">Kavling tanah</p></div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 								<div class="row">
 									<div class="col-md-12">
 										<div class="form-group row">
@@ -597,7 +597,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-12">
 											<div class="form-group row">
 												<label class="col-sm-2 col-form-label">Nama Lengkap</label>
@@ -606,13 +606,13 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> -->
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group row">
 												<label class="col-sm-3 col-form-label">Nama Identitas</label>
 												<div class="col-sm-9">
-													<input type="text" class="form-control" name="nama_identitas_pasangan" placeholder="Masuka Nama Lengkap" />
+													<input type="text" class="form-control" name="nama_identitas_pasangan" placeholder="Masuka Nama Sesuai KTP" />
 												</div>
 											</div>
 										</div>
@@ -620,7 +620,7 @@
 											<div class="form-group row">
 												<label class="col-sm-3 col-form-label">Nama panggilan</label>
 												<div class="col-sm-9">
-													<input type="text" class="form-control" name="nama_panggilan_pasangan" placeholder="Masukan Nama Identitas" />
+													<input type="text" class="form-control" name="nama_panggilan_pasangan" placeholder="Masukan Nama Panggilan" />
 												</div>
 											</div>
 										</div>
@@ -907,7 +907,7 @@
 										  </div>
 										</div>
 									</div>
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-12">
 										  <div class="form-group row">
 										    <label class="col-sm-2 col-form-label">Nama Lengkap</label>
@@ -916,13 +916,13 @@
 										    </div>
 										  </div>
 										</div>
-									</div>
+									</div> -->
 									<div class="row">
 										<div class="col-md-6">
 										  <div class="form-group row">
 										    <label class="col-sm-3 col-form-label">Nama Identitas</label>
 										    <div class="col-sm-9">
-										      <input type="text" class="form-control" name="nama_identitas_penjamin" placeholder="Masukan Nama Identitas" />
+										      <input type="text" class="form-control" name="nama_identitas_penjamin" placeholder="Masukan Nama Sesuai KTP" />
 										    </div>
 										  </div>
 										</div>

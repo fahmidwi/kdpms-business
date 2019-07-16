@@ -465,7 +465,7 @@
 							            </div>
 							          </div>
 							        </div>
-							        <div class="row">
+							        <!-- <div class="row">
 							          <div class="col-md-12">
 							            <div class="form-group row">
 							              <label class="col-sm-3 col-form-label">Legalitas</label>
@@ -474,7 +474,7 @@
 							              </div>
 							            </div>
 							          </div>
-							        </div>
+							        </div> -->
 							        <div class="row">
 							          <div class="col-md-12">
 							            <div class="form-group row">
@@ -641,7 +641,7 @@
 	                        </div>
 	                      </div>
 	                    </div>
-	                    <div class="row">
+	                    <!-- <div class="row">
 	                      <div class="col-md-12">
 	                        <div class="form-group row">
 	                          <label class="col-sm-3 col-form-label">Kecamatan BPKB</label>
@@ -670,7 +670,7 @@
 	                          </div>
 	                        </div>
 	                      </div>
-	                    </div>
+	                    </div> -->
 	                    <div class="row">
 	                      <div class="col-md-12">
 	                        <div class="form-group row">
@@ -726,7 +726,7 @@
 	                        <div class="form-group row">
 	                          <label class="col-sm-3 col-form-label">Nomor BPKB</label>
 	                          <div class="col-sm-9">
-	                            <input type="number" placeholder="Masukan Nomor BPKB" class="form-control" name="no_bpkb_kendaraaan" id="no_bpkb" style="margin-left: -5%; width: 105%;"/>
+	                            <input type="text" placeholder="Masukan Nomor BPKB" class="form-control" name="no_bpkb_kendaraaan" id="no_bpkb" style="margin-left: -5%; width: 105%;"/>
 	                          </div>
 	                        </div>
 	                      </div>
@@ -736,7 +736,7 @@
 	                        <div class="form-group row">
 	                          <label class="col-sm-4 col-form-label">Nomor Rangka</label>
 	                          <div class="col-sm-8">
-	                            <input type="number" style="margin-left: 15%; width: 80%;" placeholder="Masukan Nomor Rangka" class="form-control" name="no_rangka_kendaraaan"  id="no_rangka" >
+	                            <input type="text" style="margin-left: 15%; width: 80%;" placeholder="Masukan Nomor Rangka" class="form-control" name="no_rangka_kendaraaan"  id="no_rangka" >
 	                          </div>
 	                        </div>
 	                      </div>
@@ -744,7 +744,7 @@
 	                        <div class="form-group row">
 	                          <label class="col-sm-3 col-form-label">Nomor Mesin</label>
 	                          <div class="col-sm-9">
-	                            <input type="number" placeholder="Masukan Nomor Mesin" class="form-control" name="no_mesin_kendaraaan" id="no_mesin">
+	                            <input type="text" placeholder="Masukan Nomor Mesin" class="form-control" name="no_mesin_kendaraaan" id="no_mesin">
 	                          </div>
 	                        </div>
 	                      </div>
@@ -754,7 +754,7 @@
 	                        <div class="form-group row">
 	                          <label class="col-sm-4 col-form-label">Nomor STNK</label>
 	                          <div class="col-sm-8">
-	                            <input type="number" style="margin-left: 15%; width: 80%;" placeholder="Masukan Nomor STNK" class="form-control" name="no_stnk_kendaraaan" id="no_stnk" >
+	                            <input type="text" style="margin-left: 15%; width: 80%;" placeholder="Masukan Nomor STNK" class="form-control" name="no_stnk_kendaraaan" id="no_stnk" >
 	                          </div>
 	                        </div>
 	                      </div>
@@ -762,7 +762,7 @@
 	                        <div class="form-group row">
 	                          <label class="col-sm-3 col-form-label">Nomor Polisi</label>
 	                          <div class="col-sm-9">
-	                            <input type="number" placeholder="Masukan Nomor Polisi" class="form-control" name="no_polisi_kendaraaan" id="no_polisi" >
+	                            <input type="text" placeholder="Masukan Nomor Polisi" class="form-control" name="no_polisi_kendaraaan" id="no_polisi" >
 	                          </div>
 	                        </div>
 	                      </div>
@@ -790,7 +790,7 @@
 	                        <div class="form-group row">
 	                          <label class="col-sm-3 col-form-label">Nomor Faktur</label>
 	                          <div class="col-sm-9">
-	                            <input type="number" placeholder="Masukan Nomor Faktur" id="no_faktur" style="margin-left: -5%; width: 105%;" class="form-control" name="no_faktur" >
+	                            <input type="text" placeholder="Masukan Nomor Faktur" id="no_faktur" style="margin-left: -5%; width: 105%;" class="form-control" name="no_faktur" >
 	                          </div>
 	                        </div>
 	                      </div>

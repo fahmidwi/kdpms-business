@@ -24,7 +24,7 @@
 							<tr>
 								<th></th>
 								<th>No KTP</th>
-								<th>Nama Lengkap</th>
+								<th>Nama Identitas</th>
 								<th>Nama Ibu kandung</th>
 								<th>AO</th>
 								<th>Area kerja (Kantor)</th>
@@ -383,7 +383,7 @@ $(document).ready(function () {
 												'<a href="javascript:void(0)" id="closeinfo'+data[i].id_calon_debitur+'" selector="#info'+data[i].id_calon_debitur+'" title="tutup info debitur" id_deb="'+data[i].id_calon_debitur+'" style="display:none;"><i class="mdi mdi-chevron-up"></i></a>'+
 											'</td>'+
 											'<td class="text-primary">'+data[i].no_ktp+'</td>'+
-											'<td>'+data[i].nama_lengkap+'</td>'+
+											'<td>'+data[i].nama_identitas+'</td>'+
 											'<td>'+data[i].nama_gadis_ibu_kandung+'</td>'+
 											'<td>'+data[i].AO+'</td>'+
 											'<td>'+data[i].nama_area_kerja+'</td>'+

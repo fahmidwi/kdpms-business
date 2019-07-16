@@ -662,7 +662,7 @@ class Home extends CI_Controller {
 		/*POST CALON NASABAH*/
 		$kantor = $this->input->post('kantor');
 		$ao = $this->input->post('ao');
-		$nama_lengkap_calon_nasabah = $this->input->post('nama_lengkap_cn');
+		//$nama_lengkap_calon_nasabah = $this->input->post('nama_lengkap_cn');
 		$nama_identitas_calon_nasabah = $this->input->post('nama_identitas_cn');
 		$nama_panggilan_calon_nasabah = $this->input->post('nama_panggilan_cn');
 		$no_ktp_calon_nasabah = $this->input->post('no_ktp_cn');
@@ -681,7 +681,7 @@ class Home extends CI_Controller {
 		$sumber_peng_calon_nasabah = $this->input->post('sumber_peng_cn');
 		$status_kep_rumah_calon_nasabah = $this->input->post('status_kep_rumah_cn');
 		$tinggal_sejak_calon_nasabah = $this->input->post('tinggal_sejak_cn');
-		$jum_tanah_calon_nasabah = $this->input->post('jum_tanah_cn');
+		//$jum_tanah_calon_nasabah = $this->input->post('jum_tanah_cn');
 		$jum_tanah_bangunan_calon_nasabah = $this->input->post('jum_tanah_bangunan_cn');
 		$jum_motor_calon_nasabah = $this->input->post('jum_motor_cn');
 		$jum_mobil_calon_nasabah = $this->input->post('jum_mobil_cn');
@@ -708,7 +708,7 @@ class Home extends CI_Controller {
 		/*------------*/
 
 		/*POST PASANGAN*/
-		$nama_lengkap_pasangan = $this->input->post('nama_lengkap_pasangan');
+		//$nama_lengkap_pasangan = $this->input->post('nama_lengkap_pasangan');
 		$nama_identitas_pasangan = $this->input->post('nama_identitas_pasangan');
 		$nama_panggilan_pasangan = $this->input->post('nama_panggilan_pasangan');
 		$no_ktp_pasangan = $this->input->post('no_ktp_pasangan');
@@ -745,7 +745,7 @@ class Home extends CI_Controller {
 		/*------------*/
 
 		/*POST PENJAMIN*/
-		$nama_lengkap_penjamin = $this->input->post('nama_lengkap_penjamin');
+		//$nama_lengkap_penjamin = $this->input->post('nama_lengkap_penjamin');
 		$nama_identitas_penjamin = $this->input->post('nama_identitas_penjamin');
 		$no_ktp_penjamin = $this->input->post('no_ktp_penjamin');
 		$npwp_penjamin = $this->input->post('npwp_penjamin');
@@ -2887,6 +2887,8 @@ class Home extends CI_Controller {
 			'pengeluaran_pendidikan' => str_replace(".","",$this->input->post('pengeluaran_pendidikan')),
 			'pengeluaran_lainya' => str_replace(".","",$this->input->post('pengeluaran_lainnya')),
 			'angsuran_lain' => str_replace(".","",$this->input->post('angsuran_lain')),
+			'angsuran_kdpms' => str_replace(".","",$this->input->post('angsuran_kdpms')),
+			'pengeluaran_lainnya' => str_replace(".","",$this->input->post('pengeluaran_lainnya')),
 			'hasil_cek_lingkungan' => $this->input->post('hasil_cek_lingkungan'),
 			'vertifikasi_data_debitur' => $this->input->post('verifikasi_data_debitur'),
 			'ket_calon_debitur' => $this->input->post('ket_calon_debitur'),
@@ -3256,6 +3258,12 @@ class Home extends CI_Controller {
 			'alamat_usaha_debitur' => $this->input->post('alamat_usaha_debitur'),
 			'masa_kerja_debitur' => $this->input->post('masa_kerja_debitur'),
 			'no_telp_kerja_debitur' => $this->input->post('no_telp_kerja_debitur'),
+			'usaha_debitur' => $this->input->post('usaha_debitur'),
+			'nama_tempat_usaha' => $this->input->post('nama_tempat_usaha'),
+			'jenis_usaha' => $this->input->post('jenis_usaha'),
+			'masa_usaha' => $this->input->post('masa_usaha'),
+			'no_telp_usaha' => $this->input->post('no_telp_usaha'),
+			'tempat_usaha' => $this->input->post('tempat_usaha'),
 			'pengeluaran_lainya' => str_replace(".","",$this->input->post('pengeluaran_lainnya')),
 			'pendapatan_tunai' => str_replace(".","",$this->input->post('pendapatan_tunai')),
 			'pendapatan_kredit' => str_replace(".","",$this->input->post('pendapatan_kredit')),

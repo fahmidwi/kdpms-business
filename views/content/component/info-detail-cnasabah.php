@@ -23,7 +23,7 @@
 									<div class="form-group row">
 										<label class="col-sm-3 col-form-label">Nama Lengkap</label>
 										<div class="col-sm-9" style="border-bottom: 1px solid grey">
-											<div id="nama_lengkap">
+											<div id="nama_identitas">
 											</div>
 										</div>
 									</div>

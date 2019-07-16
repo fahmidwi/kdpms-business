@@ -7,6 +7,7 @@ application/logs/*
 !application/logs/index.html
 
 !application/*/.htaccess
+/assets/
 
 composer.lock
 
@@ -15,7 +16,6 @@ user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 /vendor/
-
 # IDE Files
 #-------------------------
 /nbproject/

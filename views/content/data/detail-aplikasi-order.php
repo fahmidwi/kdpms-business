@@ -78,14 +78,14 @@ $(document).ready(function () {
 			dataType:'JSON',
 			beforeSend:function () {
 				$('#noktp').html(loading)
-					$('#nama_lengkap').html(loading)
+					$('#nama_identitas').html(loading)
 					$('#nibk').html(loading)
 					$('#alamat').html(loading)
 			},
 			success:function (data) {
 				$.each(data,function (key,val) {
 					$('#noktp').html('<p>'+val.no_ktp+'</p>')
-					$('#nama_lengkap').html('<p>'+val.nama_lengkap+'</p>')
+					$('#nama_identitas').html('<p>'+val.nama_identitas+'</p>')
 					$('#nibk').html('<p>'+val.nama_gadis_ibu_kandung+'</p>')
 					$('#alamat').html('<p>'+val.alamat+', RT.'+val.rt+' RW.'+val.rw+', KELURAHAN.'+val.Kelurahan+', KECAMATAN.'+val.Kecamatan+', '+val.Kotakab+', PROVINSI '+val.propinsi+'</p>')
 				})
@@ -115,7 +115,7 @@ $(document).ready(function () {
 				}else{
 					$.each(data,function (key,val) {
 						$('#noktp_pasangan').html('<p>'+val.no_ktp+'</p>')
-						$('#nama_lengkap_pasangan').html('<p>'+val.nama_lengkap+'</p>')
+						$('#nama_identitas_pasangan').html('<p>'+val.nama_identitas+'</p>')
 						$('#nibk_pasangan').html('<p>'+val.nama_gadis_ibu_kandung+'</p>')
 						$('#alamat_pasangan').html('<p>'+val.alamat+', RT '+val.rt+' RW '+val.rw+', KELURAHAN '+val.Kelurahan+', KECAMATAN '+val.Kecamatan+', '+val.Kotakab+', PROVINSI '+val.propinsi+'</p>')
 					})
@@ -146,7 +146,7 @@ $(document).ready(function () {
 				}else{
 					$.each(data,function (key,val) {
 						$('#noktp_penjamin').html('<p>'+val.no_ktp+'</p>')
-						$('#nama_lengkap_penjamin').html('<p>'+val.nama_lengkap+'</p>')
+						$('#nama_identitas_penjamin').html('<p>'+val.nama_identitas+'</p>')
 						$('#nibk_penjamin').html('<p>'+val.nama_gadis_ibu_kandung+'</p>')
 						$('#alamat_penjamin').html('<p>'+val.alamat+', RT '+val.rt+' RW '+val.rw+', KELURAHAN '+val.Kelurahan+', KECAMATAN '+val.Kecamatan+', '+val.Kotakab+', PROVINSI '+val.propinsi+'</p>')
 					})

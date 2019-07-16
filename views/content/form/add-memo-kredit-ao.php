@@ -164,6 +164,26 @@
                         </div>
                       </div>
                     </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Angsuran KDPMS</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="angsuran_kdpms" id="angsuran_kdpms" onkeydown="return numbersonly(this, event)" onkeyup="javascript:tandaPemisahTitik(this)" placeholder="Masukan Angsuran Lainnya" style="margin-left: -5%; width: 105%;"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Penghasilan Lainnya</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" name="pendapatan_lainnya" id="pendapatan_lainnya" onkeydown="return numbersonly(this, event)" onkeyup="javascript:tandaPemisahTitik(this)" placeholder="Masukan Pendapatan Lainnya" style="margin-left: -5%; width: 105%;"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <hr><br>
                       <b class="card-description">
                       Fasilitas
@@ -518,7 +538,7 @@
 							            </div>
 							          </div>
 							        </div>
-							        <div class="row">
+							        <!-- <div class="row">
 							          <div class="col-md-12">
 							            <div class="form-group row">
 							              <label class="col-sm-3 col-form-label">Legalitas</label>
@@ -527,7 +547,7 @@
 							              </div>
 							            </div>
 							          </div>
-							        </div>
+							        </div> -->
 							        <div class="row">
 							          <div class="col-md-12">
 							            <div class="form-group row">
@@ -656,7 +676,7 @@
 	                        </div>
 	                      </div>
 	                    </div>
-	                    <div class="row">
+	                    <!-- <div class="row">
 	                      <div class="col-md-12">
 	                        <div class="form-group row">
 	                          <label class="col-sm-3 col-form-label">Kecamatan BPKB</label>
@@ -685,7 +705,7 @@
 	                          </div>
 	                        </div>
 	                      </div>
-	                    </div>
+	                    </div> -->
 	                    <div class="row">
 	                      <div class="col-md-12">
 	                        <div class="form-group row">
@@ -805,7 +825,7 @@
 	                        <div class="form-group row">
 	                          <label class="col-sm-3 col-form-label">Nomor Faktur</label>
 	                          <div class="col-sm-9">
-	                            <input type="number" placeholder="Masukan Nomor Faktur" id="no_faktur" style="margin-left: -5%; width: 105%;" class="form-control" name="no_faktur" >
+	                            <input type="text" placeholder="Masukan Nomor Faktur" id="no_faktur" style="margin-left: -5%; width: 105%;" class="form-control" name="no_faktur" >
 	                          </div>
 	                        </div>
 	                      </div>

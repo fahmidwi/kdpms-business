@@ -224,7 +224,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Jenis Usaha Debitur</label>
+                <label class="col-sm-3 col-form-label">Jenis Kerja Debitur</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" name="jenis_usaha_debitur" id="jenis_usaha_debitur" placeholder="Masukan Jenis Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
                 </div>
@@ -234,7 +234,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Alamat Usaha Debitur</label>
+                <label class="col-sm-3 col-form-label">Alamat Kerja Debitur</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" name="alamat_usaha_debitur" id="alamat_usaha_debitur" placeholder="Masukan Alamat Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
                 </div>
@@ -257,6 +257,88 @@
                 <label class="col-sm-3 col-form-label">Nomor Telepon Kerja Debitur</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" name="no_telp_kerja_debitur" id="no_telp_kerja_debitur" placeholder="Masukan Nomor Telepon Kerja Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div><hr><br>
+          <b class="card-description">
+            Usaha
+          </b><br><br>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text" placeholder="Masukan Usaha Debitur" id="usaha_debitur" style="margin-left: -5%; width: 105%;" name="usaha_debitur"/>
+                </div>
+              </div>
+            </div>
+             <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Nama Tempat Usaha</label>
+                <div class="col-sm-8">
+                  <input type="text" style="margin-left: 15%; width: 80%;" name="nama_tempat_usaha" placeholder="Masukan Nama Tempat Kerja" id="nama_tempat_usaha" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Posisi</label>
+                <div class="col-sm-9">
+                  <input type="text" name="posisi" placeholder="Masukan Posisi" id="posisi" class="form-control" readonly="PEMILIK"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Jenis Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="jenis_usaha" id="jenis_usaha" placeholder="Masukan Jenis Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Alamat Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="alamat_tempat_usaha" id="alamat_tempat_usaha" placeholder="Masukan Alamat Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Masa Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="masa_usaha" id="masa_usaha" placeholder="Masukan Masa Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Nomor Telepon Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="no_telp_usaha" id="no_telp_usaha" placeholder="Masukan Nomor Telepon Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Tempat Usaha</label>
+                <div class="col-sm-9">
+                <select class="form-control" name="no_telp_kerja_debitur" id="no_telp_kerja_debitur" style="margin-left: -5%; width: 105%;">
+                  <option>MILIK SENDIRI</option>
+                  <option>SEWA</option>
+                </select>
                 </div>
               </div>
             </div>
