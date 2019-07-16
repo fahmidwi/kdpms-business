@@ -46,7 +46,8 @@
 										<div class="form-group row">
 											<label class="col-sm-3 col-form-label">Nomor KK</label>
 											<div class="col-sm-9">
-												<input class="form-control" type="number" name="no_kk_cn" placeholder="Masukan Nomor KK" />
+												<input class="form-control" type="number" name="no_kk_cn" placeholder="Masukan Nomor KK" id="no_kk_cn"/>
+												<div id="msg_nasabah_kk_exist"></div>
 											</div>
 										</div>
 									</div>
@@ -1147,11 +1148,38 @@ $(document).ready(function () {
 		checkExist('#no_ktp_pas','checkPasanganExist',noktp,'#msg_nasabah_exist_pas')
 	})
 
-
-	function checkExist (selector,controller,noktp,msg) {
+	$('#no_kk_cn').keyup(function () {
+		var nokk = $(this).val()
 		$.ajax({
 			type:'GET',
-			url:url+'Home/'+controller+'/'+noktp,
+			url:url+'Home/checkNokkNasabah/'+nokk,
+			dataType:'JSON',
+			success:function (res) {
+				if (res.amount == 0) {
+					$('#msg_nasabah_kk_exist').hide();
+				}else{
+					$('#msg_nasabah_kk_exist').show();
+					$('#msg_nasabah_kk_exist').html('<p style="margin-top:2%;color:yellow;background:grey;pdding:15px;">Data dengan nokk <v style="font-weight:bold;">'+nokk+' </v>telah terdaftar</p>')
+				}
+			},
+			error:function (xhr, status, error) {
+				console.log(xhr.status)
+      	if (xhr.status == 500) {
+      		swal({
+			        title:error,
+			        text:'Server bermasalah, periksa koneksi internet anda.',
+			        icon: "error",
+			        type: "error"
+			    });
+      	}
+			}
+		})
+	})
+
+	function checkExist (selector,controller,no,msg) {
+		$.ajax({
+			type:'GET',
+			url:url+'Home/'+controller+'/'+no,
 			dataType:'JSON',
 			success:function (res) {
 				if (res.amount == 0) {

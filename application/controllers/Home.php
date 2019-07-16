@@ -622,6 +622,18 @@ class Home extends CI_Controller {
 		}
 	}
 
+	public function checkNokkNasabah($value='')
+	{
+		$no_ktp = $this->uri->segment(3);
+		$where = array('no_kk' => $no_ktp);
+		$query = $this->business->get_where('los_calon_nasabah',null,null,$where)->num_rows();
+		if ($query > 0) {
+			echo json_encode(array('amount' => $query));
+		}else{
+			echo json_encode(array('amount' => $query));
+		}
+	}
+
 
 	public function checkPasanganExist($value='')
 	{
