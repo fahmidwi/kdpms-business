@@ -226,8 +226,8 @@ $(document).ready(function () {
 			success:function (data) {
 				$.each(data,function (key,val) {
 					$('#noktp').html('<p>'+val.no_ktp+'</p>')
-					$('#nama_lengkap').html('<p>'+val.nama_lengkap+'</p>')
 					$('#nibk').html('<p>'+val.nama_gadis_ibu_kandung+'</p>')
+					$('#nama_lengkap').html('<p>'+val.nama_lengkap+'</p>')
 					$('#alamat').html('<p>'+val.alamat+', RT.'+val.rt+' RW.'+val.rw+', KELURAHAN.'+val.Kelurahan+', KECAMATAN.'+val.Kecamatan+', '+val.Kotakab+', PROVINSI '+val.propinsi+'</p>')
 				})
 			},
