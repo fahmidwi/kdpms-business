@@ -241,7 +241,7 @@ $(document).ready(function () {
 					}else{
 						$.each(data,function (key,val) {
 							$('#noktp_pasangan').html('<p>'+val.no_ktp+'</p>')
-							$('#nama_lengkap_pasangan').html('<p>'+val.nama_lengkap+'</p>')
+							$('#nama_lengkap_pasangan').html('<p>'+val.nama_identitas+'</p>')
 							$('#nibk_pasangan').html('<p>'+val.nama_gadis_ibu_kandung+'</p>')
 							$('#alamat_pasangan').html('<p>'+val.alamat+', RT '+val.rt+' RW '+val.rw+', KELURAHAN '+val.Kelurahan+', KECAMATAN '+val.Kecamatan+', '+val.Kotakab+', PROVINSI '+val.propinsi+'</p>')
 						})
@@ -530,6 +530,8 @@ $(document).ready(function () {
 								$('#alamat-sertifikat').html('<p>'+k.alamat+'</p>')
 								$('#luas_tanah').html('<p>'+k.luas_tanah+'</p>')
 								$('#luas_bangunan').html('<p>'+k.luas_bangunan+'</p>')
+								$('#tgl_surat_ukur').html('<p>'+changeDate(k.tgl_surat_ukur)+'</p>')
+								$('#no_surat_ukur').html('<p>'+k.no_surat_ukur+'</p>')
 								if (k.jenis_sertifikat == 'SHM') {
 									$('.d_shm').show()
 									$('#no_shm').html('<p>'+k.no_shm+'</p>')
