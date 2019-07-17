@@ -410,6 +410,8 @@ $(document).ready(function () {
 							$('#alamat-sertifikat').html('<p>'+k.alamat+'</p>')
 							$('#luas_tanah').html('<p>'+k.luas_tanah+'</p>')
 							$('#luas_bangunan').html('<p>'+k.luas_bangunan+'</p>')
+							$('#tgl_surat_ukur').html('<p>'+changeDate(k.tgl_surat_ukur)+'</p>')
+							$('#no_surat_ukur').html('<p>'+k.no_surat_ukur+'</p>')
 							if (k.jenis_sertifikat == 'SHM') {
 								$('.d_shm').show()
 								$('#no_shm').html('<p>'+k.no_shm+'</p>')

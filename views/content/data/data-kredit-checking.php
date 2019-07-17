@@ -164,6 +164,7 @@ $(document).ready(function () {
               load()
             },
             success:function(data){
+							console.log(data);
             	if (data.amount == 0) {
             			$('#showOrder').html('<tr><td colspan="5" style="text-align: center;"><i class="mdi mdi-close"></i> Data Kosong !!</td></tr>')
             	}else {
