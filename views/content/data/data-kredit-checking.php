@@ -172,7 +172,7 @@ $(document).ready(function () {
 									for(i=0; i<data.length; i++){
 											html += '<tr href="#" style="cursor: pointer;" id="KreditCheckingOrder" dataIdO="'+data[i].id+'" dataIdN="'+data[i].id_calon_debitur+'">'+
 															'<td>'+data[i].id+'</td>'+
-															'<td>'+data[i].nama_lengkap+'</td>'+
+															'<td>'+data[i].nama_identitas+'</td>'+
 															'<td>'+data[i].tenor+' Bulan</td>'+
 															'<td class="text-primary" style="font-weight:bold;">'+data[i].nama_jenis_jaminan+'</td>'+
 															'<td>'+data[i].AO_ORDER+'</td>'+
