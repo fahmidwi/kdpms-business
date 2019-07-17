@@ -8,6 +8,7 @@ if($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 echo "TEst";
+echo "TEst";
 
 class Home extends CI_Controller {
 
