@@ -785,7 +785,7 @@ class Home extends CI_Controller {
 			'id_calon_debitur' => null,
 			'kode_kantor' => $kantor,
 			'kode_ao' => $ao,
-			'nama_lengkap' => $nama_lengkap_calon_nasabah,
+			'nama_lengkap' => $nama_identitas_calon_nasabah,
 			'nama_panggilan' => $nama_panggilan_calon_nasabah,
 			'nama_identitas' => $nama_identitas_calon_nasabah,
 			'no_ktp' => $no_ktp_calon_nasabah,
@@ -804,7 +804,7 @@ class Home extends CI_Controller {
 			'sumber_penghasilan' => $sumber_peng_calon_nasabah,
 			'kepemilikan_rumah' => $status_kep_rumah_calon_nasabah,
 			'tinggal_sejak' => $tinggal_sejak_calon_nasabah,
-			'jumlah_kepemilikan_tanah' => $jum_tanah_calon_nasabah,
+			// 'jumlah_kepemilikan_tanah' => $jum_tanah_calon_nasabah,
 			'jumlah_kepemilikan_tanah_bangunan' => $jum_tanah_bangunan_calon_nasabah,
 			'jumlah_kendaraan_motor' => $jum_motor_calon_nasabah,
 			'jumlah_kendaraan_mobil' => $jum_mobil_calon_nasabah,
@@ -854,7 +854,7 @@ class Home extends CI_Controller {
 			$dataPasangan = array(
 				'id_calon_debitur' => $id,
 				'no_ktp' => $no_ktp_pasangan,
-				'nama_lengkap' => $nama_lengkap_pasangan,
+				'nama_lengkap' => $nama_identitas_pasangan,
 				'nama_panggilan' => $nama_panggilan_pasangan,
 				'nama_identitas' => $nama_identitas_pasangan,
 				'npwp' => $npwp_pasangan,
@@ -900,7 +900,7 @@ class Home extends CI_Controller {
 			$dataPenjamin = array(
 				'id_calon_debitur' => $id,
 				'no_ktp' => $no_ktp_penjamin,
-				'nama_lengkap' => $nama_lengkap_penjamin,
+				'nama_lengkap' => $nama_identitas_penjamin,
 				'nama_identitas' => $nama_identitas_penjamin,
 				'npwp' => $npwp_penjamin,
 				'kelamin' => $kelamin_penjamin,
@@ -947,7 +947,7 @@ class Home extends CI_Controller {
 			$dataPasangan = array(
 				'id_calon_debitur' => $id,
 				'no_ktp' => $no_ktp_pasangan,
-				'nama_lengkap' => $nama_lengkap_pasangan,
+				'nama_lengkap' => $nama_identitas_pasangan,
 				'nama_panggilan' => $nama_panggilan_pasangan,
 				'nama_identitas' => $nama_identitas_pasangan,
 				'npwp' => $npwp_pasangan,
@@ -1002,7 +1002,7 @@ class Home extends CI_Controller {
 			$dataPenjamin = array(
 				'id_calon_debitur' => $id,
 				'no_ktp' => $no_ktp_penjamin,
-				'nama_lengkap' => $nama_lengkap_penjamin,
+				'nama_lengkap' => $nama_identitas_penjamin,
 				'nama_identitas' => $nama_identitas_penjamin,
 				'npwp' => $npwp_penjamin,
 				'kelamin' => $kelamin_penjamin,
