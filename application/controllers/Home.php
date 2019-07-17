@@ -7,6 +7,8 @@ if($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 	exit;
 }
 
+echo "test";
+
 class Home extends CI_Controller {
 
 	public function __construct()
