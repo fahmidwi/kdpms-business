@@ -2126,6 +2126,8 @@ class Home extends CI_Controller {
 				$toemail = 'putrania1972@gmail.com, adisuyadi.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'muhamadamirudin78@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Bambang Setiawan') {
+				$toemail = 'Faiyzajavier@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
 			}
 	       	$subject = 'KREDIT CHECKING TELAH DISETUJUI';
 	       	$message = "
@@ -2227,6 +2229,8 @@ class Home extends CI_Controller {
 			$toemail = 'putrania1972@gmail.com';//TO AO
 		}else if ($ao_to_email == 'Amirudin') {
 			$toemail = 'muhamadamirudin78@gmail.com';//TO AO
+		}else if ($ao_to_email == 'Bambang Setiawan') {
+			$toemail = 'Faiyzajavier@gmail.com';
 		}
 
        	$subject = 'PENOLAKAN KREDIT CHECKING';
@@ -2546,7 +2550,7 @@ class Home extends CI_Controller {
 			<center><img src='http://103.31.232.30/kdpms-business/assets/images/bussines.png' margin-left:2%;></center>
 			</div>
 			<br>
-			<center><h2 style='font-family: arial;'>DATA SURVEY </h2></center>
+			<center><h2 style='font-family: arial;'>DATA KREDIT CHECKING </h2></center>
 
 			<p style='font-family: verdana'>Data calon debitur yang terlampir di bawah ini telah di kreditchecking, lakukan verifikasi kreditchecking.</p>
 			<p>MARKETING : $ao_to_email</p>
@@ -2653,6 +2657,8 @@ class Home extends CI_Controller {
 				$toemail = 'putrania1972@gmail.com, adisuyadi.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'muhamadamirudin78@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Bambang Setiawan') {
+				$toemail = 'Faiyzajavier@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
 			}
 	       	$subject = 'DATA SURVEY DI SETUJUI';
 	       	$message = "
@@ -2724,6 +2730,8 @@ class Home extends CI_Controller {
 				$toemail = 'putrania1972@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'muhamadamirudin78@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Bambang Setiawan') {
+				$toemail = 'Faiyzajavier@gmail.com';//TO AO
 			}
 	       	$subject = 'DATA SURVEY DI TOLAK';
 	       	$message = "
@@ -3478,6 +3486,8 @@ class Home extends CI_Controller {
 				$toemail = 'fahmidwi45@gmail.com, adisuyadi.kdpms@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'fahmidwi45@gmail.com, budiawan.kdpms@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Bambang Setiawan') {
+				$toemail = 'Faiyzajavier@gmail.com';
 			}
 			//$toemail = 'fahmidwi45@gmail.com';//TO AO
 	       	$subject = 'PERSETUJUAN';
@@ -3711,6 +3721,8 @@ class Home extends CI_Controller {
 			$toemail = 'fahmidwi45@gmail.com, adisuyadi.kdpms@gmail.com';//TO AO
 		}else if ($ao_to_email == 'Amirudin') {
 			$toemail = 'fahmidwi45@gmail.com, budiawan.kdpms@gmail.com,';//TO AO
+		}else if ($ao_to_email == 'Bambang Setiawan') {
+			$toemail = 'Faiyzajavier@gmail.com, budiawan.kdpms@gmail.com';//TO AO
 		}
        	$subject = 'PERSETUJUAN';
        	$message = "
@@ -4348,6 +4360,8 @@ class Home extends CI_Controller {
 				$toemail = 'putrania1972@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'muhamadamirudin78@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Bambang Setiawan') {
+				$toemail = 'Faiyzajavier@gmail.com';//TO AO
 			}
 	       	$subject = 'INFO PERSETUJUAN';
 	       	$message = "
@@ -4446,6 +4460,8 @@ class Home extends CI_Controller {
 				$toemail = 'putrania1972@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'muhamadamirudin78@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Bambang Setiawan') {
+				$toemail = 'Faiyzajavier@gmail.com';//TO AO
 			}
 	       	$subject = 'INFO PERSETUJUAN';
 	       	$message = "
@@ -4554,6 +4570,8 @@ class Home extends CI_Controller {
 				$toemail = 'putrania1972@gmail.com, adisuyadi.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'muhamadamirudin78@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Bambang Setiawan') {
+				$toemail = 'Faiyzajavier@gmail.com';//TO AO
 			}
 	       	$subject = 'INFO PENOLAKAN';
 	       	$message = "
@@ -4601,6 +4619,8 @@ class Home extends CI_Controller {
 				$toemail = 'putrania1972@gmail.com, adisuyadi.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'muhamadamirudin78@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Bambang Setiawan') {
+				$toemail = 'Faiyzajavier@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
 			}
 	       	$subject = 'INFO PENOLAKAN';
 	       	$message = "
