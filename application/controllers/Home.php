@@ -785,7 +785,7 @@ class Home extends CI_Controller {
 			'id_calon_debitur' => null,
 			'kode_kantor' => $kantor,
 			'kode_ao' => $ao,
-			'nama_lengkap' => $nama_identitas_calon_nasabah,
+			// 'nama_lengkap' => $nama_lengkap_calon_nasabah,
 			'nama_panggilan' => $nama_panggilan_calon_nasabah,
 			'nama_identitas' => $nama_identitas_calon_nasabah,
 			'no_ktp' => $no_ktp_calon_nasabah,
@@ -854,7 +854,7 @@ class Home extends CI_Controller {
 			$dataPasangan = array(
 				'id_calon_debitur' => $id,
 				'no_ktp' => $no_ktp_pasangan,
-				'nama_lengkap' => $nama_identitas_pasangan,
+				// 'nama_lengkap' => $nama_lengkap_pasangan,
 				'nama_panggilan' => $nama_panggilan_pasangan,
 				'nama_identitas' => $nama_identitas_pasangan,
 				'npwp' => $npwp_pasangan,
@@ -900,7 +900,7 @@ class Home extends CI_Controller {
 			$dataPenjamin = array(
 				'id_calon_debitur' => $id,
 				'no_ktp' => $no_ktp_penjamin,
-				'nama_lengkap' => $nama_identitas_penjamin,
+				// 'nama_lengkap' => $nama_lengkap_penjamin,
 				'nama_identitas' => $nama_identitas_penjamin,
 				'npwp' => $npwp_penjamin,
 				'kelamin' => $kelamin_penjamin,
@@ -947,7 +947,7 @@ class Home extends CI_Controller {
 			$dataPasangan = array(
 				'id_calon_debitur' => $id,
 				'no_ktp' => $no_ktp_pasangan,
-				'nama_lengkap' => $nama_identitas_pasangan,
+				'nama_lengkap' => $nama_lengkap_pasangan,
 				'nama_panggilan' => $nama_panggilan_pasangan,
 				'nama_identitas' => $nama_identitas_pasangan,
 				'npwp' => $npwp_pasangan,
@@ -1002,7 +1002,7 @@ class Home extends CI_Controller {
 			$dataPenjamin = array(
 				'id_calon_debitur' => $id,
 				'no_ktp' => $no_ktp_penjamin,
-				'nama_lengkap' => $nama_identitas_penjamin,
+				'nama_lengkap' => $nama_lengkap_penjamin,
 				'nama_identitas' => $nama_identitas_penjamin,
 				'npwp' => $npwp_penjamin,
 				'kelamin' => $kelamin_penjamin,
@@ -2126,8 +2126,6 @@ class Home extends CI_Controller {
 				$toemail = 'putrania1972@gmail.com, adisuyadi.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'muhamadamirudin78@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
-			}else if ($ao_to_email == 'Bambang Setiawan') {
-				$toemail = 'Faiyzajavier@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
 			}
 	       	$subject = 'KREDIT CHECKING TELAH DISETUJUI';
 	       	$message = "
@@ -2229,8 +2227,6 @@ class Home extends CI_Controller {
 			$toemail = 'putrania1972@gmail.com';//TO AO
 		}else if ($ao_to_email == 'Amirudin') {
 			$toemail = 'muhamadamirudin78@gmail.com';//TO AO
-		}else if ($ao_to_email == 'Bambang Setiawan') {
-			$toemail = 'Faiyzajavier@gmail.com';
 		}
 
        	$subject = 'PENOLAKAN KREDIT CHECKING';
@@ -2550,7 +2546,7 @@ class Home extends CI_Controller {
 			<center><img src='http://103.31.232.30/kdpms-business/assets/images/bussines.png' margin-left:2%;></center>
 			</div>
 			<br>
-			<center><h2 style='font-family: arial;'>DATA KREDIT CHECKING </h2></center>
+			<center><h2 style='font-family: arial;'>DATA SURVEY </h2></center>
 
 			<p style='font-family: verdana'>Data calon debitur yang terlampir di bawah ini telah di kreditchecking, lakukan verifikasi kreditchecking.</p>
 			<p>MARKETING : $ao_to_email</p>
@@ -2614,7 +2610,7 @@ class Home extends CI_Controller {
 		}
 	}
 
-	public function Act_SudahSurvey()
+	public function Act_PendingSurvey()
 	{
 		$id_kredit_checking = $this->input->post('id_kredit_check');
 		$id_order = $this->input->post('id_order');
@@ -2626,6 +2622,69 @@ class Home extends CI_Controller {
 		$where = array('id' => $id_kredit_checking);
 		$data = array(
 			'flg_survey' => 1,
+		);
+		$querySudahSurvey = $this->business->update_data('los_kredit_checking',$data,$where);
+
+		if ($querySudahSurvey) {
+			if ($ao_to_email == 'Kantor') {
+				$toemail = 'fahmidwi45@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Adi suyadi') {
+				$toemail = 'adisuyadi.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Budiawan') {
+				$toemail = 'budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Rediana Saputra') {
+				$toemail = 'redianasaputra4@gmail.com, adisuyadi.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}else if ($ao_to_email == 'M.Yakub') {
+				$toemail = 'mu.yakub99@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Lukman') {
+				$toemail = 'lukmanubay16@gmail.com, adisuyadi.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Putra Nia') {
+				$toemail = 'putrania1972@gmail.com, adisuyadi.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Amirudin') {
+				$toemail = 'muhamadamirudin78@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Bambang Setiawan') {
+				$toemail = 'Faiyzajavier@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
+			}
+	       	$subject = 'SURVEY DI PENDING';
+	       	$message = "
+		    <div style='padding:2%;background-color:white;'>
+			<center><img src='http://103.31.232.30/kdpms-business/assets/images/bussines.png' margin-left:2%;></center>
+			</div>
+			<br>
+			<center><h2 style='font-family: arial;'>DATA SURVEY DI PEMDING </h2></center>
+
+			<p style='font-family: verdana'>Data Calon nasabah ini di pending dalam proses survey</p>
+			<p>MARKETING : $ao_to_email</p>
+			<p>Nama Calon debitur : $name_to_email</p>
+			<p>NIK : $nik_to_email</p>
+			<p>plafond : Rp. $plafond_to_email</p>
+			<br><br><br><br><br>
+			<div style='background-color: #e4e4e4; padding: 10px; font-family: verdana;'>
+				<center>
+					<p>2018 Koperasi Dana Pinjaman Mandiri Sejahtera</p>
+					<p>JL. KH Abdullah Bin Nuh Ruko No. 46C, Sindang Barang Bogor Barat - Kota Bogor</p>
+				</center>
+			</div>
+		    ";
+		    $this->sendEmail($toemail,$subject,$message);
+			echo json_encode(array('msg' => 'success' ));
+		}else{
+			echo json_encode(array('msg' => 'failed' ));
+		}
+	}
+
+	public function Act_SudahSurvey()
+	{
+		$id_kredit_checking = $this->input->post('id_kredit_check');
+		$id_order = $this->input->post('id_order');
+		$ao_to_email = $this->input->post('ao_to_email');
+		$name_to_email = $this->input->post('name_to_email');
+		$nik_to_email = $this->input->post('nik_to_email');
+		$plafond_to_email = $this->input->post('plafond_to_email');
+
+		$where = array('id' => $id_kredit_checking);
+		$data = array(
+			'flg_survey' => 2,
 		);
 		$querySudahSurvey = $this->business->update_data('los_kredit_checking',$data,$where);
 
@@ -2688,6 +2747,12 @@ class Home extends CI_Controller {
 		}
 	}
 
+	public function changeFlgSurvey()
+	{
+		$this->business->update_data('los_kredit_checking',array('flg_survey' => 2),array('flg_survey' => 1));
+		echo 'done ya qmack';
+	}
+
 	public function Act_TolakSurvey()
 	{
 		$id_kredit_checking = $this->input->post('id_kredit_check');
@@ -2701,7 +2766,7 @@ class Home extends CI_Controller {
 		$where = array('id' => $id_kredit_checking);
 
 		$data = array(
-			'flg_survey' => 2,
+			'flg_survey' => 3,
 		);
 		$querySudahSurvey = $this->business->update_data('los_kredit_checking',$data,$where);
 
@@ -4460,8 +4525,6 @@ class Home extends CI_Controller {
 				$toemail = 'putrania1972@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'muhamadamirudin78@gmail.com';//TO AO
-			}else if ($ao_to_email == 'Bambang Setiawan') {
-				$toemail = 'Faiyzajavier@gmail.com';//TO AO
 			}
 	       	$subject = 'INFO PERSETUJUAN';
 	       	$message = "
@@ -4619,8 +4682,6 @@ class Home extends CI_Controller {
 				$toemail = 'putrania1972@gmail.com, adisuyadi.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'muhamadamirudin78@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
-			}else if ($ao_to_email == 'Bambang Setiawan') {
-				$toemail = 'Faiyzajavier@gmail.com, budiawan.kdpms@gmail.com, Heinrichricky@gmail.com';//TO AO
 			}
 	       	$subject = 'INFO PENOLAKAN';
 	       	$message = "
