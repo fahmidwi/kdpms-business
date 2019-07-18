@@ -204,12 +204,70 @@
 										buttons: false,
 									})
 									$('#app').load('views/content/data/data-cek-survey-komite.php');
-								}else{
+								}
+							},
+							error:function (xhr, status, error) {
+								$('#load_page').val('false');
+								console.log(xhr.responseText)
+								if (xhr.status == 500) {
 									swal({
-										title: "Warning!",
-										text: "data gagal di verifikasi!",
-										icon: "danger"
+											title:error,
+											text:'Server bermasalah, periksa koneksi internet anda.',
+											icon: "error"
 									});
+								}
+							}
+						})
+					}
+				});
+		})
+
+		$('#showSurveyKomite').on('click','#pending',function () {
+				var id = $(this).attr('dataIdKc')
+				var id_order = $(this).attr('dataIdOrder')
+				var ao_to_email = $(this).attr('dataAo')
+				var name_to_email = $(this).attr('dataNama')
+				var nik_to_email = $(this).attr('dataNik')
+				var plafond_to_email = $(this).attr('dataPlafond')
+				swal({
+					title: "Pending survey?",
+					text: "aksi ini akan menunda proses survey",
+					icon: "info",
+					buttons: true,
+					dangerMode: true,
+				})
+				.then((willDelete) => {
+					if (willDelete) {
+						$.ajax({
+							type:'POST',
+							url:url+'Home/Act_PendingSurvey',
+              data:{
+                id_kredit_check:id,
+                id_order:id_order,
+                ao_to_email:ao_to_email,
+                name_to_email:name_to_email,
+                nik_to_email:nik_to_email,
+                plafond_to_email:plafond_to_email
+              },
+              dataType:'JSON',
+							beforeSend:function () {
+								$('#load_page').val('true');
+								load()
+								swal({
+									text:'Silahkan tunggu, Sedang memproses data . . .',
+									buttons: false,
+									closeModal: false,
+								})
+							},success:function (res) {
+								$('#load_page').val('false');
+								if (res.msg == 'success') {
+									swal({
+										text:'Data survey terpending',
+										icon:'success',
+										timer:2000,
+										buttons: false,
+									})
+									$('#app').load('views/content/data/data-cek-survey-komite.php');
 								}
 							},
 							error:function (xhr, status, error) {
@@ -351,9 +409,15 @@
 							if (data[i].flg_survey == 0) {
 								var butTolak = '<a href="javascript:void(0)" id="tolak" dataIdKc="'+data[i].id+'" dataIdOrder="'+data[i].id_order+'" dataAo="'+data[i].AO_ORDER+'" dataNama="'+data[i].calon_debitur+'" dataNik="'+data[i].no_ktp+'" dataPlafond="'+FormatRupiah(data[i].plafond)+' - '+data[i].tenor+' Bulan'+'"><label class="but badge badge-danger"><i class="mdi mdi-close-circle"></i>&nbsp;Tolak</label></a>&nbsp;'
 								var butSudah = '<a href="javascript:void(0)" id="sudah" dataIdKc="'+data[i].id+'" dataIdOrder="'+data[i].id_order+'" dataAo="'+data[i].AO_ORDER+'" dataNama="'+data[i].calon_debitur+'" dataNik="'+data[i].no_ktp+'" dataPlafond="'+FormatRupiah(data[i].plafond)+' - '+data[i].tenor+' Bulan'+'"><label class="but badge badge-success"><i class="mdi mdi-bookmark-check"></i>&nbsp;Sudah</label></a>&nbsp;'
+								var butPending = '<a href="javascript:void(0)" id="pending" dataIdKc="'+data[i].id+'" dataIdOrder="'+data[i].id_order+'" dataAo="'+data[i].AO_ORDER+'" dataNama="'+data[i].calon_debitur+'" dataNik="'+data[i].no_ktp+'" dataPlafond="'+FormatRupiah(data[i].plafond)+' - '+data[i].tenor+' Bulan'+'"><label class="but badge badge-primary"><i class="mdi mdi-timer"></i>&nbsp;Pending</label></a>&nbsp;'
+							}else if(data[i].flg_survey == 1){
+								var butTolak = '<a href="javascript:void(0)" id="tolak" dataIdKc="'+data[i].id+'" dataIdOrder="'+data[i].id_order+'" dataAo="'+data[i].AO_ORDER+'" dataNama="'+data[i].calon_debitur+'" dataNik="'+data[i].no_ktp+'" dataPlafond="'+FormatRupiah(data[i].plafond)+' - '+data[i].tenor+' Bulan'+'"><label class="but badge badge-danger"><i class="mdi mdi-close-circle"></i>&nbsp;Tolak</label></a>&nbsp;'
+								var butSudah = '<a href="javascript:void(0)" id="sudah" dataIdKc="'+data[i].id+'" dataIdOrder="'+data[i].id_order+'" dataAo="'+data[i].AO_ORDER+'" dataNama="'+data[i].calon_debitur+'" dataNik="'+data[i].no_ktp+'" dataPlafond="'+FormatRupiah(data[i].plafond)+' - '+data[i].tenor+' Bulan'+'"><label class="but badge badge-success"><i class="mdi mdi-bookmark-check"></i>&nbsp;Sudah</label></a>&nbsp;'
+								var butPending = ''
 							}else{
 								var butTolak = '-'
 								var butSudah = '-'
+								var butPending = '-'
 							}
 						/*}else{
 							var butTolak = ''
@@ -363,8 +427,10 @@
 						if (data[i].flg_survey == 0) {
 								var verifikasi = '<td class="text-warning"><i class="mdi mdi-timer-sand">Menunggu</i></td>'
 						}else if (data[i].flg_survey == 1){
-								var verifikasi = '<td class="text-primary"><i class="mdi mdi-check-circle">Lanjut</i></td>'
-						}else{
+								var verifikasi = '<td class="text-primary"><i class="mdi mdi-timer-sand">Dipending</i></td>'
+						}else if (data[i].flg_survey == 2){
+								var verifikasi = '<td class="text-success"><i class="mdi mdi-check-circle">Lanjut</i></td>'
+							}else if (data[i].flg_survey == 3){
 								var verifikasi = '<td class="text-danger"><i class="mdi mdi-close-circle">Ditolak</i></td>'
 						}
 
@@ -377,7 +443,7 @@
 											'<td class="text-primary">'+data[i].jenis_jaminan+'</td>'+
 											verifikasi+
 											'<td>'+
-											butSudah+butTolak+
+											butSudah+butPending+butTolak+
 											'</td>'+
 										'</tr>'
 					}
