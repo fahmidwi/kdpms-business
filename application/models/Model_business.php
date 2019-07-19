@@ -585,7 +585,7 @@ class Model_business extends CI_Model {
 			AND kc.verifikasi = 1
 			AND kc.status = "DONE"
 			AND los_cn.create_by = "'.$ao.'"
-			AND kc.flg_survey = 1 ORDER BY kc.id DESC
+			AND kc.flg_survey = 2 ORDER BY kc.id DESC
 		';
 		return $this->db->query($query);
 	}
