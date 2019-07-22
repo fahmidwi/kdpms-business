@@ -52,7 +52,7 @@ class Report extends CI_Controller {
         $pdf->SetFont('times','B',9);
         $pdf->Cell(163,6,'    DATA PERSONAL CALON DEBITUR',1,0);
             $cadeb = '
-        Nama Lengkap                      : '.strtoupper($data->nama_lengkap).'
+        Nama Lengkap                      : '.strtoupper($data->nama_identitas).'
         Nama Identitas                      : '.$data->nama_identitas.'
         Nama Panggilan                    : '.$data->nama_panggilan.'
         Alamat                                   : '.$data->alamat.', RT.'.$data->rt.' RW.'.$data->rw.', KELURAHAN.'.$data->Kelurahan.',
@@ -98,7 +98,7 @@ class Report extends CI_Controller {
         $pdf->Cell(10,6,'',0,1);
         $pdf->SetFont('times','',10);
         $datapasangan = '
-        Nama Lengkap                      : '.$datapasangan->nama_lengkap.'
+        Nama Lengkap                      : '.$datapasangan->nama_identitas.'
         Nama Identitas                      : '.$datapasangan->nama_identitas.'
         Nama Panggilan                    : '.$datapasangan->nama_panggilan.'
         Alamat                                   : '.$datapasangan->alamat.', RT.'.$datapasangan->rt.' RW.'.$datapasangan->rw.', KELURAHAN.'.$datapasangan->Kelurahan.',
@@ -131,7 +131,7 @@ class Report extends CI_Controller {
 
         $pdf->SetFont('times','',10);
         $ketcalondebitur = '
-        Nama Lengkap                      : '.$datapenjamin->nama_lengkap.'
+        Nama Lengkap                      : '.$datapenjamin->nama_identitas.'
         Nama Identitas                      : '.$datapenjamin->nama_identitas.'
         Alamat                                   : '.$datapenjamin->alamat.', RT.'.$datapenjamin->rt.' RW.'.$datapenjamin->rw.', KELURAHAN.'.$datapenjamin->Kelurahan.',
                                                              KECAMATAN.'.$datapenjamin->Kecamatan.', '.$datapenjamin->Kotakab.',
@@ -310,13 +310,13 @@ class Report extends CI_Controller {
         }else{
         	$pasangan = 'PASANGAN
 
-	 		 Nama                              : '.$dataPasangan->nama_lengkap.'
+	 		 Nama                              : '.$dataPasangan->nama_identitas.'
 	 		 Tempat, Tanggal Lahir  : '.$dataPasangan->tempat_lahir.','.$dataPasangan->tgl_lahir.'
 	 		 No. KTP/No. SIM          : '.$dataPasangan->no_ktp.'';
         }
 
         $datadebitur = '
-   	Nama debitur                 : '.strtoupper($debitur->nama_lengkap).'
+   	Nama debitur                 : '.strtoupper($debitur->nama_identitas).'
  		 Alamat                           : '.strtoupper($debitur->alamat).', RT.'.$debitur->rt.' RW.'.$debitur->rw.', KELURAHAN.'.$debitur->Kelurahan.',
  		 				                                     KECAMATAN.'.$debitur->Kecamatan.', '.$debitur->Kotakab.',
  		 				                                     '.$debitur->propinsi.'
@@ -604,7 +604,7 @@ class Report extends CI_Controller {
         }else{
         	$pasangan = 'PASANGAN
 
-	 		 Nama                              : '.$dataPasangan->nama_lengkap.'
+	 		 Nama                              : '.$dataPasangan->nama_identitas.'
 	 		 Tempat, Tanggal Lahir  : '.$dataPasangan->tempat_lahir.','.$dataPasangan->tgl_lahir.'
 	 		 No. KTP/No. SIM          : '.$dataPasangan->no_ktp.'';
         }
@@ -618,7 +618,7 @@ class Report extends CI_Controller {
 	        $penjamin = 'PENJAMIN
 
 	 	  Hubungan                      : '.$dataPenjamin->hubungan_debitur.'
-	 		 Nama                             : '.$dataPenjamin->nama_lengkap.'
+	 		 Nama                             : '.$dataPenjamin->nama_identitas.'
 	 		 Alamat                           : '.strtoupper($dataPenjamin->alamat).', RT.'.$dataPenjamin->rt.' RW.'.$dataPenjamin->rw.', KELURAHAN.'.$dataPenjamin->Kelurahan.',
  		 				                                     KECAMATAN.'.$dataPenjamin->Kecamatan.',
  		 				                                     '.$dataPenjamin->Kotakab.',
@@ -628,7 +628,7 @@ class Report extends CI_Controller {
         }
 
         $datadebitur = '
-   	Nama debitur                 : '.strtoupper($ca->nama_lengkap).'
+   	Nama debitur                 : '.strtoupper($ca->nama_identitas).'
  		 Alamat                           : '.strtoupper($ca->alamat_domisili).', RT.'.$ca->rt_domisili.' RW.'.$ca->rw_domisili.', KELURAHAN '.$ca->Kelurahan_domisili.',
  		 				                                     KECAMATAN '.$ca->Kecamatan_domisili.',
  		 				                                     '.$ca->Kotakab_domisili.',
@@ -1787,7 +1787,7 @@ Surat ini berlaku 14(empat belas) hari sejak tanda tangan dan secara otomatis ti
         $pdf->Cell(163,6,'    DATA CALON DEBITUR',1,0);
         $pdf->SetFont('arial','',10);
         $datadebitur = '
-   	Nama debitur                 : '.strtoupper($data->nama_lengkap).'
+   	Nama debitur                 : '.strtoupper($data->nama_identitas).'
  	  Alamat                           :  '.strtoupper($data->alamat_domisili).', RT '.$data->rt_domisili.', RW '.$data->rw_domisili.',
  	                                           KEL '.strtoupper($data->Kelurahan_domisili).' KEC '.strtoupper($data->Kecamatan_domisili).'
  	                                           '.strtoupper($data->Kotakab_domisili).'
