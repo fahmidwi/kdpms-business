@@ -379,21 +379,23 @@
 				                    </div>
 				                  </div>
 				                </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Nomor Sertifikat</label>
+                            <div class="col-sm-8">
+                              <input type="number" class="form-control" name="no_sertifikat" id="no_sertifikat" placeholder="Masukan Nomor Sertifikat" style="margin-left: -5%; width: 100%;" />
+                            </div>
+                          </div>
+                        </div>
+                        
 				              </div>
 				              <div class="row">
+				                
 				                <div class="col-md-6">
 				                  <div class="form-group row">
-				                    <label class="col-sm-4 col-form-label">Tanggal Sertifikat</label>
+				                    <label class="col-sm-4 col-form-label">Jenis Sertifikat</label>
 				                    <div class="col-sm-8">
-				                      <input type="date" name="tgl_sertifikat" class="form-control" id="tgl_sertifikat" style="margin-left: 15%; width: 80%;">
-				                    </div>
-				                  </div>
-				                </div>
-				                <div class="col-md-6">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Jenis Sertifikat</label>
-				                    <div class="col-sm-9">
-				                      <select class="form-control" name="jenis_sertifikat" id="jenis_sertifikat">
+				                      <select class="form-control" name="jenis_sertifikat" id="jenis_sertifikat" style="margin-left: 15%; width: 75%;">
 				                        <option value="null">Pilih jenis sertifikat</option>
 				                        <option value="SHM">SHM</option>
 				                        <option value="SHGB">SHGB</option>
@@ -403,17 +405,47 @@
 				                    </div>
 				                  </div>
 				                </div>
+                        <div class="col-md-6">
+                        <div id="shgb">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Masa Berlaku SHGB</label>
+                            <div class="col-sm-8">
+                              <input type="date" name="masa_berlaku_shgb" class="form-control" placeholder="Masukan Pekerjaan" id="masa_berlaku_shgb" style="margin-left: -5%; width: 105%;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 				              </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Alamat Sertifikat</label>
+                            <div class="col-sm-9">
+                              <textarea class="form-control" type="text" name="alamat" id="alamat" placeholder="Masukan Alamat" style="margin-left: -5%; width: 105%;"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 											<div class="row">
-				                <div class="col-md-12">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Nomor Sertifikat</label>
-				                    <div class="col-sm-9">
-				                      <input type="number" class="form-control" name="no_sertifikat" id="no_sertifikat" placeholder="Masukan Nomor Sertifikat" style="margin-left: -5%; width: 105%;" />
-				                    </div>
-				                  </div>
-				                </div>
-				              </div>
+                        <div class="col-md-12">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Atas Nama</label>
+                            <div class="col-sm-9">
+                              <input class="form-control" type="text" name="atas_nama" id="atas_nama" placeholder="Masukan Atas Nama"  style="margin-left: -5%; width: 105%;"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row"> 
+                      <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Tanggal Sertifikat</label>
+                            <div class="col-sm-8">
+                              <input type="date" name="tgl_sertifikat" class="form-control" id="tgl_sertifikat" style="margin-left: 15%; width: 80%;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 				              <!-- <div class="row" id="shm">
 				                <div class="col-md-12">
 				                  <div class="form-group row">
@@ -434,24 +466,15 @@
 													</div>
 												</div>
 												<div class="col-md-6">
-				                  <div class="form-group row">
-				                    <label class="col-sm-4 col-form-label">Nomor Surat Ukur</label>
-				                    <div class="col-sm-8">
-				                      <input type="text" placeholder="Masukan Nomor Surat Ukur"  style="margin-left: 15%; width: 80%;" class="form-control" name="no_surat_ukur" id="no_surat_ukur" />
-				                    </div>
-				                  </div>
-				                </div>
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Nomor Surat Ukur</label>
+                            <div class="col-sm-8">
+                              <input type="text" placeholder="Masukan Nomor Surat Ukur"   class="form-control" name="no_surat_ukur" id="no_surat_ukur" style="margin-left: -5%; width: 105%;" />
+                            </div>
+                          </div>
+                        </div>
 											</div>
-				              <div class="row" id="shgb">
-				                <div class="col-md-6">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Masa Berlaku SHGB</label>
-				                    <div class="col-sm-9">
-				                      <input type="date" name="masa_berlaku_shgb" class="form-control" placeholder="Masukan Pekerjaan" id="masa_berlaku_shgb">
-				                    </div>
-				                  </div>
-				                </div>
-				              </div>
+				              
 				              <div class="row" id="ajb">
 				                <div class="col-md-6">
 				                  <div class="form-group row">
@@ -476,26 +499,6 @@
 				                    <label class="col-sm-4 col-form-label">Masa Berlaku SHMRS</label>
 				                    <div class="col-sm-8">
 				                      <input type="date" name="masa_berlaku_shmrs" class="form-control" id="masa_berlaku_shmrs" style="margin-left: 15%; width: 80%;">
-				                    </div>
-				                  </div>
-				                </div>
-				              </div>
-				              <div class="row">
-				                <div class="col-md-12">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Atas Nama</label>
-				                    <div class="col-sm-9">
-				                      <input class="form-control" type="text" name="atas_nama" id="atas_nama" placeholder="Masukan Atas Nama"  style="margin-left: -5%; width: 105%;"/>
-				                    </div>
-				                  </div>
-				                </div>
-				              </div>
-				              <div class="row">
-				                <div class="col-md-12">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Alamat</label>
-				                    <div class="col-sm-9">
-				                      <textarea class="form-control" type="text" name="alamat" id="alamat" placeholder="Masukan Alamat" style="margin-left: -5%; width: 105%;"></textarea>
 				                    </div>
 				                  </div>
 				                </div>
@@ -1337,6 +1340,8 @@ $(document).ready(function () {
 		var pengeluaran_pendidikan = true
 		var pengeluaran_lainnya = true
 		var angsuran_lain = true
+		var angsuran_kdpms = true
+		var pendapatan_lainnya = true
 		var hasil_cek_lingkungan = true
 		var vertifikasi_data_debitur = true
 		var ket_calon_debitur = true
@@ -1415,6 +1420,8 @@ $(document).ready(function () {
 		pengeluaran_pendidikan = checkEmpty('input[name=pengeluaran_pendidikan]')
 		pengeluaran_lainnya = checkEmpty('input[name=pengeluaran_lainnya]')
 		angsuran_lain = checkEmpty('input[name=angsuran_lain]')
+		angsuran_kdpms = checkEmpty('input[name=angsuran_kdpms]')
+		pendapatan_lainnya = checkEmpty('input[name=pendapatan_lainnya]')
 		hasil_cek_lingkungan = checkEmpty('textarea[name=hasil_cek_lingkungan]')
 		verifikasi_data_debitur = checkEmpty('textarea[name=verifikasi_data_debitur]')
 		ket_calon_debitur = checkEmpty('textarea[name=ket_calon_debitur]')
@@ -1454,7 +1461,7 @@ $(document).ready(function () {
 			nilai_njop = checkEmpty('input[name=nilai_njop]')
 			tgl_taksasi = checkEmpty('input[name=tgl_taksasi]')
 		
-			if (jaminan_utama && sumber_informasi && tujuan_kredit && jenis_fasilitas && kode_produk && plafond && jangka_waktu && suku_bunga && akad_kredit && akad_jaminan && gaji_debitur && gaji_pasangan && gaji_penjamin && pengeluaran_rumah_tangga && pengeluaran_transport && pengeluaran_pendidikan && pengeluaran_lainnya && angsuran_lain && hasil_cek_lingkungan && verifikasi_data_debitur && ket_calon_debitur && realisasi && nama_anak && nama_sekolah && alamat_sekolah_anak && lokasi && kepemilikan && penggunaan && no_sertifikat && tgl_sertifikat && tgl_surat_ukur && no_surat_ukur && masa_berlaku_shgb && no_ajb && tgl_ajb && masa_berlaku_shmrs && jenis_sertifikat && atas_nama && alamat && luas_tanah && luas_bangunan && kondisi_bangunan && nilai_taksasi && nilai_njop && tgl_taksasi) {
+			if (jaminan_utama && sumber_informasi && tujuan_kredit && jenis_fasilitas && kode_produk && plafond && jangka_waktu && suku_bunga && akad_kredit && akad_jaminan && gaji_debitur && gaji_pasangan && gaji_penjamin && pengeluaran_rumah_tangga && pengeluaran_transport && pengeluaran_pendidikan && pengeluaran_lainnya && angsuran_lain && angsuran_kdpms && pendapatan_lainnya && hasil_cek_lingkungan && verifikasi_data_debitur && ket_calon_debitur && realisasi && nama_anak && nama_sekolah && alamat_sekolah_anak && lokasi && kepemilikan && penggunaan && no_sertifikat && tgl_sertifikat && tgl_surat_ukur && no_surat_ukur && masa_berlaku_shgb && no_ajb && tgl_ajb && masa_berlaku_shmrs && jenis_sertifikat && atas_nama && alamat && luas_tanah && luas_bangunan && kondisi_bangunan && nilai_taksasi && nilai_njop && tgl_taksasi) {
 				saveMemoAo()
 			}
 		}else if (angunan == 'Kendaraan') {
@@ -1477,14 +1484,14 @@ $(document).ready(function () {
 			no_rangka_kendaraaan = checkEmpty('input[name=no_rangka_kendaraaan]')
 			no_mesin_kendaraaan = checkEmpty('input[name=no_mesin_kendaraaan]')
 			no_stnk_kendaraaan = checkEmpty('input[name=no_stnk_kendaraaan]')
-				no_polisi_kendaraaan = checkEmpty('input[name=no_polisi_kendaraaan]')
+			no_polisi_kendaraaan = checkEmpty('input[name=no_polisi_kendaraaan]')
 			tahun_kendaraan = checkEmpty('input[name=tahun_kendaraan]')
 			warna_kendaraan = checkEmpty('input[name=warna_kendaraan]')
 			no_faktur = checkEmpty('input[name=no_faktur]')
 			silinder_kendaraan = checkEmpty('input[name=silinder_kendaraan]')
 			nilai_taksasi_kendaraan = checkEmpty('input[name=nilai_taksasi_kendaraan]')
 		
-			if (jaminan_utama && sumber_informasi && tujuan_kredit && jenis_fasilitas && kode_produk && plafond && jangka_waktu && suku_bunga && akad_kredit && akad_jaminan && gaji_debitur && gaji_pasangan && gaji_penjamin && pengeluaran_rumah_tangga && pengeluaran_transport && pengeluaran_pendidikan && pengeluaran_lainnya && angsuran_lain && hasil_cek_lingkungan && verifikasi_data_debitur && ket_calon_debitur && realisasi && nama_anak && nama_sekolah && alamat_sekolah_anak && kd_merk_kendaraan && kd_type_kendaraan && kd_jenis_kendaraan && kepemilikan_kendaraan && penggunaan_kendaraan && atas_nama_kendaraan && alamat_bpkb_kendaraan && kecamatan_bpkb_kendaraan && kelurahan_bpkb_kendaraan && kota_bpkb_kendaraan && nilai_likuidas_kendaraan && kondisi_jaminan_kendaraan && tgl_taksasi_kendaraaan && tgl_exp_pajak_kendaraaan && tgl_exp_stnk_kendaraaan && no_bpkb_kendaraaan && no_rangka_kendaraaan && no_mesin_kendaraaan && no_stnk_kendaraaan && no_polisi_kendaraaan && tahun_kendaraan && warna_kendaraan && no_faktur && silinder_kendaraan && nilai_taksasi_kendaraan) {
+			if (jaminan_utama && sumber_informasi && tujuan_kredit && jenis_fasilitas && kode_produk && plafond && jangka_waktu && suku_bunga && akad_kredit && akad_jaminan && gaji_debitur && gaji_pasangan && gaji_penjamin && pengeluaran_rumah_tangga && pengeluaran_transport && pengeluaran_pendidikan && pengeluaran_lainnya && angsuran_lain && angsuran_kdpms && pendapatan_lainnya && hasil_cek_lingkungan && verifikasi_data_debitur && ket_calon_debitur && realisasi && nama_anak && nama_sekolah && alamat_sekolah_anak && kd_merk_kendaraan && kd_type_kendaraan && kd_jenis_kendaraan && kepemilikan_kendaraan && penggunaan_kendaraan && atas_nama_kendaraan && alamat_bpkb_kendaraan && kecamatan_bpkb_kendaraan && kelurahan_bpkb_kendaraan && kota_bpkb_kendaraan && nilai_likuidas_kendaraan && kondisi_jaminan_kendaraan && tgl_taksasi_kendaraaan && tgl_exp_pajak_kendaraaan && tgl_exp_stnk_kendaraaan && no_bpkb_kendaraaan && no_rangka_kendaraaan && no_mesin_kendaraaan && no_stnk_kendaraaan && no_polisi_kendaraaan && tahun_kendaraan && warna_kendaraan && no_faktur && silinder_kendaraan && nilai_taksasi_kendaraan) {
 				saveMemoAo()
 			}
 		}
@@ -1507,6 +1514,7 @@ $(document).ready(function () {
 				$('#simpan-memo-ao').html('<i class="mdi mdi-18px mdi-spin mdi-loading"></i> Sedang mengirim data . . .');
 			},
 			success:function(data) {
+				console.log(data)
         $('#load_page').val('false');
 				$('#simpan-memo-ao').prop('disabled',false)
 				$('#simpan-memo-ao').html('Simpan')

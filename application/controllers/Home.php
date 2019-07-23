@@ -177,9 +177,9 @@ class Home extends CI_Controller {
 	public function getTotalMemoAo($session_kantor)
 	{
 		if ($session_kantor == 01) {
-			$where = array('los_cn.kode_kantor' => $session_kantor,'status' => 'DONE','flg_survey' => '1');
+			$where = array('los_cn.kode_kantor' => $session_kantor,'status' => 'DONE','flg_survey' => '2');
 		}else if ($session_kantor == 02){
-			$where = array('los_cn.kode_kantor' => $session_kantor,'status' => 'DONE','flg_survey' => '1');
+			$where = array('los_cn.kode_kantor' => $session_kantor,'status' => 'DONE','flg_survey' => '2');
 		}
 		$data = $this->db->select('*')
 						 ->from('los_calon_nasabah AS los_cn')
@@ -3018,7 +3018,6 @@ class Home extends CI_Controller {
 			'nilai_njop' => $this->input->post('nilai_njop'),
 			'tgl_taksasi' => $this->input->post('tgl_taksasi')*/
 		);
-		//print_r($dataAoSertifikat);die();
 
 		$dataAoKendaraan = array(
 			'id_order' => $this->input->post('id_order'),
@@ -3339,13 +3338,14 @@ class Home extends CI_Controller {
 			'pekerjaan_debitur' => $this->input->post('pekerjaan_debitur'),
 			'nama_tempat_kerja' => $this->input->post('nama_tempat_kerja'),
 			'posisi' => $this->input->post('posisi'),
-			'jenis_usaha_debitur' => $this->input->post('jenis_usaha_debitur'),
-			'alamat_usaha_debitur' => $this->input->post('alamat_usaha_debitur'),
+			'jenis_usaha_debitur' => $this->input->post('jenis_kerja_debitur'),
+			'alamat_usaha_debitur' => $this->input->post('alamat_kerja_debitur'),
 			'masa_kerja_debitur' => $this->input->post('masa_kerja_debitur'),
 			'no_telp_kerja_debitur' => $this->input->post('no_telp_kerja_debitur'),
 			'usaha_debitur' => $this->input->post('usaha_debitur'),
 			'nama_tempat_usaha' => $this->input->post('nama_tempat_usaha'),
 			'jenis_usaha' => $this->input->post('jenis_usaha'),
+			'alamat_tempat_usaha' => $this->input->post('alamat_tempat_usaha'),
 			'masa_usaha' => $this->input->post('masa_usaha'),
 			'no_telp_usaha' => $this->input->post('no_telp_usaha'),
 			'tempat_usaha' => $this->input->post('tempat_usaha'),
@@ -3382,9 +3382,9 @@ class Home extends CI_Controller {
 			'nilai_taksasi' => $this->input->post('nilai_taksasi_persen'),
 			'sumber_harga' => $this->input->post('sumber_harga'),
 			'faktor_menaikan' => $this->input->post('faktor_yang_dapat_menaikan'),
-			'faktor_menurunkan' => $this->input->post('faktor_yang_dapat_menurunkan')
+			'faktor_menurunkan' => $this->input->post('faktor_yang_dapat_menurunkan'),
 		);
-
+		print_r($dataMemoCa);die();
 		$dataMemoCaBangunan = array(
 			'id_order' => rawurldecode($this->uri->segment(7)),
 			'kontruksi' => $this->input->post('kontruksi'),

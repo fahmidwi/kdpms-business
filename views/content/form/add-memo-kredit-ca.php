@@ -226,7 +226,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Jenis Kerja Debitur</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" name="jenis_usaha_debitur" id="jenis_usaha_debitur" placeholder="Masukan Jenis Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                  <input type="text" class="form-control" name="jenis_kerja_debitur" id="jenis_kerja_debitur" placeholder="Masukan Jenis Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
                 </div>
               </div>
             </div>
@@ -236,7 +236,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Alamat Kerja Debitur</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" name="alamat_usaha_debitur" id="alamat_usaha_debitur" placeholder="Masukan Alamat Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                  <input type="text" class="form-control" name="alamat_kerja_debitur" id="alamat_kerja_debitur" placeholder="Masukan Alamat Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
                 </div>
               </div>
             </div>
@@ -285,7 +285,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Posisi</label>
                 <div class="col-sm-9">
-                  <input type="text" name="posisi" placeholder="Masukan Posisi" id="posisi" class="form-control" readonly="PEMILIK"> 
+                  <input type="text" placeholder="Masukan Posisi" class="form-control" value="PEMILIK USAHA" readonly> 
                 </div>
               </div>
             </div>
@@ -335,7 +335,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Tempat Usaha</label>
                 <div class="col-sm-9">
-                <select class="form-control" name="no_telp_kerja_debitur" id="no_telp_kerja_debitur" style="margin-left: -5%; width: 105%;">
+                <select class="form-control" name="tempat_usaha" id="tempat_usaha" style="margin-left: -5%; width: 105%;">
                   <option>MILIK SENDIRI</option>
                   <option>SEWA</option>
                 </select>
@@ -2032,198 +2032,198 @@ $(document).ready(function () {
 	$('#form-memo-kredit-ca').submit(function (e) {
 	e.preventDefault()
 	var data = new FormData(this)
-	var jml_tanggungan = true
-	var alamat_sekarang = true
-	var nama_tempat_kerja = true
-	var posisi = true
-	var jenis_usaha_debitur = true
-	var alamat_usaha_debitur = true
-	var masa_kerja_debitur = true
-	var no_telp_kerja_debitur = true
+	// var jml_tanggungan = true
+	// var alamat_sekarang = true
+	// var nama_tempat_kerja = true
+	// var posisi = true
+	// var jenis_kerja_debitur = true
+	// var alamat_kerja_debitur = true
+	// var masa_kerja_debitur = true
+	// var no_telp_kerja_debitur = true
 
-	var pengeluaran_lainnya = true
-	var pendapatan_tunai = true
-	var pendapatan_kredit = true
-	var pengeluaran_sewa = true
-	var pengeluaran_belanja = true
-	var pengeluaran_gaji_pegawai = true
-	var angsuran_lain_usaha = true
-	var pengeluaran_lain_usaha = true
-	var pengeluaran_telp_listrik_air = true
-	var catatan = true
+	// var pengeluaran_lainnya = true
+	// var pendapatan_tunai = true
+	// var pendapatan_kredit = true
+	// var pengeluaran_sewa = true
+	// var pengeluaran_belanja = true
+	// var pengeluaran_gaji_pegawai = true
+	// var angsuran_lain_usaha = true
+	// var pengeluaran_lain_usaha = true
+	// var pengeluaran_telp_listrik_air = true
+	// var catatan = true
 
-	var pusat_keramaian = true
-	var jarak_keramaian = true
+	// var pusat_keramaian = true
+	// var jarak_keramaian = true
 
-	var fasilitas_umum = true
-	var luas_tanah_ca = true
-  var luas_tanah_njop = true
-  var luas_bangunan_njop = true
-	var luas_bangunan_ca = true
-  var kondisi_bentuk_tanah = true
-	var dibangun_tahun = true
-	var kegunaan_bangunan = true
-	var penguasaan_tanah_bangunan = true
-	var kondisi_fisik_bangunan = true
+	// var fasilitas_umum = true
+	// var luas_tanah_ca = true
+  // var luas_tanah_njop = true
+  // var luas_bangunan_njop = true
+	// var luas_bangunan_ca = true
+  // var kondisi_bentuk_tanah = true
+	// var dibangun_tahun = true
+	// var kegunaan_bangunan = true
+	// var penguasaan_tanah_bangunan = true
+	// var kondisi_fisik_bangunan = true
 
-	var sebelah_utara = true
-	var sebelah_selatan = true
-	var sebelah_timur = true
-	var sebelah_barat = true
+	// var sebelah_utara = true
+	// var sebelah_selatan = true
+	// var sebelah_timur = true
+	// var sebelah_barat = true
 
-	var jalan_depan = true
-	var jalan_lingkungan_terbesar = true
-	var kontruksi = true
-	var lantai = true
-	var dinding = true
-	var kusen = true
-	var pintu = true
-	var jendela = true
-	var kuda_kuda = true
-	var rangkap_atap = true
-	var langit_langit = true
-	var atap = true
-	var pagar = true
-	var ruang_tamu = true
-	var kamar_mandi = true
-	var ruang_makan = true
-	var dapur = true
-	var kamar_pembantu = true
-	var teras = true
-	var kamar_tidur = true
-	var garasi = true
-	var ruang_keluarga = true
-	var kamar_mandi_2 = true
-	var ruang_makan_2 = true
-	var dapur_2 = true
-	var kamar = true
-	var teras = true
-	var listrik = true
-	var telpon_fax = true
-	var air = true
-	var njop_bumi = true
-	var njop_bangunan = true
-	var harga_pasaran_tanah = true
-	var harga_pasaran_bangunan = true
-	var keterangan_penilaian = true
-	var nilai_taksasi_persen = true
-	var sumber_harga = true
-	var faktor_yang_dapat_menaikan = true
-	var faktor_yang_dapat_menurunkan = true
+	// var jalan_depan = true
+	// var jalan_lingkungan_terbesar = true
+	// var kontruksi = true
+	// var lantai = true
+	// var dinding = true
+	// var kusen = true
+	// var pintu = true
+	// var jendela = true
+	// var kuda_kuda = true
+	// var rangkap_atap = true
+	// var langit_langit = true
+	// var atap = true
+	// var pagar = true
+	// var ruang_tamu = true
+	// var kamar_mandi = true
+	// var ruang_makan = true
+	// var dapur = true
+	// var kamar_pembantu = true
+	// var teras = true
+	// var kamar_tidur = true
+	// var garasi = true
+	// var ruang_keluarga = true
+	// var kamar_mandi_2 = true
+	// var ruang_makan_2 = true
+	// var dapur_2 = true
+	// var kamar = true
+	// var teras = true
+	// var listrik = true
+	// var telpon_fax = true
+	// var air = true
+	// var njop_bumi = true
+	// var njop_bangunan = true
+	// var harga_pasaran_tanah = true
+	// var harga_pasaran_bangunan = true
+	// var keterangan_penilaian = true
+	// var nilai_taksasi_persen = true
+	// var sumber_harga = true
+	// var faktor_yang_dapat_menaikan = true
+	// var faktor_yang_dapat_menurunkan = true
 
-	var team_survey = true
-	var penyimpangan = true
-	var vertifikasi_data_debitur = true
-	var vertifikasi_penjamin = true
-	var vertifikasi_jaminan = true
-	var analisa_kredit_checking = true
-	var ket_calon_debitur = true
-	var comment_analisa = true
-	var hasil_cek_lingk = true
-	var hasil_cek_aspek_kuantitatif = true
+	// var team_survey = true
+	// var penyimpangan = true
+	// var vertifikasi_data_debitur = true
+	// var vertifikasi_penjamin = true
+	// var vertifikasi_jaminan = true
+	// var analisa_kredit_checking = true
+	// var ket_calon_debitur = true
+	// var comment_analisa = true
+	// var hasil_cek_lingk = true
+	// var hasil_cek_aspek_kuantitatif = true
 
-	var Subject = true
-	var foto_jaminan = true
-	var lampiran_caa = true
+	// var Subject = true
+	// var foto_jaminan = true
+	// var lampiran_caa = true
 
-	jml_tanggungan = checkEmpty('input[name=jml_tanggungan]')
-	alamat_sekarang = checkSelect('select[name=alamat_sekarang]')
-	nama_tempat_kerja = checkEmpty('input[name=nama_tempat_kerja]')
-	posisi = checkEmpty('input[name=posisi]')
-	jenis_usaha_debitur = checkEmpty('input[name=jenis_usaha_debitur]')
-	alamat_usaha_debitur = checkEmpty('input[name=alamat_usaha_debitur]')
-	masa_kerja_debitur = checkEmpty('input[name=masa_kerja_debitur]')
-	no_telp_kerja_debitur = checkEmpty('input[name=no_telp_kerja_debitur]')
+	// jml_tanggungan = checkEmpty('input[name=jml_tanggungan]')
+	// alamat_sekarang = checkSelect('select[name=alamat_sekarang]')
+	// nama_tempat_kerja = checkEmpty('input[name=nama_tempat_kerja]')
+	// posisi = checkEmpty('input[name=posisi]')
+	// jenis_kerja_debitur = checkEmpty('input[name=jenis_kerja_debitur]')
+	// alamat_kerja_debitur = checkEmpty('input[name=alamat_kerja_debitur]')
+	// masa_kerja_debitur = checkEmpty('input[name=masa_kerja_debitur]')
+	// no_telp_kerja_debitur = checkEmpty('input[name=no_telp_kerja_debitur]')
 
-	pengeluaran_lainnya = checkEmpty('input[name=pengeluaran_lainnya]')
-	pendapatan_tunai = checkEmpty('input[name=pendapatan_tunai]')
-	pendapatan_kredit = checkEmpty('input[name=pendapatan_kredit]')
-	pengeluaran_sewa = checkEmpty('input[name=pengeluaran_sewa]')
-	pengeluaran_belanja = checkEmpty('input[name=pengeluaran_belanja]')
-	pengeluaran_gaji_pegawai = checkEmpty('input[name=pengeluaran_gaji_pegawai]')
-	angsuran_lain_usaha = checkEmpty('input[name=angsuran_lain_usaha]')
-	pengeluaran_lain_usaha = checkEmpty('input[name=pengeluaran_lain_usaha]')
-	pengeluaran_telp_listrik_air = checkEmpty('input[name=pengeluaran_telp_listrik_air]')
-	catatan = checkEmpty('textarea[name=catatan]')
+	// pengeluaran_lainnya = checkEmpty('input[name=pengeluaran_lainnya]')
+	// pendapatan_tunai = checkEmpty('input[name=pendapatan_tunai]')
+	// pendapatan_kredit = checkEmpty('input[name=pendapatan_kredit]')
+	// pengeluaran_sewa = checkEmpty('input[name=pengeluaran_sewa]')
+	// pengeluaran_belanja = checkEmpty('input[name=pengeluaran_belanja]')
+	// pengeluaran_gaji_pegawai = checkEmpty('input[name=pengeluaran_gaji_pegawai]')
+	// angsuran_lain_usaha = checkEmpty('input[name=angsuran_lain_usaha]')
+	// pengeluaran_lain_usaha = checkEmpty('input[name=pengeluaran_lain_usaha]')
+	// pengeluaran_telp_listrik_air = checkEmpty('input[name=pengeluaran_telp_listrik_air]')
+	// catatan = checkEmpty('textarea[name=catatan]')
 
-	pusat_keramaian = checkEmpty('textarea[name=pusat_keramaian]')
-	jarak_keramaian = checkEmpty('textarea[name=jarak_keramaian]')
+	// pusat_keramaian = checkEmpty('textarea[name=pusat_keramaian]')
+	// jarak_keramaian = checkEmpty('textarea[name=jarak_keramaian]')
 
-	fasilitas_umum = checkEmpty('textarea[name=fasilitas_umum]')
-  luas_tanah_ca = checkEmpty('input[name=luas_tanah_ca]')
-	luas_tanah_njop = checkEmpty('input[name=luas_tanah_njop]')
-  luas_bangunan_ca = checkEmpty('input[name=luas_bangunan_ca]')
-	luas_bangunan_njop = checkEmpty('input[name=luas_bangunan_njop]')
-  kondisi_bentuk_tanah = checkEmpty('textarea[name=kondisi_bentuk_tanah]')
-	dibangun_tahun = checkEmpty('input[name=dibangun_tahun]')
-	kegunaan_bangunan = checkEmpty('input[name=kegunaan_bangunan]')
-	penguasaan_tanah_bangunan = checkEmpty('input[name=penguasaan_tanah_bangunan]')
-	kondisi_fisik_bangunan = checkEmpty('input[name=kondisi_fisik_bangunan]')
+	// fasilitas_umum = checkEmpty('textarea[name=fasilitas_umum]')
+  // luas_tanah_ca = checkEmpty('input[name=luas_tanah_ca]')
+	// luas_tanah_njop = checkEmpty('input[name=luas_tanah_njop]')
+  // luas_bangunan_ca = checkEmpty('input[name=luas_bangunan_ca]')
+	// luas_bangunan_njop = checkEmpty('input[name=luas_bangunan_njop]')
+  // kondisi_bentuk_tanah = checkEmpty('textarea[name=kondisi_bentuk_tanah]')
+	// dibangun_tahun = checkEmpty('input[name=dibangun_tahun]')
+	// kegunaan_bangunan = checkEmpty('input[name=kegunaan_bangunan]')
+	// penguasaan_tanah_bangunan = checkEmpty('input[name=penguasaan_tanah_bangunan]')
+	// kondisi_fisik_bangunan = checkEmpty('input[name=kondisi_fisik_bangunan]')
 
-	sebelah_utara = checkEmpty('input[name=sebelah_utara]')
-	sebelah_selatan = checkEmpty('input[name=sebelah_selatan]')
-	sebelah_timur = checkEmpty('input[name=sebelah_timur]')
-	sebelah_barat = checkEmpty('input[name=sebelah_barat]')
+	// sebelah_utara = checkEmpty('input[name=sebelah_utara]')
+	// sebelah_selatan = checkEmpty('input[name=sebelah_selatan]')
+	// sebelah_timur = checkEmpty('input[name=sebelah_timur]')
+	// sebelah_barat = checkEmpty('input[name=sebelah_barat]')
 
-	jalan_depan = checkEmpty('input[name=jalan_depan]')
-	jalan_lingkungan_terbesar = checkEmpty('input[name=jalan_lingkungan_terbesar]')
-	kontruksi = checkEmpty('input[name=kontruksi]')
-	lantai = checkEmpty('input[name=lantai]')
-	dinding = checkEmpty('input[name=dinding]')
-	kusen = checkEmpty('input[name=kusen]')
-	pintu = checkEmpty('input[name=pintu]')
-	jendela = checkEmpty('input[name=jendela]')
-	kuda_kuda = checkEmpty('input[name=kuda_kuda]')
-	rangkap_atap = checkEmpty('input[name=rangkap_atap]')
-	langit_langit = checkEmpty('input[name=langit_langit]')
-	atap = checkEmpty('input[name=atap]')
-	pagar = checkEmpty('input[name=pagar]')
-	ruang_tamu = checkEmpty('input[name=ruang_tamu]')
-	kamar_mandi = checkEmpty('input[name=kamar_mandi]')
-	ruang_makan = checkEmpty('input[name=ruang_makan]')
-	dapur = checkEmpty('input[name=dapur]')
-	kamar_pembantu = checkEmpty('input[name=kamar_pembantu]')
-	teras = checkEmpty('input[name=teras]')
-	kamar_tidur = checkEmpty('input[name=kamar_tidur]')
-	garasi = checkEmpty('input[name=garasi]')
-	ruang_keluarga = checkEmpty('input[name=ruang_keluarga]')
-	kamar_mandi_2 = checkEmpty('input[name=kamar_mandi_2]')
-	ruang_makan_2 = checkEmpty('input[name=ruang_makan_2]')
-	dapur_2 = checkEmpty('input[name=dapur_2]')
-	kamar = checkEmpty('input[name=kamar]')
-	teras = checkEmpty('input[name=teras]')
-	listrik = checkEmpty('input[name=listrik]')
-	telpon_fax = checkEmpty('input[name=telpon_fax]')
-	air = checkEmpty('input[name=air]')
-	njop_bumi = checkEmpty('input[name=njop_bumi]')
-	njop_bangunan = checkEmpty('input[name=njop_bangunan]')
-	harga_pasaran_tanah = checkEmpty('input[name=harga_pasaran_tanah]')
-	harga_pasaran_bangunan = checkEmpty('input[name=harga_pasaran_bangunan]')
-	keterangan_penilaian = checkEmpty('textarea[name=keterangan_penilaian]')
-	nilai_taksasi_persen = checkEmpty('input[name=nilai_taksasi_persen]')
-	sumber_harga = checkEmpty('textarea[name=sumber_harga]')
-	faktor_yang_dapat_menaikan = checkEmpty('textarea[name=faktor_yang_dapat_menaikan]')
-	faktor_yang_dapat_menurunkan = checkEmpty('textarea[name=faktor_yang_dapat_menurunkan]')
+	// jalan_depan = checkEmpty('input[name=jalan_depan]')
+	// jalan_lingkungan_terbesar = checkEmpty('input[name=jalan_lingkungan_terbesar]')
+	// kontruksi = checkEmpty('input[name=kontruksi]')
+	// lantai = checkEmpty('input[name=lantai]')
+	// dinding = checkEmpty('input[name=dinding]')
+	// kusen = checkEmpty('input[name=kusen]')
+	// pintu = checkEmpty('input[name=pintu]')
+	// jendela = checkEmpty('input[name=jendela]')
+	// kuda_kuda = checkEmpty('input[name=kuda_kuda]')
+	// rangkap_atap = checkEmpty('input[name=rangkap_atap]')
+	// langit_langit = checkEmpty('input[name=langit_langit]')
+	// atap = checkEmpty('input[name=atap]')
+	// pagar = checkEmpty('input[name=pagar]')
+	// ruang_tamu = checkEmpty('input[name=ruang_tamu]')
+	// kamar_mandi = checkEmpty('input[name=kamar_mandi]')
+	// ruang_makan = checkEmpty('input[name=ruang_makan]')
+	// dapur = checkEmpty('input[name=dapur]')
+	// kamar_pembantu = checkEmpty('input[name=kamar_pembantu]')
+	// teras = checkEmpty('input[name=teras]')
+	// kamar_tidur = checkEmpty('input[name=kamar_tidur]')
+	// garasi = checkEmpty('input[name=garasi]')
+	// ruang_keluarga = checkEmpty('input[name=ruang_keluarga]')
+	// kamar_mandi_2 = checkEmpty('input[name=kamar_mandi_2]')
+	// ruang_makan_2 = checkEmpty('input[name=ruang_makan_2]')
+	// dapur_2 = checkEmpty('input[name=dapur_2]')
+	// kamar = checkEmpty('input[name=kamar]')
+	// teras = checkEmpty('input[name=teras]')
+	// listrik = checkEmpty('input[name=listrik]')
+	// telpon_fax = checkEmpty('input[name=telpon_fax]')
+	// air = checkEmpty('input[name=air]')
+	// njop_bumi = checkEmpty('input[name=njop_bumi]')
+	// njop_bangunan = checkEmpty('input[name=njop_bangunan]')
+	// harga_pasaran_tanah = checkEmpty('input[name=harga_pasaran_tanah]')
+	// harga_pasaran_bangunan = checkEmpty('input[name=harga_pasaran_bangunan]')
+	// keterangan_penilaian = checkEmpty('textarea[name=keterangan_penilaian]')
+	// nilai_taksasi_persen = checkEmpty('input[name=nilai_taksasi_persen]')
+	// sumber_harga = checkEmpty('textarea[name=sumber_harga]')
+	// faktor_yang_dapat_menaikan = checkEmpty('textarea[name=faktor_yang_dapat_menaikan]')
+	// faktor_yang_dapat_menurunkan = checkEmpty('textarea[name=faktor_yang_dapat_menurunkan]')
 
-	team_survey = checkEmpty('textarea[name=team_survey]')
-	penyimpangan = checkEmpty('textarea[name=penyimpangan]')
-	vertifikasi_data_debitur = checkEmpty('textarea[name=vertifikasi_data_debitur]')
-	vertifikasi_penjamin = checkEmpty('textarea[name=vertifikasi_penjamin]')
-	vertifikasi_jaminan = checkEmpty('textarea[name=vertifikasi_jaminan]')
-	analisa_kredit_checking = checkEmpty('textarea[name=analisa_kredit_checking]')
-	ket_calon_debitur = checkEmpty('textarea[name=ket_calon_debitur]')
-	comment_analisa = checkEmpty('textarea[name=comment_analisa]')
-	hasil_cek_lingk = checkEmpty('textarea[name=hasil_cek_lingk]')
-	hasil_cek_aspek_kuantitatif = checkEmpty('textarea[name=hasil_cek_aspek_kuantitatif]')
+	// team_survey = checkEmpty('textarea[name=team_survey]')
+	// penyimpangan = checkEmpty('textarea[name=penyimpangan]')
+	// vertifikasi_data_debitur = checkEmpty('textarea[name=vertifikasi_data_debitur]')
+	// vertifikasi_penjamin = checkEmpty('textarea[name=vertifikasi_penjamin]')
+	// vertifikasi_jaminan = checkEmpty('textarea[name=vertifikasi_jaminan]')
+	// analisa_kredit_checking = checkEmpty('textarea[name=analisa_kredit_checking]')
+	// ket_calon_debitur = checkEmpty('textarea[name=ket_calon_debitur]')
+	// comment_analisa = checkEmpty('textarea[name=comment_analisa]')
+	// hasil_cek_lingk = checkEmpty('textarea[name=hasil_cek_lingk]')
+	// hasil_cek_aspek_kuantitatif = checkEmpty('textarea[name=hasil_cek_aspek_kuantitatif]')
 
-	Subject = checkEmpty('textarea[name=Subject]')
-	foto_jaminan = checkEmpty('input[id=foto_jaminan]')
-	lampiran_caa = checkEmpty('input[id=lampiran]')
+	// Subject = checkEmpty('textarea[name=Subject]')
+	// foto_jaminan = checkEmpty('input[id=foto_jaminan]')
+	// lampiran_caa = checkEmpty('input[id=lampiran]')
 
-		if (jml_tanggungan && alamat_sekarang && nama_tempat_kerja && posisi && jenis_usaha_debitur && alamat_usaha_debitur && masa_kerja_debitur && no_telp_kerja_debitur && pengeluaran_lainnya && pendapatan_tunai && pendapatan_kredit && pengeluaran_sewa && pengeluaran_belanja && pengeluaran_gaji_pegawai && angsuran_lain_usaha && pengeluaran_lain_usaha && pengeluaran_telp_listrik_air && catatan && pusat_keramaian && jarak_keramaian && fasilitas_umum && luas_tanah_ca && kondisi_bentuk_tanah && luas_bangunan_ca && dibangun_tahun && kegunaan_bangunan && penguasaan_tanah_bangunan && kondisi_fisik_bangunan && sebelah_utara && sebelah_selatan && sebelah_timur && sebelah_barat && jalan_depan && jalan_lingkungan_terbesar && kontruksi && lantai && dinding && kusen && pintu && jendela && kuda_kuda && rangkap_atap && langit_langit && atap && pagar && ruang_tamu && kamar_mandi && ruang_makan && dapur && kamar_pembantu && teras && kamar_tidur && garasi && ruang_keluarga && kamar_mandi_2 && ruang_makan_2 && dapur_2 && kamar && teras && listrik && telpon_fax && air && njop_bumi && njop_bangunan && harga_pasaran_tanah && harga_pasaran_bangunan && keterangan_penilaian && nilai_taksasi_persen && sumber_harga && faktor_yang_dapat_menaikan && faktor_yang_dapat_menurunkan && team_survey && penyimpangan && vertifikasi_data_debitur && vertifikasi_penjamin && vertifikasi_jaminan && analisa_kredit_checking && ket_calon_debitur && comment_analisa && hasil_cek_lingk && hasil_cek_aspek_kuantitatif && Subject && foto_jaminan && lampiran_caa) {
+	// 	if (jml_tanggungan && alamat_sekarang && nama_tempat_kerja && posisi && jenis_kerja_debitur && alamat_kerja_debitur && masa_kerja_debitur && no_telp_kerja_debitur && pengeluaran_lainnya && pendapatan_tunai && pendapatan_kredit && pengeluaran_sewa && pengeluaran_belanja && pengeluaran_gaji_pegawai && angsuran_lain_usaha && pengeluaran_lain_usaha && pengeluaran_telp_listrik_air && catatan && pusat_keramaian && jarak_keramaian && fasilitas_umum && luas_tanah_ca && kondisi_bentuk_tanah && luas_bangunan_ca && dibangun_tahun && kegunaan_bangunan && penguasaan_tanah_bangunan && kondisi_fisik_bangunan && sebelah_utara && sebelah_selatan && sebelah_timur && sebelah_barat && jalan_depan && jalan_lingkungan_terbesar && kontruksi && lantai && dinding && kusen && pintu && jendela && kuda_kuda && rangkap_atap && langit_langit && atap && pagar && ruang_tamu && kamar_mandi && ruang_makan && dapur && kamar_pembantu && teras && kamar_tidur && garasi && ruang_keluarga && kamar_mandi_2 && ruang_makan_2 && dapur_2 && kamar && teras && listrik && telpon_fax && air && njop_bumi && njop_bangunan && harga_pasaran_tanah && harga_pasaran_bangunan && keterangan_penilaian && nilai_taksasi_persen && sumber_harga && faktor_yang_dapat_menaikan && faktor_yang_dapat_menurunkan && team_survey && penyimpangan && vertifikasi_data_debitur && vertifikasi_penjamin && vertifikasi_jaminan && analisa_kredit_checking && ket_calon_debitur && comment_analisa && hasil_cek_lingk && hasil_cek_aspek_kuantitatif && Subject && foto_jaminan && lampiran_caa) {
+	// 		addMemoCa(data)
+	// 	}
 			addMemoCa(data)
-		}
-			//addMemoCa(data)
 	})
 
 
