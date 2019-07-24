@@ -115,12 +115,12 @@
 				paramsID2.val(id_order)
 				paramsID3.val(id_calon_debitur)
 				$('#modal').modal('toggle')
-				 setTimeout(function () {
-				 	load()
-				 	$('#tamplate').val('views/content/form/add-memo-kredit-ao.php')
-				 	$('#app').load('views/content/form/add-memo-kredit-ao.php')
-				 },500)
-				//checkOrder(id_order)
+				//  setTimeout(function () {
+				//  	load()
+				//  	$('#tamplate').val('views/content/form/add-memo-kredit-ao.php')
+				//  	$('#app').load('views/content/form/add-memo-kredit-ao.php')
+				//  },500)
+				checkOrder(id_order)
 		})
 
 		'use strict'
