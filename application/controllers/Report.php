@@ -983,7 +983,7 @@ class Report extends CI_Controller {
  		';
         $pdf->SetFont('times','',10);
 		$pdf->MultiCell(163,5,$ketcalondebitur,'L R B','L',false);
-
+         
 		$debitur = $this->business->DataReportMemoAo($id_order)->row();
 		//print_r($debitur);die();
 		$pdf->SetFont('times','B',9);
@@ -1007,17 +1007,25 @@ class Report extends CI_Controller {
 			Plafond Kredit       : Rp. '.number_format($debitur->plafon_kredit, 2, ".", ".").'
 			Jangka Waktu        : '.$debitur->jangka_waktu.' bulan
 			Suku Bunga           : '.$debitur->suku_bunga.'% p.m.flat
-			Pby Bunga /bln      : Rp. 2.000.000/BELUM DINAMIS
+			
 			Akad Kredit           : '.$debitur->akad_kredit.'
 			Akad Jaminan        : '.$debitur->akad_jaminan.'
  		';
+        //Pby Bunga /bln      : Rp. 2.000.000/BELUM DINAMIS
         $pdf->SetFont('times','',10);
 		$pdf->MultiCell(163,5,$fasilitas_kredit,'L R B','L',false);
 
 		$total_pend = $debitur->gaji_debitur+$debitur->gaji_pasangan+$debitur->gaji_penjamin;
 		$total_pengeluaran =$debitur->pengeluaran_rumah_tangga+$debitur->pengeluaran_transportasi+$debitur->pengeluaran_pendidikan+$debitur->angsuran_lain+$debitur->pengeluaran_lainya;
 		$Disposible = $total_pend - $total_pengeluaran;
-		$pdf->SetFont('times','B',9);
+		
+        // if(strlen($lainlain->ket_calon_debitur_ca) > 550){
+        //     $pdf->AddPage();
+        //     $pdf->Cell(10,6,'',0,1);
+        //     $pdf->Cell(10,6,'',0,1);
+        // }
+
+        $pdf->SetFont('times','B',9);
         $pdf->Cell(163,6,'    KAPASITAS(BULANAN)',1,0);
         $pdf->Cell(10,6,'',0,1);
         $pdf->SetFont('times','',10);
@@ -1040,7 +1048,7 @@ class Report extends CI_Controller {
  		';
 
 		$pdf->SetFont('times','',10);
-		$pdf->MultiCell(163,5,$keadaan_bangunan,'L R B','L',false);
+		$pdf->MultiCell(163,5,$kapasitas,'L R B','L',false);
 
 
 		$pdf->AddPage();

@@ -1884,6 +1884,7 @@ class Home extends CI_Controller {
 	public function edit_data_order($id_order)
 	{
 		$where = array('id' => $id_order);
+		$where2 = array('id_order' => $id_order);
 		$data = array(
 	    	'kode_ao' => $this->input->post('ao'),
 	    	'kode_mitra' => 1, // belum dinamis
@@ -1899,6 +1900,18 @@ class Home extends CI_Controller {
 			'kode_kantor' => $this->input->post('kantor'),
 		);
 
+		$data_ao = array(
+			'plafon_kredit' => str_replace(".","",$this->input->post('plafond')),
+			'jangka_waktu' => $this->input->post('tenor')
+		);
+
+		$data_ca = array(
+			'realisasi' => str_replace(".","",$this->input->post('plafond')),
+			'tenor' => $this->input->post('tenor')
+		);
+
+		$this->business->update_data('los_memo_kredit_ao',$data_ao,$where2);
+		$this->business->update_data('los_memo_kredit_ca_lain_lain',$data_ca,$where2);
 		$queryeditorder = $this->business->update_data('los_order',$data,$where);
 
 		if ($queryeditorder) {
@@ -3314,7 +3327,6 @@ class Home extends CI_Controller {
 		}
 	}
 
-
 	public function AddMemoKreditCa($value='')
 	{
 		$dataMemoCa = array(
@@ -3357,6 +3369,7 @@ class Home extends CI_Controller {
 			'pengeluaran_gaji_pegawai' => str_replace(".","",$this->input->post('pengeluaran_gaji_pegawai')),
 			'angsuran_lain_usaha' => str_replace(".","",$this->input->post('angsuran_lain_usaha')),
 			'pengeluaran_lainya_usaha' => str_replace(".","",$this->input->post('pengeluaran_lain_usaha')),
+			'pengeluaran_telp_listrik_air' => str_replace(".","",$this->input->post('pengeluaran_telp_listrik_air')),
 			'luas_tanah_ca' => $this->input->post('luas_tanah_ca'),
 			'luas_tanah_njop' => $this->input->post('luas_tanah_njop'),
 			'kondisi_bentuk_tanah' => $this->input->post('kondisi_bentuk_tanah'),
@@ -3384,8 +3397,6 @@ class Home extends CI_Controller {
 			'faktor_menaikan' => $this->input->post('faktor_yang_dapat_menaikan'),
 			'faktor_menurunkan' => $this->input->post('faktor_yang_dapat_menurunkan'),
 		);
-		
-		print_r($dataMemoCa);die();
 		
 		$dataMemoCaBangunan = array(
 			'id_order' => rawurldecode($this->uri->segment(7)),
@@ -3589,8 +3600,8 @@ class Home extends CI_Controller {
 	public function AddMemoKreditCaKendaraan($value='')
 	{
 		$dataMemoCa = array(
-			'id_order' => $this->input->post('id_order'),
-			'id_calon_debitur' => $this->input->post('id_calon_debitur'),
+			'id_order' => rawurldecode($this->uri->segment(7)),
+			'id_calon_debitur' => rawurldecode($this->uri->segment(8)),
 			'no_aplikasi' => $this->input->post('no_aplikasi_ca'),
 			'jaminan_utama' => $this->input->post('jaminan_utama_ca'),
 			'sumber_informasi' => $this->input->post('sumber_informasi_ca'),
@@ -3609,10 +3620,17 @@ class Home extends CI_Controller {
 			'pekerjaan_debitur' => $this->input->post('pekerjaan_debitur'),
 			'nama_tempat_kerja' => $this->input->post('nama_tempat_kerja'),
 			'posisi' => $this->input->post('posisi'),
-			'jenis_usaha_debitur' => $this->input->post('jenis_usaha_debitur'),
-			'alamat_usaha_debitur' => $this->input->post('alamat_usaha_debitur'),
+			'jenis_usaha_debitur' => $this->input->post('jenis_kerja_debitur'),
+			'alamat_usaha_debitur' => $this->input->post('alamat_kerja_debitur'),
 			'masa_kerja_debitur' => $this->input->post('masa_kerja_debitur'),
 			'no_telp_kerja_debitur' => $this->input->post('no_telp_kerja_debitur'),
+			'usaha_debitur' => $this->input->post('usaha_debitur'),
+			'nama_tempat_usaha' => $this->input->post('nama_tempat_usaha'),
+			'jenis_usaha' => $this->input->post('jenis_usaha'),
+			'alamat_tempat_usaha' => $this->input->post('alamat_tempat_usaha'),
+			'masa_usaha' => $this->input->post('masa_usaha'),
+			'no_telp_usaha' => $this->input->post('no_telp_usaha'),
+			'tempat_usaha' => $this->input->post('tempat_usaha'),
 			'pengeluaran_lainya' => str_replace(".","",$this->input->post('pengeluaran_lainnya')),
 			'pendapatan_tunai' => str_replace(".","",$this->input->post('pendapatan_tunai')),
 			'pendapatan_kredit' => str_replace(".","",$this->input->post('pendapatan_kredit')),
@@ -3621,6 +3639,33 @@ class Home extends CI_Controller {
 			'pengeluaran_gaji_pegawai' => str_replace(".","",$this->input->post('pengeluaran_gaji_pegawai')),
 			'angsuran_lain_usaha' => str_replace(".","",$this->input->post('angsuran_lain_usaha')),
 			'pengeluaran_lainya_usaha' => str_replace(".","",$this->input->post('pengeluaran_lain_usaha')),
+			'pengeluaran_telp_listrik_air' => str_replace(".","",$this->input->post('pengeluaran_telp_listrik_air')),
+			'luas_tanah_ca' => $this->input->post('luas_tanah_ca'),
+			'luas_tanah_njop' => $this->input->post('luas_tanah_njop'),
+			'kondisi_bentuk_tanah' => $this->input->post('kondisi_bentuk_tanah'),
+			'luas_bangunan_ca' => $this->input->post('luas_bangunan_ca'),
+			'luas_bangunan_njop' => $this->input->post('luas_bangunan_njop'),
+			'dibangun_tahun' => $this->input->post('dibangun_tahun'),
+			'kegunaan_bangunan' => $this->input->post('kegunaan_bangunan'),
+			'penguasaan_tanah_bangunan' => $this->input->post('penguasaan_tanah_bangunan'),
+			'kondisi_fisik' => $this->input->post('kondisi_fisik_bangunan'),
+			'sebelah_utara' => $this->input->post('sebelah_utara'),
+			'sebelah_selatan' => $this->input->post('sebelah_selatan'),
+			'sebelah_timur' => $this->input->post('sebelah_timur'),
+			'sebelah_barat' => $this->input->post('sebelah_barat'),
+			'jalan_didepan' => $this->input->post('jalan_depan'),
+			'jalan_lingkungan_terbesar' => $this->input->post('jalan_lingkungan_terbesar'),
+			'fasilitas_umum' => $this->input->post('fasilitas_umum'),
+			'tahun_njop' => $this->input->post('tahun_njop'),
+			'njop_tanah' => str_replace(".","",$this->input->post('njop_bumi')),
+			'njop_bangunan' => str_replace(".","",$this->input->post('njop_bangunan')),
+			'harga_pasar_tanah' => str_replace(".","",$this->input->post('harga_pasaran_tanah')),
+			'harga_pasar_bangunan' => str_replace(".","",$this->input->post('harga_pasaran_bangunan')),
+			'keterangan_penilaian' => $this->input->post('keterangan_penilaian'),
+			'nilai_taksasi' => $this->input->post('nilai_taksasi_persen'),
+			'sumber_harga' => $this->input->post('sumber_harga'),
+			'faktor_menaikan' => $this->input->post('faktor_yang_dapat_menaikan'),
+			'faktor_menurunkan' => $this->input->post('faktor_yang_dapat_menurunkan'),
 		);
 
 		$VerifikasiDataCa = array(
@@ -3750,6 +3795,7 @@ class Home extends CI_Controller {
 			'ket_return' => null,
 			'flg_notif' => '0',
 		);
+
 		$whereTrack = array('id_order' => $this->input->post('id_order'));
 		$dataTracking = array(
 			'desc_memo_ca' => 'Memo CA Telah Selesai',

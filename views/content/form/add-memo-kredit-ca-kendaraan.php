@@ -261,6 +261,88 @@
               </div>
             </div>
           </div><hr><br>
+           <b class="card-description">
+            Usaha
+          </b><br><br>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text" name="usaha_debitur" placeholder="Masukan Usaha Debitur" id="usaha_debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+             <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Nama Tempat Usaha</label>
+                <div class="col-sm-8">
+                  <input type="text" style="margin-left: 15%; width: 80%;" name="nama_tempat_usaha" placeholder="Masukan Nama Tempat Kerja" id="nama_tempat_usaha" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Posisi</label>
+                <div class="col-sm-9">
+                  <input type="text" placeholder="Masukan Posisi" id="posisi" class="form-control" value="PEMILIK USAHA" readonly> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Jenis Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="jenis_usaha" id="jenis_usaha" placeholder="Masukan Jenis Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Alamat Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="alamat_tempat_usaha" id="alamat_tempat_usaha" placeholder="Masukan Alamat Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Masa Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="masa_usaha" id="masa_usaha" placeholder="Masukan Masa Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Nomor Telepon Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="no_telp_usaha" id="no_telp_usaha" placeholder="Masukan Nomor Telepon Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Tempat Usaha</label>
+                <div class="col-sm-9">
+                <select class="form-control" name="tempat_usaha" id="tempat_usaha" style="margin-left: -5%; width: 105%;">
+                  <option>MILIK SENDIRI</option>
+                  <option>SEWA</option>
+                </select>
+                </div>
+              </div>
+            </div>
+          </div><hr><br>
           <b class="card-description">
             Keuangan Debitur
           </b><br><br>
@@ -1593,98 +1675,98 @@ $(document).ready(function () {
 	$('#form-memo-kredit-ca').submit(function (e) {
 	e.preventDefault()
 	var data = new FormData(this)
-	var jml_tanggungan = true
-	var alamat_sekarang = true
-	var nama_tempat_kerja = true
-	var posisi = true
-	var jenis_usaha_debitur = true
-	var alamat_usaha_debitur = true
-	var masa_kerja_debitur = true
-	var no_telp_kerja_debitur = true
+	// var jml_tanggungan = true
+	// var alamat_sekarang = true
+	// var nama_tempat_kerja = true
+	// var posisi = true
+	// var jenis_usaha_debitur = true
+	// var alamat_usaha_debitur = true
+	// var masa_kerja_debitur = true
+	// var no_telp_kerja_debitur = true
 
-	var pengeluaran_lainnya = true
-	var pendapatan_tunai = true
-	var pendapatan_kredit = true
-	var pengeluaran_sewa = true
-	var pengeluaran_belanja = true
-	var pengeluaran_gaji_pegawai = true
-	var angsuran_lain_usaha = true
-	var pengeluaran_lain_usaha = true
-	var pengeluaran_telp_listrik_air = true
-	var catatan = true
+	// var pengeluaran_lainnya = true
+	// var pendapatan_tunai = true
+	// var pendapatan_kredit = true
+	// var pengeluaran_sewa = true
+	// var pengeluaran_belanja = true
+	// var pengeluaran_gaji_pegawai = true
+	// var angsuran_lain_usaha = true
+	// var pengeluaran_lain_usaha = true
+	// var pengeluaran_telp_listrik_air = true
+	// var catatan = true
 
-	var masa_berlaku_stnk = true
-	var masa_berlaku_pajak = true
+	// var masa_berlaku_stnk = true
+	// var masa_berlaku_pajak = true
 
-	var kondisi_mesin_hidup = true
-	var perlengkapan_yang_ada = true
+	// var kondisi_mesin_hidup = true
+	// var perlengkapan_yang_ada = true
 
-	var team_survey = true
-	var penyimpangan = true
-	var vertifikasi_data_debitur = true
-	var vertifikasi_penjamin = true
-	var vertifikasi_jaminan = true
-	var analisa_kredit_checking = true
-	var ket_calon_debitur = true
-	var comment_analisa = true
-	var hasil_cek_lingk = true
-	var hasil_cek_aspek_kuantitatif = true
+	// var team_survey = true
+	// var penyimpangan = true
+	// var vertifikasi_data_debitur = true
+	// var vertifikasi_penjamin = true
+	// var vertifikasi_jaminan = true
+	// var analisa_kredit_checking = true
+	// var ket_calon_debitur = true
+	// var comment_analisa = true
+	// var hasil_cek_lingk = true
+	// var hasil_cek_aspek_kuantitatif = true
 
-	var Subject = true
-	var foto_jaminan = true
-	var lampiran_caa = true
+	// var Subject = true
+	// var foto_jaminan = true
+	// var lampiran_caa = true
 
-	jml_tanggungan = checkEmpty('input[name=jml_tanggungan]')
-	alamat_sekarang = checkSelect('select[name=alamat_sekarang]')
-	nama_tempat_kerja = checkEmpty('input[name=nama_tempat_kerja]')
-	posisi = checkEmpty('input[name=posisi]')
-	jenis_usaha_debitur = checkEmpty('input[name=jenis_usaha_debitur]')
-	alamat_usaha_debitur = checkEmpty('input[name=alamat_usaha_debitur]')
-	masa_kerja_debitur = checkEmpty('input[name=masa_kerja_debitur]')
-	no_telp_kerja_debitur = checkEmpty('input[name=no_telp_kerja_debitur]')
+	// jml_tanggungan = checkEmpty('input[name=jml_tanggungan]')
+	// alamat_sekarang = checkSelect('select[name=alamat_sekarang]')
+	// nama_tempat_kerja = checkEmpty('input[name=nama_tempat_kerja]')
+	// posisi = checkEmpty('input[name=posisi]')
+	// jenis_usaha_debitur = checkEmpty('input[name=jenis_usaha_debitur]')
+	// alamat_usaha_debitur = checkEmpty('input[name=alamat_usaha_debitur]')
+	// masa_kerja_debitur = checkEmpty('input[name=masa_kerja_debitur]')
+	// no_telp_kerja_debitur = checkEmpty('input[name=no_telp_kerja_debitur]')
 
-	pengeluaran_lainnya = checkEmpty('input[name=pengeluaran_lainnya]')
-	pendapatan_tunai = checkEmpty('input[name=pendapatan_tunai]')
-	pendapatan_kredit = checkEmpty('input[name=pendapatan_kredit]')
-	pengeluaran_sewa = checkEmpty('input[name=pengeluaran_sewa]')
-	pengeluaran_belanja = checkEmpty('input[name=pengeluaran_belanja]')
-	pengeluaran_gaji_pegawai = checkEmpty('input[name=pengeluaran_gaji_pegawai]')
-	angsuran_lain_usaha = checkEmpty('input[name=angsuran_lain_usaha]')
-	pengeluaran_lain_usaha = checkEmpty('input[name=pengeluaran_lain_usaha]')
-	pengeluaran_telp_listrik_air = checkEmpty('input[name=pengeluaran_telp_listrik_air]')
-	catatan = checkEmpty('textarea[name=catatan]')
+	// pengeluaran_lainnya = checkEmpty('input[name=pengeluaran_lainnya]')
+	// pendapatan_tunai = checkEmpty('input[name=pendapatan_tunai]')
+	// pendapatan_kredit = checkEmpty('input[name=pendapatan_kredit]')
+	// pengeluaran_sewa = checkEmpty('input[name=pengeluaran_sewa]')
+	// pengeluaran_belanja = checkEmpty('input[name=pengeluaran_belanja]')
+	// pengeluaran_gaji_pegawai = checkEmpty('input[name=pengeluaran_gaji_pegawai]')
+	// angsuran_lain_usaha = checkEmpty('input[name=angsuran_lain_usaha]')
+	// pengeluaran_lain_usaha = checkEmpty('input[name=pengeluaran_lain_usaha]')
+	// pengeluaran_telp_listrik_air = checkEmpty('input[name=pengeluaran_telp_listrik_air]')
+	// catatan = checkEmpty('textarea[name=catatan]')
 
-	masa_berlaku_stnk = checkEmpty('input[name=masa_berlaku_stnk]')
-	masa_berlaku_pajak = checkEmpty('input[name=masa_berlaku_pajak]')
+	// masa_berlaku_stnk = checkEmpty('input[name=masa_berlaku_stnk]')
+	// masa_berlaku_pajak = checkEmpty('input[name=masa_berlaku_pajak]')
 
-	kondisi_mesin_hidup  = checkEmpty('textarea[name=kondisi_mesin_hidup]')
-	perlengkapan_yang_ada  = checkEmpty('textarea[name=perlengkapan_yang_ada]')
+	// kondisi_mesin_hidup  = checkEmpty('textarea[name=kondisi_mesin_hidup]')
+	// perlengkapan_yang_ada  = checkEmpty('textarea[name=perlengkapan_yang_ada]')
 
-	sumber1 = checkEmpty('input[name=sumber1]')
-	harga1 = checkEmpty('input[name=harga1]')
-	sumber2 = checkEmpty('input[name=sumber2]')
-	harga2 = checkEmpty('input[name=harga2]')
-	kesimpulan_penilaian  = checkEmpty('textarea[name=kesimpulan_penilaian]')
+	// sumber1 = checkEmpty('input[name=sumber1]')
+	// harga1 = checkEmpty('input[name=harga1]')
+	// sumber2 = checkEmpty('input[name=sumber2]')
+	// harga2 = checkEmpty('input[name=harga2]')
+	// kesimpulan_penilaian  = checkEmpty('textarea[name=kesimpulan_penilaian]')
 
-	team_survey = checkEmpty('textarea[name=team_survey]')
-	penyimpangan = checkEmpty('textarea[name=penyimpangan]')
-	vertifikasi_data_debitur = checkEmpty('textarea[name=vertifikasi_data_debitur]')
-	vertifikasi_penjamin = checkEmpty('textarea[name=vertifikasi_penjamin]')
-	vertifikasi_jaminan = checkEmpty('textarea[name=vertifikasi_jaminan]')
-	analisa_kredit_checking = checkEmpty('textarea[name=analisa_kredit_checking]')
-	ket_calon_debitur = checkEmpty('textarea[name=ket_calon_debitur]')
-	comment_analisa = checkEmpty('textarea[name=comment_analisa]')
-	hasil_cek_lingk = checkEmpty('textarea[name=hasil_cek_lingk]')
-	hasil_cek_aspek_kuantitatif = checkEmpty('textarea[name=hasil_cek_aspek_kuantitatif]')
+	// team_survey = checkEmpty('textarea[name=team_survey]')
+	// penyimpangan = checkEmpty('textarea[name=penyimpangan]')
+	// vertifikasi_data_debitur = checkEmpty('textarea[name=vertifikasi_data_debitur]')
+	// vertifikasi_penjamin = checkEmpty('textarea[name=vertifikasi_penjamin]')
+	// vertifikasi_jaminan = checkEmpty('textarea[name=vertifikasi_jaminan]')
+	// analisa_kredit_checking = checkEmpty('textarea[name=analisa_kredit_checking]')
+	// ket_calon_debitur = checkEmpty('textarea[name=ket_calon_debitur]')
+	// comment_analisa = checkEmpty('textarea[name=comment_analisa]')
+	// hasil_cek_lingk = checkEmpty('textarea[name=hasil_cek_lingk]')
+	// hasil_cek_aspek_kuantitatif = checkEmpty('textarea[name=hasil_cek_aspek_kuantitatif]')
 
-	Subject = checkEmpty('textarea[name=Subject]')
-	foto_jaminan = checkEmpty('input[id=foto_jaminan]')
-	lampiran_caa = checkEmpty('input[id=lampiran]')
+	// Subject = checkEmpty('textarea[name=Subject]')
+	// foto_jaminan = checkEmpty('input[id=foto_jaminan]')
+	// lampiran_caa = checkEmpty('input[id=lampiran]')
 
-	if (jml_tanggungan && alamat_sekarang && nama_tempat_kerja && posisi && jenis_usaha_debitur && alamat_usaha_debitur && masa_kerja_debitur && no_telp_kerja_debitur && pengeluaran_lainnya && pendapatan_tunai && pendapatan_kredit && pengeluaran_sewa && pengeluaran_belanja && pengeluaran_gaji_pegawai && angsuran_lain_usaha && pengeluaran_lain_usaha && pengeluaran_telp_listrik_air && catatan && masa_berlaku_stnk && masa_berlaku_pajak && kondisi_mesin_hidup && perlengkapan_yang_ada && sumber1 && harga1 && sumber2 && harga2 && kesimpulan_penilaian && team_survey && penyimpangan && vertifikasi_data_debitur && vertifikasi_penjamin && vertifikasi_jaminan && analisa_kredit_checking && ket_calon_debitur && comment_analisa && hasil_cek_lingk && hasil_cek_aspek_kuantitatif && Subject && foto_jaminan && lampiran_caa) {
+	// if (jml_tanggungan && alamat_sekarang && nama_tempat_kerja && posisi && jenis_usaha_debitur && alamat_usaha_debitur && masa_kerja_debitur && no_telp_kerja_debitur && pengeluaran_lainnya && pendapatan_tunai && pendapatan_kredit && pengeluaran_sewa && pengeluaran_belanja && pengeluaran_gaji_pegawai && angsuran_lain_usaha && pengeluaran_lain_usaha && pengeluaran_telp_listrik_air && catatan && masa_berlaku_stnk && masa_berlaku_pajak && kondisi_mesin_hidup && perlengkapan_yang_ada && sumber1 && harga1 && sumber2 && harga2 && kesimpulan_penilaian && team_survey && penyimpangan && vertifikasi_data_debitur && vertifikasi_penjamin && vertifikasi_jaminan && analisa_kredit_checking && ket_calon_debitur && comment_analisa && hasil_cek_lingk && hasil_cek_aspek_kuantitatif && Subject && foto_jaminan && lampiran_caa) {
+	// addMemoCa(data)
+	// }
 	addMemoCa(data)
-	}
-	//addMemoCa(data)
 	})
 
 
