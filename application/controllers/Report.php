@@ -522,7 +522,7 @@ class Report extends CI_Controller {
 			Produk                   : '.$debitur->produk.'
 			Plafond Kredit       : Rp. '.number_format($debitur->plafon_kredit, 2, ".", ".").'
 			Jangka Waktu        : '.$debitur->jangka_waktu.' bulan
-			Suku Bunga           : '.$debitur->suku_bunga.'% p.m.flat
+			Suku Bunga           : '.$debitur->suku_bunga.'%
 			Akad Kredit           : '.$debitur->akad_kredit.'
 			Akad Jaminan        : '.$debitur->akad_jaminan.'
 
@@ -1006,7 +1006,7 @@ class Report extends CI_Controller {
 			Produk                   : '.$debitur->produk.'
 			Plafond Kredit       : Rp. '.number_format($debitur->plafon_kredit, 2, ".", ".").'
 			Jangka Waktu        : '.$debitur->jangka_waktu.' bulan
-			Suku Bunga           : '.$debitur->suku_bunga.'% p.m.flat
+			Suku Bunga           : '.$debitur->suku_bunga.'%
 			
 			Akad Kredit           : '.$debitur->akad_kredit.'
 			Akad Jaminan        : '.$debitur->akad_jaminan.'
