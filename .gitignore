@@ -1,16 +1,16 @@
 .DS_Store
 
-application/config/config.php
+/application/config/config.php
 
 application/cache/*
-!application/cache/index.html
+!/application/cache/index.html
 
 application/logs/*
 !application/logs/index.html
 
 !application/*/.htaccess
 /assets/
-lib/js/url.js
+/lib/js/url.js
 composer.lock
 
 user_guide_src/build/*
