@@ -1884,6 +1884,7 @@ class Home extends CI_Controller {
 	public function edit_data_order($id_order)
 	{
 		$where = array('id' => $id_order);
+		$where2 = array('id_order' => $id_order);
 		$data = array(
 	    	'kode_ao' => $this->input->post('ao'),
 	    	'kode_mitra' => 1, // belum dinamis
@@ -1899,6 +1900,18 @@ class Home extends CI_Controller {
 			'kode_kantor' => $this->input->post('kantor'),
 		);
 
+		$data_ao = array(
+			'plafon_kredit' => str_replace(".","",$this->input->post('plafond')),
+			'jangka_waktu' => $this->input->post('tenor')
+		);
+
+		$data_ca = array(
+			'realisasi' => str_replace(".","",$this->input->post('plafond')),
+			'tenor' => $this->input->post('tenor')
+		);
+
+		$this->business->update_data('los_memo_kredit_ao',$data_ao,$where2);
+		$this->business->update_data('los_memo_kredit_ca_lain_lain',$data_ca,$where2);
 		$queryeditorder = $this->business->update_data('los_order',$data,$where);
 
 		if ($queryeditorder) {
