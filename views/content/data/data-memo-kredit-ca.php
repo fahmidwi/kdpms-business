@@ -115,23 +115,24 @@
 				paramsID2.val(id_calon_debitur)
 				paramsID3.val(id_kredit_checking)
 				$('#modal').modal('toggle')
-				// if (jaminan == 'SERTIFIKAT') {
-				// 	 setTimeout(function () {
-				// 	 	load()
-				// 	 	$('#tamplate').val('views/content/form/add-memo-kredit-ca.php')
-				// 	 	$('#app').load('views/content/form/add-memo-kredit-ca.php')
-				// 	 },500)
-				// 	//checkOrder(id_order,jaminan)
-				// }else if (jaminan == 'BPKB'){
-				// 	//	alert('ANGUNAN KENDARAAN# FITUR SEDANG DALAM PROSES PERBAIKAN')
-				// 	load()
-				// 	 setTimeout(function () {
-				// 	 	load()
-				// 	 	$('#tamplate').val('views/content/form/add-memo-kredit-ca-kendaraan.php')
-				// 	 	$('#app').load('views/content/form/add-memo-kredit-ca-kendaraan.php')
-				// 	 },500)
-					checkOrder(id_order,jaminan)
-				}
+				// // if (jaminan == 'SERTIFIKAT') {
+				// // 	 setTimeout(function () {
+				// // 	 	load()
+				// // 	 	$('#tamplate').val('views/content/form/add-memo-kredit-ca.php')
+				// // 	 	$('#app').load('views/content/form/add-memo-kredit-ca.php')
+				// // 	 },500)
+				// // 	//checkOrder(id_order,jaminan)
+				// // }else if (jaminan == 'BPKB'){
+				// // 	//	alert('ANGUNAN KENDARAAN# FITUR SEDANG DALAM PROSES PERBAIKAN')
+				// // 	load()
+				// // 	 setTimeout(function () {
+				// // 	 	load()
+				// // 	 	$('#tamplate').val('views/content/form/add-memo-kredit-ca-kendaraan.php')
+				// // 	 	$('#app').load('views/content/form/add-memo-kredit-ca-kendaraan.php')
+				// // 	 },500)
+				// 	checkOrder(id_order,jaminan)
+				// }
+				checkOrder (id_order,jaminan)
 		})
 		function checkOrder (id_order,jaminan) {
 			$.ajax({
