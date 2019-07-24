@@ -3384,7 +3384,9 @@ class Home extends CI_Controller {
 			'faktor_menaikan' => $this->input->post('faktor_yang_dapat_menaikan'),
 			'faktor_menurunkan' => $this->input->post('faktor_yang_dapat_menurunkan'),
 		);
+		
 		print_r($dataMemoCa);die();
+		
 		$dataMemoCaBangunan = array(
 			'id_order' => rawurldecode($this->uri->segment(7)),
 			'kontruksi' => $this->input->post('kontruksi'),
