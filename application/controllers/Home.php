@@ -3172,6 +3172,8 @@ class Home extends CI_Controller {
 			'pengeluaran_pendidikan' => str_replace(".","",$this->input->post('pengeluaran_pendidikan')),
 			'pengeluaran_lainya' => str_replace(".","",$this->input->post('pengeluaran_lainnya')),
 			'angsuran_lain' => str_replace(".","",$this->input->post('angsuran_lain')),
+			'angsuran_kdpms' => str_replace(".","",$this->input->post('angsuran_kdpms')),
+			'pendapatan_lainnya' => str_replace(".","",$this->input->post('penghasilan_lainnya')),
 			'hasil_cek_lingkungan' => $this->input->post('hasil_cek_lingkungan'),
 			'vertifikasi_data_debitur' => $this->input->post('vertifikasi_data_debitur'),
 			'ket_calon_debitur' => $this->input->post('ket_calon_debitur'),

@@ -249,6 +249,26 @@
 	                      </div>
 	                    </div>
 	                  </div>
+	                  <div class="row">
+	                    <div class="col-md-12">
+	                      <div class="form-group row">
+	                        <label class="col-sm-3 col-form-label">Angsuran KDPMS</label>
+	                        <div class="col-sm-9">
+	                          <input type="text" class="form-control" name="angsuran_kdpms" id="angsuran_kdpms" onkeydown="return numbersonly(this, event)" onkeyup="javascript:tandaPemisahTitik(this)" placeholder="Masukan Angsuran KDPMS" style="margin-left: -5%; width: 105%;"/>
+	                        </div>
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="row">
+	                    <div class="col-md-12">
+	                      <div class="form-group row">
+	                        <label class="col-sm-3 col-form-label">Penghasilan Lainnya</label>
+	                        <div class="col-sm-9">
+	                          <input type="text" class="form-control" name="penghasilan_lainnya" id="penghasilan_lainnya" onkeydown="return numbersonly(this, event)" onkeyup="javascript:tandaPemisahTitik(this)" placeholder="Masukan Penghasilan Lainnya" style="margin-left: -5%; width: 105%;"/>
+	                        </div>
+	                      </div>
+	                    </div>
+	                  </div>
 										<hr><br>
                       <b class="card-description">
                       Fasilitas
@@ -294,7 +314,6 @@
 				              <b class="card-description">
 				                Sertifikat
 				              </b><br><br>
-				             <input type="hidden" name="status_ser" id="status_ser">
 				             <div class="row">
 				                <div class="col-md-6">
 				                  <div class="form-group row">
@@ -322,53 +341,67 @@
 				                    </div>
 				                  </div>
 				                </div>
+                        <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Nomor Sertifikat</label>
+                            <div class="col-sm-8">
+                              <input type="number" class="form-control" name="no_sertifikat" id="no_sertifikat" placeholder="Masukan Nomor Sertifikat" style="margin-left: -5%; width: 100%;" />
+                            </div>
+                          </div>
+                        </div>
+                        
 				              </div>
 				              <div class="row">
-				                <div class="col-md-12">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Nomor Sertifikat</label>
-				                    <div class="col-sm-9">
-				                      <input type="number" class="form-control" name="no_sertifikat" id="no_sertifikat" placeholder="Masukan Nomor Sertifikat" style="margin-left: -5%; width: 105%;" />
-				                    </div>
-				                  </div>
-				                </div>
-				              </div>
-				              <div class="row">
+				                
 				                <div class="col-md-6">
 				                  <div class="form-group row">
-				                    <label class="col-sm-4 col-form-label">Tanggal Sertifikat</label>
+				                    <label class="col-sm-4 col-form-label">Jenis Sertifikat</label>
 				                    <div class="col-sm-8">
-				                      <input type="date" name="tgl_sertifikat" class="form-control" id="tgl_sertifikat" style="margin-left: 15%; width: 80%;">
-				                    </div>
-				                  </div>
-				                </div>
-				                <div class="col-md-6">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Jenis Sertifikat</label>
-				                    <div class="col-sm-9">
 				                     <div id="opt-jenis-sertifikat"></div>
 				                    </div>
 				                  </div>
 				                </div>
+                        <div class="col-md-6">
+                        <div id="shgb">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Masa Berlaku SHGB</label>
+                            <div class="col-sm-8">
+                              <input type="date" name="masa_berlaku_shgb" class="form-control" placeholder="Masukan Pekerjaan" id="masa_berlaku_shgb" style="margin-left: -5%; width: 105%;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 				              </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Alamat Sertifikat</label>
+                            <div class="col-sm-9">
+                              <textarea class="form-control" type="text" name="alamat" id="alamat" placeholder="Masukan Alamat" style="margin-left: -5%; width: 105%;"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 											<div class="row">
-												<div class="col-md-6">
-													<div class="form-group row">
-														<label class="col-sm-4 col-form-label">Tanggal Surat Ukur</label>
-														<div class="col-sm-8">
-															<input type="date" placeholder="Masukan Nomor Surat Ukur"  style="margin-left: 15%; width: 80%;" class="form-control" name="tgl_surat_ukur" id="tgl_surat_ukur" />
-														</div>
-													</div>
-												</div>
-												<div class="col-md-6">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Nomor Surat Ukur</label>
-				                    <div class="col-sm-9">
-				                      <input type="text" placeholder="Masukan Nomor Surat Ukur" class="form-control" name="no_surat_ukur" id="no_surat_ukur" />
-				                    </div>
-				                  </div>
-				                </div>
-											</div>
+                        <div class="col-md-12">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Atas Nama</label>
+                            <div class="col-sm-9">
+                              <input class="form-control" type="text" name="atas_nama" id="atas_nama" placeholder="Masukan Atas Nama"  style="margin-left: -5%; width: 105%;"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row"> 
+                      <div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Tanggal Sertifikat</label>
+                            <div class="col-sm-8">
+                              <input type="date" name="tgl_sertifikat" class="form-control" id="tgl_sertifikat" style="margin-left: 15%; width: 80%;">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 				              <!-- <div class="row" id="shm">
 				                <div class="col-md-12">
 				                  <div class="form-group row">
@@ -379,16 +412,25 @@
 				                  </div>
 				                </div>
 				              </div> -->
-				              <div class="row" id="shgb">
-				                <div class="col-md-6">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Masa Berlaku SHGB</label>
-				                    <div class="col-sm-9">
-				                      <input type="date" name="masa_berlaku_shgb" class="form-control" placeholder="Masukan Pekerjaan" id="masa_berlaku_shgb">
-				                    </div>
-				                  </div>
-				                </div>
-				              </div>
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group row">
+														<label class="col-sm-4 col-form-label">Tanggal Surat Ukur</label>
+														<div class="col-sm-8">
+															<input type="date" placeholder="Masukan Nomor Surat Ukur"  style="margin-left: 15%; width: 80%;" class="form-control" name="tgl_surat_ukur" id="tgl_surat_ukur" />
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Nomor Surat Ukur</label>
+                            <div class="col-sm-8">
+                              <input type="text" placeholder="Masukan Nomor Surat Ukur"   class="form-control" name="no_surat_ukur" id="no_surat_ukur" style="margin-left: -5%; width: 105%;" />
+                            </div>
+                          </div>
+                        </div>
+											</div>
+				              
 				              <div class="row" id="ajb">
 				                <div class="col-md-6">
 				                  <div class="form-group row">
@@ -417,26 +459,7 @@
 				                  </div>
 				                </div>
 				              </div>
-				              <div class="row">
-				                <div class="col-md-12">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Atas Nama</label>
-				                    <div class="col-sm-9">
-				                      <input class="form-control" type="text" name="atas_nama" id="atas_nama" placeholder="Masukan Atas Nama"  style="margin-left: -5%; width: 105%;"/>
-				                    </div>
-				                  </div>
-				                </div>
-				              </div>
-				              <div class="row">
-				                <div class="col-md-12">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Alamat</label>
-				                    <div class="col-sm-9">
-				                      <textarea class="form-control" type="text" name="alamat" id="alamat" placeholder="Masukan Alamat" style="margin-left: -5%; width: 105%;"></textarea>
-				                    </div>
-				                  </div>
-				                </div>
-				              </div>
+				              
 				              <div class="row">
 				                <div class="col-md-6">
 				                  <div class="form-group row">
@@ -451,6 +474,17 @@
 				                    <label class="col-sm-3 col-form-label">Luas Bangunan</label>
 				                    <div class="col-sm-9">
 				                      <input class="form-control" type="number" placeholder="Masukan Luas Bangunan" id="luas_bangunan" name="luas_bangunan" />
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+                      
+				              <div class="row">
+				                <div class="col-md-12">
+				                  <div class="form-group row">
+				                    <label class="col-sm-3 col-form-label">Kondisi Bangunan</label>
+				                    <div class="col-sm-9">
+				                      <textarea class="form-control" name="kondisi_bangunan" name="kondisi_bangunan" style="margin-left: -5%; width: 105%;" placeholder="Masukan Kondisi Bangunan"></textarea>
 				                    </div>
 				                  </div>
 				                </div>
@@ -488,60 +522,12 @@
 				              <!-- <div class="row">
 				                <div class="col-md-6">
 				                  <div class="form-group row">
-				                    <label class="col-sm-4 col-form-label">Masa Berlaku SHGB</label>
-				                    <div class="col-sm-8">
-				                      <input type="date" class="form-control"  style="margin-left: 15%; width: 80%;" name="masa_berlaku_shgb" id="masa_berlaku_shgb" />
-				                    </div>
-				                  </div>
-				                </div>
-				              </div>
-				              <div class="row">
-				                <div class="col-md-6">
-				                  <div class="form-group row">
-				                    <label class="col-sm-4 col-form-label">Nomor AJB</label>
-				                    <div class="col-sm-8">
-				                      <input type="number" placeholder="Masukan Nomor AJB"  style="margin-left: 15%; width: 80%;" class="form-control" name="no_ajb" id="no_ajb" />
-				                    </div>
-				                  </div>
-				                </div>
-				                <div class="col-md-6">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Tanggal AJB</label>
-				                    <div class="col-sm-9">
-				                      <input type="date" name="tgl_ajb" class="form-control" placeholder="Masukan Pekerjaan" id="tgl_ajb">
-				                    </div>
-				                  </div>
-				                </div>
-				              </div>
-				              <div class="row">
-				                <div class="col-md-12">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Nomor Surat Ukur</label>
-				                    <div class="col-sm-9">
-				                      <input type="number" class="form-control" name="no_surat_ukur" id="no_surat_ukur" placeholder="Masukan Nomor Surat Ukur" style="margin-left: -5%; width: 105%;"/>
-				                    </div>
-				                  </div>
-				                </div>
-				              </div> -->
-				              <div class="row">
-				                <div class="col-md-12">
-				                  <div class="form-group row">
-				                    <label class="col-sm-3 col-form-label">Kondisi Bangunan</label>
-				                    <div class="col-sm-9">
-				                      <textarea class="form-control" name="kondisi_bangunan" id="kondisi_bangunan" style="margin-left: -5%; width: 105%;" placeholder="Masukan Kondisi Bangunan"></textarea>
-				                    </div>
-				                  </div>
-				                </div>
-				              </div>
-				              <!-- <div class="row">
-				                <div class="col-md-6">
-				                  <div class="form-group row">
 				                    <label class="col-sm-4 col-form-label">Nilai Taksasi</label>
 				                    <div class="col-sm-8">
 				                      <input type="text"  style="margin-left: 15%; width: 80%; placeholder="Masukan Nilai Taksasi" id="nilai_taksasi" class="form-control" name="nilai_taksasi"/>
 				                    </div>
 				                  </div>
-												</div>
+				                </div>
 				                <div class="col-md-6">
 				                  <div class="form-group row">
 				                    <label class="col-sm-3 col-form-label">Nilai NJOP</label>
@@ -560,11 +546,12 @@
 				                    </div>
 				                  </div>
 				                </div>
-				         			 </div> -->
+				          		</div> -->
 				        </div>
 					      </div><hr>
 				      </div>
 				    </div>
+
 	          <div id="col-kendaraan">
 				      <div class="col-12 grid-margin">
 	              <div class="card">
@@ -573,6 +560,65 @@
 	                      Kendaraan
 	                    </b><br><br>
 	                   <input type="hidden" name="status_ken" id="status_ken">
+	                   <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Kepemilikan</label>
+                            <div class="col-sm-9">
+	                            <div id="opt-kepemilikan-ken"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+	                      <div class="col-md-12">
+	                        <div class="form-group row">
+	                          <label class="col-sm-3 col-form-label">Penggunaan</label>
+	                          <div class="col-sm-9">
+	                            <div id="opt-penggunaan-ken"></div>
+	                          </div>
+	                        </div>
+	                      </div>
+	                    </div>
+	                    <div class="row">
+	                      <div class="col-md-6">
+	                        <div class="form-group row">
+	                          <label class="col-sm-4 col-form-label">Nomor STNK</label>
+	                          <div class="col-sm-8">
+	                            <input type="text" style="margin-left: 15%; width: 80%;" placeholder="Masukan Nomor STNK" class="form-control" name="no_stnk_kendaraaan" id="no_stnk" >
+	                          </div>
+	                        </div>
+	                      </div>
+	                      <div class="col-md-6">
+	                        <div class="form-group row">
+	                          <label class="col-sm-3 col-form-label">Nomor Polisi</label>
+	                          <div class="col-sm-9">
+	                            <input type="text" placeholder="Masukan Nomor Polisi" class="form-control" name="no_polisi_kendaraaan" id="no_polisi" >
+	                          </div>
+	                        </div>
+	                      </div>
+	                    </div>
+
+	                    <div class="row">
+	                      <div class="col-md-12">
+	                        <div class="form-group row">
+	                          <label class="col-sm-3 col-form-label">Atas Nama</label>
+	                          <div class="col-sm-9">
+	                            <input class="form-control" type="text" name="atas_nama_kendaraan" id="atas_nama_kendaraan" placeholder="Masukan Atas Nama" style="margin-left: -5%; width: 105%;"/>
+	                          </div>
+	                        </div>
+	                      </div>
+	                    </div>
+	                    <div class="row">
+	                      <div class="col-md-12">
+	                        <div class="form-group row">
+	                          <label class="col-sm-3 col-form-label">Alamat BPKB</label>
+	                          <div class="col-sm-9">
+	                            <textarea class="form-control" type="text" name="alamat_bpkb_kendaraan" id="alamat_bpkb" placeholder="Masukan Alamat BPKB" style="margin-left: -5%; width: 105%;"></textarea>
+	                          </div>
+	                        </div>
+	                      </div>
+	                    </div>
 	                   <div class="row">
 	                      <div class="col-md-6">
 	                        <div class="form-group row">
@@ -602,11 +648,19 @@
 	                      </div>
 	                    </div>
 	                    <div class="row">
-	                      <div class="col-md-12">
+	                      <div class="col-md-6">
 	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Kepemilikan</label>
+	                          <label class="col-sm-4 col-form-label">Tahun</label>
+	                          <div class="col-sm-8">
+	                            <input type="number" style="margin-left: 15%; width: 80%;" placeholder="Masukan Tahun" class="form-control" name="tahun_kendaraan" id="tahun_kendaraan" >
+	                          </div>
+	                        </div>
+	                      </div>
+	                      <div class="col-md-6">
+	                        <div class="form-group row">
+	                          <label class="col-sm-3 col-form-label">Warna</label>
 	                          <div class="col-sm-9">
-	                            <div id="opt-kepemilikan-ken"></div>
+	                            <input type="text" placeholder="Masukan Warna" class="form-control" name="warna_kendaraan" id="warna_kendaraan" >
 	                          </div>
 	                        </div>
 	                      </div>
@@ -614,9 +668,9 @@
 	                    <div class="row">
 	                      <div class="col-md-12">
 	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Penggunaan</label>
+	                          <label class="col-sm-3 col-form-label">Tanggal Expired Pajak</label>
 	                          <div class="col-sm-9">
-	                            <div id="opt-penggunaan-ken"></div>
+	                            <input type="date" class="form-control" name="tgl_exp_pajak_kendaraaan"  id="tgl_exp_pajak" style="margin-left: -5%; width: 105%;"/>
 	                          </div>
 	                        </div>
 	                      </div>
@@ -624,9 +678,9 @@
 	                    <div class="row">
 	                      <div class="col-md-12">
 	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Atas Nama</label>
+	                          <label class="col-sm-3 col-form-label">Tanggal Expired STNK</label>
 	                          <div class="col-sm-9">
-	                            <input class="form-control" type="text" name="atas_nama_kendaraan" id="atas_nama_kendaraan" placeholder="Masukan Atas Nama" style="margin-left: -5%; width: 105%;"/>
+	                            <input type="date" class="form-control" name="tgl_exp_stnk_kendaraaan" id="tgl_exp_stnk_kendaraaan" style="margin-left: -5%; width: 105%;"/>
 	                          </div>
 	                        </div>
 	                      </div>
@@ -634,9 +688,57 @@
 	                    <div class="row">
 	                      <div class="col-md-12">
 	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Alamat BPKB</label>
+	                          <label class="col-sm-3 col-form-label">Nomor BPKB</label>
 	                          <div class="col-sm-9">
-	                            <textarea class="form-control" type="text" name="alamat_bpkb_kendaraan" id="alamat_bpkb" placeholder="Masukan Alamat BPKB" style="margin-left: -5%; width: 105%;"></textarea>
+	                            <input type="text" placeholder="Masukan Nomor BPKB" class="form-control" name="no_bpkb_kendaraaan" id="no_bpkb" style="margin-left: -5%; width: 105%;"/>
+	                          </div>
+	                        </div>
+	                      </div>
+	                    </div>
+	                    <div class="row">
+	                      <div class="col-md-6">
+	                        <div class="form-group row">
+	                          <label class="col-sm-4 col-form-label">Nomor Rangka</label>
+	                          <div class="col-sm-8">
+	                            <input type="text" style="margin-left: 15%; width: 80%;" placeholder="Masukan Nomor Rangka" class="form-control" name="no_rangka_kendaraaan"  id="no_rangka" >
+	                          </div>
+	                        </div>
+	                      </div>
+	                      <div class="col-md-6">
+	                        <div class="form-group row">
+	                          <label class="col-sm-3 col-form-label">Nomor Mesin</label>
+	                          <div class="col-sm-9">
+	                            <input type="text" placeholder="Masukan Nomor Mesin" class="form-control" name="no_mesin_kendaraaan" id="no_mesin">
+	                          </div>
+	                        </div>
+	                      </div>
+	                    </div>
+	                    <div class="row">
+	                      <div class="col-md-12">
+	                        <div class="form-group row">
+	                          <label class="col-sm-3 col-form-label">Nomor Faktur</label>
+	                          <div class="col-sm-9">
+	                            <input type="text" placeholder="Masukan Nomor Faktur" id="no_faktur" style="margin-left: -5%; width: 105%;" class="form-control" name="no_faktur" >
+	                          </div>
+	                        </div>
+	                      </div>
+	                    </div>
+	                    <div class="row">
+	                      <div class="col-md-12">
+	                        <div class="form-group row">
+	                          <label class="col-sm-3 col-form-label">Silinder</label>
+	                          <div class="col-sm-9">
+	                            <input type="number" placeholder="Masukan Silinder" id="silinder" style="margin-left: -5%; width: 105%;" class="form-control" name="silinder_kendaraan" >
+	                          </div>
+	                        </div>
+	                      </div>
+	                    </div>
+	                    <div class="row">
+	                      <div class="col-md-12">
+	                        <div class="form-group row">
+	                          <label class="col-sm-3 col-form-label">Nilai Taksasi</label>
+	                          <div class="col-sm-9">
+	                            <input type="number" placeholder="Masukan Nilai Taksasi" id="nilai_taksasi_kendaraan" style="margin-left: -5%; width: 105%;" class="form-control" name="nilai_taksasi_kendaraan" >
 	                          </div>
 	                        </div>
 	                      </div>
@@ -701,120 +803,11 @@
 	                        </div>
 	                      </div>
 	                    </div>
-	                    <div class="row">
-	                      <div class="col-md-12">
-	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Tanggal Expired Pajak</label>
-	                          <div class="col-sm-9">
-	                            <input type="date" class="form-control" name="tgl_exp_pajak_kendaraaan"  id="tgl_exp_pajak" style="margin-left: -5%; width: 105%;"/>
-	                          </div>
-	                        </div>
-	                      </div>
-	                    </div>
-	                    <div class="row">
-	                      <div class="col-md-12">
-	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Tanggal Expired STNK</label>
-	                          <div class="col-sm-9">
-	                            <input type="date" class="form-control" name="tgl_exp_stnk_kendaraaan" id="tgl_exp_stnk_kendaraaan" style="margin-left: -5%; width: 105%;"/>
-	                          </div>
-	                        </div>
-	                      </div>
-	                    </div>
-	                    <div class="row">
-	                      <div class="col-md-12">
-	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Nomor BPKB</label>
-	                          <div class="col-sm-9">
-	                            <input type="text" placeholder="Masukan Nomor BPKB" class="form-control" name="no_bpkb_kendaraaan" id="no_bpkb" style="margin-left: -5%; width: 105%;"/>
-	                          </div>
-	                        </div>
-	                      </div>
-	                    </div>
-	                    <div class="row">
-	                      <div class="col-md-6">
-	                        <div class="form-group row">
-	                          <label class="col-sm-4 col-form-label">Nomor Rangka</label>
-	                          <div class="col-sm-8">
-	                            <input type="text" style="margin-left: 15%; width: 80%;" placeholder="Masukan Nomor Rangka" class="form-control" name="no_rangka_kendaraaan"  id="no_rangka" >
-	                          </div>
-	                        </div>
-	                      </div>
-	                      <div class="col-md-6">
-	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Nomor Mesin</label>
-	                          <div class="col-sm-9">
-	                            <input type="text" placeholder="Masukan Nomor Mesin" class="form-control" name="no_mesin_kendaraaan" id="no_mesin">
-	                          </div>
-	                        </div>
-	                      </div>
-	                    </div>
-	                    <div class="row">
-	                      <div class="col-md-6">
-	                        <div class="form-group row">
-	                          <label class="col-sm-4 col-form-label">Nomor STNK</label>
-	                          <div class="col-sm-8">
-	                            <input type="text" style="margin-left: 15%; width: 80%;" placeholder="Masukan Nomor STNK" class="form-control" name="no_stnk_kendaraaan" id="no_stnk" >
-	                          </div>
-	                        </div>
-	                      </div>
-	                      <div class="col-md-6">
-	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Nomor Polisi</label>
-	                          <div class="col-sm-9">
-	                            <input type="text" placeholder="Masukan Nomor Polisi" class="form-control" name="no_polisi_kendaraaan" id="no_polisi" >
-	                          </div>
-	                        </div>
-	                      </div>
-	                    </div>
-	                    <div class="row">
-	                      <div class="col-md-6">
-	                        <div class="form-group row">
-	                          <label class="col-sm-4 col-form-label">Tahun</label>
-	                          <div class="col-sm-8">
-	                            <input type="number" style="margin-left: 15%; width: 80%;" placeholder="Masukan Tahun" class="form-control" name="tahun_kendaraan" id="tahun_kendaraan" >
-	                          </div>
-	                        </div>
-	                      </div>
-	                      <div class="col-md-6">
-	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Warna</label>
-	                          <div class="col-sm-9">
-	                            <input type="text" placeholder="Masukan Warna" class="form-control" name="warna_kendaraan" id="warna_kendaraan" >
-	                          </div>
-	                        </div>
-	                      </div>
-	                    </div>
-	                    <div class="row">
-	                      <div class="col-md-12">
-	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Nomor Faktur</label>
-	                          <div class="col-sm-9">
-	                            <input type="text" placeholder="Masukan Nomor Faktur" id="no_faktur" style="margin-left: -5%; width: 105%;" class="form-control" name="no_faktur" >
-	                          </div>
-	                        </div>
-	                      </div>
-	                    </div>
-	                    <div class="row">
-	                      <div class="col-md-12">
-	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Silinder</label>
-	                          <div class="col-sm-9">
-	                            <input type="number" placeholder="Masukan Silinder" id="silinder" style="margin-left: -5%; width: 105%;" class="form-control" name="silinder_kendaraan" >
-	                          </div>
-	                        </div>
-	                      </div>
-	                    </div>
-	                    <div class="row">
-	                      <div class="col-md-12">
-	                        <div class="form-group row">
-	                          <label class="col-sm-3 col-form-label">Nilai Taksasi</label>
-	                          <div class="col-sm-9">
-	                            <input type="number" placeholder="Masukan Nilai Taksasi" id="nilai_taksasi_kendaraan" style="margin-left: -5%; width: 105%;" class="form-control" name="nilai_taksasi_kendaraan" >
-	                          </div>
-	                        </div>
-	                      </div>
-	                    </div>
+	                    
+	                    
+	                    
+	                    
+	                    
 	                </div>
 	              </div>
 	            </div>
@@ -982,6 +975,8 @@ $(document).ready(function () {
 					$('#pengeluaran_transport').val(v.pengeluaran_transportasi)
 					$('#pengeluaran_pendidikan').val(v.pengeluaran_pendidikan)
 					$('#pengeluaran_lainnya').val(v.pengeluaran_lainya)
+					$('#angsuran_kdpms').val(v.angsuran_kdpms)
+					$('#penghasilan_lainnya').val(v.pendapatan_lainnya)
 					$('#angsuran_lain').val(v.angsuran_lain)
 					$('#hasil_cek_lingkungan').val(v.hasil_cek_lingkungan)
 					$('#verifikasi_data_debitur').val(v.vertifikasi_data_debitur)
