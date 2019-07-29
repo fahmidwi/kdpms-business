@@ -135,7 +135,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Jenis Usaha Debitur</label>
+									<label class="col-sm-3 col-form-label">Jenis Kerja Debitur</label>
 									<div class="col-sm-8" style="border-bottom: 1px solid grey">
 											<div id="jenis_usaha_debitur_ca">
 											</div>
@@ -146,7 +146,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Alamat Usaha Debitur</label>
+									<label class="col-sm-3 col-form-label">Alamat Kerja Debitur</label>
 									<div class="col-sm-8" style="border-bottom: 1px solid grey">
 											<div id="alamat_usaha_debitur_ca">
 											</div>
@@ -171,6 +171,95 @@
 									<label class="col-sm-3 col-form-label">Nomor Telepon Kerja Debitur</label>
 									<div class="col-sm-8" style="border-bottom: 1px solid grey">
 											<div id="no_telp_kerja_debitur_ca">
+											</div>
+									</div>
+								</div>
+							</div>
+						</div><hr><br>
+						<b class="card-description">
+							Usaha
+						</b><br><br>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Usaha Debitur</label>
+									<div class="col-sm-8" style="border-bottom: 1px solid grey">
+											<div id="usaha_debitur">
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group row">
+									<label class="col-sm-6 col-form-label">Nama Tempat Usaha</label>
+									<div class="col-sm-6"  style="border-bottom: 1px solid grey">
+										<div id="nama_tempat_usaha">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label" style="margin-left: 9%;">Posisi</label>
+									<div class="col-sm-6"  style="border-bottom: 1px solid grey">
+										<div id="poisisi">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Jenis Usaha Debitur</label>
+									<div class="col-sm-8" style="border-bottom: 1px solid grey">
+											<div id="jenis_usaha_debitur">
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Alamat Usaha Debitur</label>
+									<div class="col-sm-8" style="border-bottom: 1px solid grey">
+											<div id="alamat_tempat_usaha">
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Masa Usaha Debitur</label>
+									<div class="col-sm-8" style="border-bottom: 1px solid grey">
+											<div id="masa_usaha_debitur">
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Nomor Telepon Usaha Debitur</label>
+									<div class="col-sm-8" style="border-bottom: 1px solid grey">
+											<div id="no_telp_usaha_debitur">
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group row">
+									<label class="col-sm-3 col-form-label">Tempat Usaha</label>
+									<div class="col-sm-8" style="border-bottom: 1px solid grey">
+											<div id="tempat_usaha">
 											</div>
 									</div>
 								</div>
@@ -1037,7 +1126,6 @@ $(document).ready(function () {
 			},
 			success:function (res) {
 				$.each(res,function(k,v) {
-					console.log(v.calon_debitur)
 					$('#nama_calon_nasabah_ca').html('<p>'+v.calon_debitur+'</p>')
 					$('#no_aplikasi_ca').html('<p>'+v.no_aplikasi+'</p>')
 					$('#jaminan_utama_ca').html('<p>'+v.nama_jenis_jaminan+'</p>')
@@ -1064,6 +1152,15 @@ $(document).ready(function () {
 					$('#angsuran_lain_usaha_ca').html('<p>'+FormatRupiah(v.angsuran_lain_usaha)+'</p>')
 					$('#pengeluaran_lain_usaha_ca').html('<p>'+FormatRupiah(v.pengeluaran_lainya_usaha)+'</p>')
 					$('#pengeluaran_telp_listrik_air_ca').html('<p>'+FormatRupiah(v.pengeluaran_telp_listrik_air)+'</p>')
+					
+					$('#usaha_debitur').html('<p>'+v.usaha_debitur+'</p>')
+					$('#nama_tempat_usaha').html('<p>'+v.nama_tempat_usaha+'</p>')
+					$('#jenis_usaha').html('<p>'+v.jenis_usaha+'</p>')
+					$('#alamat_tempat_usaha').html('<p>'+v.alamat_tempat_usaha+'</p>')
+					console.log(v.alamat_tempat_usaha)
+					$('#masa_usaha').html('<p>'+v.masa_usaha+'</p>')
+					$('#no_telp_usaha').html('<p>'+v.no_telp_usaha+'</p>')
+					$('#tempat_usaha').html('<p>'+v.tempat_usaha+'</p>')
 				})
 			}
 		})

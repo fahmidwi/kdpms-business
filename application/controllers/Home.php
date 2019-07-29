@@ -4026,7 +4026,14 @@ class Home extends CI_Controller {
 			'nilai_taksasi' => $this->input->post('nilai_taksasi_persen'),
 			'sumber_harga' => $this->input->post('sumber_harga'),
 			'faktor_menaikan' => $this->input->post('faktor_yang_dapat_menaikan'),
-			'faktor_menurunkan' => $this->input->post('faktor_yang_dapat_menurunkan')
+			'faktor_menurunkan' => $this->input->post('faktor_yang_dapat_menurunkan'),
+			'usaha_debitur' => $this->input->post('usaha_debitur'),
+			'nama_tempat_usaha' => $this->input->post('nama_tempat_usaha'),
+			'jenis_usaha' => $this->input->post('jenis_usaha'),
+			'alamat_tempat_usaha' => $this->input->post('alamat_tempat_usaha'),
+			'masa_usaha' => $this->input->post('masa_usaha'),
+			'no_telp_usaha' => $this->input->post('no_telp_usaha'),
+			'tempat_usaha' => $this->input->post('tempat_usaha'),
 		);
 
 		$dataMemoCaBangunan = array(
@@ -4158,6 +4165,13 @@ class Home extends CI_Controller {
 			'pengeluaran_gaji_pegawai' => str_replace(".","",$this->input->post('pengeluaran_gaji_pegawai')),
 			'angsuran_lain_usaha' => str_replace(".","",$this->input->post('angsuran_lain_usaha')),
 			'pengeluaran_lainya_usaha' => str_replace(".","",$this->input->post('pengeluaran_lain_usaha')),
+			'usaha_debitur' => $this->input->post('usaha_debitur'),
+			'nama_tempat_usaha' => $this->input->post('nama_tempat_usaha'),
+			'jenis_usaha' => $this->input->post('jenis_usaha'),
+			'alamat_tempat_usaha' => $this->input->post('alamat_tempat_usaha'),
+			'masa_usaha' => $this->input->post('masa_usaha'),
+			'no_telp_usaha' => $this->input->post('no_telp_usaha'),
+			'tempat_usaha' => $this->input->post('tempat_usaha'),
 		);
 
 		$VerifikasiDataCa = array(
