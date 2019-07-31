@@ -235,6 +235,24 @@
                 </div>
                 <div class="col-md-12">
                   <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Angsuran KDPMS</label>
+                    <div class="col-sm-8" style="border-bottom: 1px solid grey">
+                    <div id="angsuran_kdpms">
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Penghasilan Lainnya</label>
+                    <div class="col-sm-8" style="border-bottom: 1px solid grey">
+                    <div id="penghasilan_lainnya">
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Hasil cek Lingkungan</label>
                     <div class="col-sm-8">
                       <textarea class="form-control" readonly style="height:100px;overflow:auto;" id="hasil_cek_lingkungan"></textarea>
@@ -451,7 +469,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-12">
+                <!-- <div class="col-md-12">
                   <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Legalitas</label>
                     <div class="col-sm-8" style="border-bottom: 1px solid grey">
@@ -459,7 +477,7 @@
                     </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="col-md-12">
                   <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Catatan Lainnya</label>
@@ -562,7 +580,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-12">
+               <!--  <div class="col-md-12">
                   <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Kecamatan Bpkb</label>
                     <div class="col-sm-8" style="border-bottom: 1px solid grey">
@@ -588,7 +606,7 @@
                     </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="col-md-12">
                   <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Nilai likuidas</label>
