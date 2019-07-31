@@ -246,7 +246,91 @@
                 </div>
               </div>
             </div>
-          </div><hr><br>
+          </div>
+          <hr><br>
+          <b class="card-description">
+            Usaha
+          </b><br><br>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text" placeholder="Masukan Usaha Debitur" id="usaha_debitur" style="margin-left: -5%; width: 105%;" name="usaha_debitur"/>
+                </div>
+              </div>
+            </div>
+             <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Nama Tempat Usaha</label>
+                <div class="col-sm-8">
+                  <input type="text" style="margin-left: 15%; width: 80%;" name="nama_tempat_usaha" placeholder="Masukan Nama Tempat Kerja" id="nama_tempat_usaha" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Posisi</label>
+                <div class="col-sm-9">
+                  <input type="text" name="posisi" placeholder="Masukan Posisi" id="posisi" class="form-control" value="PEMILIK USAHA" readonly> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Jenis Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="jenis_usaha" id="jenis_usaha" placeholder="Masukan Jenis Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Alamat Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="alamat_tempat_usaha" id="alamat_tempat_usaha" placeholder="Masukan Alamat Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Masa Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="masa_usaha" id="masa_usaha" placeholder="Masukan Masa Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Nomor Telepon Usaha Debitur</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="no_telp_usaha" id="no_telp_usaha" placeholder="Masukan Nomor Telepon Usaha Debitur" style="margin-left: -5%; width: 105%;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Tempat Usaha</label>
+                <div class="col-sm-9">
+                <select class="form-control" name="no_telp_kerja_debitur" id="no_telp_kerja_debitur" style="margin-left: -5%; width: 105%;">
+                  <option>MILIK SENDIRI</option>
+                  <option>SEWA</option>
+                </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr><br>
           <b class="card-description">
             Keuangan Debitur
           </b><br><br>
@@ -1960,6 +2044,14 @@ $(document).ready(function () {
 				$('#sumber_harga').attr('disabled',true).val('Sedang Mengambil Data . . .')
 				$('#faktor_yang_dapat_menaikan').attr('disabled',true).val('Sedang Mengambil Data . . .')
 				$('#faktor_yang_dapat_menurunkan').attr('disabled',true).val('Sedang Mengambil Data . . .')
+
+				$('#usaha_debitur').attr('disabled',true).val('Sedang Mengambil Data . . .')
+				$('#nama_tempat_usaha').attr('disabled',true).val('Sedang Mengambil Data . . .')
+				$('#jenis_usaha').attr('disabled',true).val('Sedang Mengambil Data . . .')
+				$('#alamat_tempat_usaha').attr('disabled',true).val('Sedang Mengambil Data . . .')
+				$('#masa_usaha').attr('disabled',true).val('Sedang Mengambil Data . . .')
+				$('#no_telp_usaha').attr('disabled',true).val('Sedang Mengambil Data . . .')
+				$('#no_telp_kerja_debitur').attr('disabled',true).val('Sedang Mengambil Data . . .')
 			},
 			success:function (res) {
 				$.each(res,function(k,v) {
@@ -2076,6 +2168,15 @@ $(document).ready(function () {
 					$('#sumber_harga').removeAttr('disabled').val(v.sumber_harga)
 					$('#faktor_yang_dapat_menaikan').removeAttr('disabled').val(v.faktor_menaikan)
 					$('#faktor_yang_dapat_menurunkan').removeAttr('disabled').val(v.faktor_menurunkan)
+
+					$('#usaha_debitur').removeAttr('disabled').val(v.usaha_debitur)
+					$('#nama_tempat_usaha').removeAttr('disabled').val(v.nama_tempat_usaha)
+					$('#jenis_usaha').removeAttr('disabled').val(v.jenis_usaha)
+					$('#alamat_tempat_usaha').removeAttr('disabled').val(v.alamat_tempat_usaha)
+					$('#masa_usaha').removeAttr('disabled').val(v.masa_usaha)
+					$('#no_telp_usaha').removeAttr('disabled').val(v.no_telp_usaha)
+					$('#tempat_usaha').removeAttr('disabled').val(v.tempat_usaha)
+					tempatusaha(v.tempat_usaha)
 				})
 			}
 		})
@@ -2661,6 +2762,20 @@ $(document).ready(function () {
 			}
 		})
 		$('#opt-alamat-sekarang').html('<select class="form-control" name="alamat_sekarang" id="alamat_sekarang"><option value="null">Pilih</Option>'+html+'</select>')
+	}
+
+	'use strict'
+	function tempatusaha(tempatusaha) {
+		var tempatusaha = ['MILIK SENDIRI','SEWA']
+		var html = ''
+		$.each(tempatusaha,function(k,v) {
+			if (v == tempatusaha) {
+				html += '<option value="'+v+'" selected>'+v+'</option>'
+			}else{
+				html += '<option value="'+v+'">'+v+'</option>'
+			}
+		})
+		$('#opt-tempat-usaha').html('<select class="form-control" name="tempat_usaha" id="tempat_usaha">'+html+'</select>')
 	}
 
 	$('#opt-propinsi').on('change','#selectPropinsi', function () {
