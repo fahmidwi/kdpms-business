@@ -322,10 +322,7 @@
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Tempat Usaha</label>
                 <div class="col-sm-9">
-                <select class="form-control" name="no_telp_kerja_debitur" id="no_telp_kerja_debitur" style="margin-left: -5%; width: 105%;">
-                  <option>MILIK SENDIRI</option>
-                  <option>SEWA</option>
-                </select>
+                <div id="opt-tempat-usaha"></div>
                 </div>
               </div>
             </div>

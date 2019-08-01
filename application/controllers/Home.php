@@ -4589,6 +4589,8 @@ class Home extends CI_Controller {
 				$toemail = 'putrania1972@gmail.com';//TO AO
 			}else if ($ao_to_email == 'Amirudin') {
 				$toemail = 'muhamadamirudin78@gmail.com';//TO AO
+			}else if ($ao_to_email == 'Bambang Setiawan') {
+				$toemail = 'Faiyzajavier@gmail.com';//TO AO
 			}
 	       	$subject = 'INFO PERSETUJUAN';
 	       	$message = "
