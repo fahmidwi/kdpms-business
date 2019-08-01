@@ -1015,9 +1015,10 @@ class Report extends CI_Controller {
         $pdf->SetFont('times','',10);
 		$pdf->MultiCell(163,5,$fasilitas_kredit,'L R B','L',false);
 
-		$total_pend = $debitur->gaji_debitur+$debitur->gaji_pasangan+$debitur->gaji_penjamin;
-		$total_pengeluaran =$debitur->pengeluaran_rumah_tangga+$debitur->pengeluaran_transportasi+$debitur->pengeluaran_pendidikan+$debitur->angsuran_lain+$debitur->pengeluaran_lainya;
-		$Disposible = $total_pend - $total_pengeluaran;
+		$total_pend = $debitur->gaji_debitur+$debitur->gaji_pasangan+$debitur->gaji_penjamin+$debitur->pendapatan_lainnya;
+		$total_pengeluaran =$debitur->pengeluaran_rumah_tangga+$debitur->pengeluaran_transportasi+$debitur->pengeluaran_pendidikan+$debitur->angsuran_lain+$debitur->pengeluaran_lainya+$debitur->angsuran_kdpms+$ca->pengeluaran_telp_listrik_air;
+        
+        $Disposible = $total_pend - $total_pengeluaran;
 		
         // if(strlen($lainlain->ket_calon_debitur_ca) > 550){
         //     $pdf->AddPage();
@@ -1030,21 +1031,24 @@ class Report extends CI_Controller {
         $pdf->Cell(10,6,'',0,1);
         $pdf->SetFont('times','',10);
         $kapasitas = '
-        	PENDAPATAN
+        PENDAPATAN
 			Cadeb                                : Rp. '.number_format($debitur->gaji_debitur, 2, ".", ".").'
 			Pasangan                           : Rp. '.number_format($debitur->gaji_pasangan, 2, ".", ".").'
 			Penjamin                           : Rp. '.number_format($debitur->gaji_penjamin, 2, ".", ".").'
+			Penghasilan lainnya          : Rp. '.number_format($debitur->pendapatan_lainnya, 2, ".", ".").'
    Total Pendapatan              : Rp. '.number_format($total_pend, 2, ".", ".").'
 
-   			PENGELUARAN
+   		PENGELUARAN
 			Rumah Tangga                  : Rp. '.number_format($debitur->pengeluaran_rumah_tangga, 2, ".", ".").'
 			Transport                           : Rp. '.number_format($debitur->pengeluaran_transportasi, 2, ".", ".").'
-			Pendidikan                         : Rp. '.number_format($debitur->pengeluaran_pendidikan, 2, ".", ".").'
+			Pendidikan                        : Rp. '.number_format($debitur->pengeluaran_pendidikan, 2, ".", ".").'
+			Listrik tlp air                     : Rp. '.number_format($ca->pengeluaran_telp_listrik_air, 2, ".", ".").'
 			Angsuran Lain-Lain          : Rp. '.number_format($debitur->angsuran_lain, 2, ".", ".").'
-			Lainnya                              : Rp. '.number_format($debitur->pengeluaran_lainya, 2, ".", ".").'
+			Angsuran KDPMS            : Rp. '.number_format($debitur->angsuran_kdpms, 2, ".", ".").'
+			Biaya Lainnya                   : Rp. '.number_format($debitur->pengeluaran_lainya, 2, ".", ".").'
 			Total Pengeluaran             : Rp. '.number_format($total_pengeluaran, 2, ".", ".").'
 
-			Disposible Income             : Rp. '.number_format($Disposible, 2, ".", ".").'
+			Sisa pendapatan                : Rp. '.number_format($Disposible, 2, ".", ".").'
  		';
 
 		$pdf->SetFont('times','',10);
@@ -1101,7 +1105,7 @@ class Report extends CI_Controller {
 		$pdf->Cell(163,6,'    BAHAN PERTIMBANGAN PENILAIAN',1,0);
 		$pdf->Cell(10,6,'',0,1);
 		$pdf->SetFont('times','',10);
-		$kapasitas = '
+		$penilaian = '
 		Sumber Informasi dan Besarnya Harga Pasaran Tanah/Bangunan
 
 		Sumber harga 1 :
@@ -1117,7 +1121,7 @@ class Report extends CI_Controller {
 		';
 
     $pdf->SetFont('times','',10);
-		$pdf->MultiCell(163,5,$kapasitas,'L R B','L',false);
+		$pdf->MultiCell(163,5,$penilaian,'L R B','L',false);
 
 		$lainlain = $this->business->get_where('los_memo_kredit_ca_lain_lain',null,null,array('id_order' => $ca->id_order))->row();
 		//print_r($lainlain);die();
