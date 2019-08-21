@@ -1358,7 +1358,7 @@
 							<div class="form-group row">
 								<label class="col-sm-3 col-form-label">Teras</label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" name="teras" id="terasl2" placeholder="Harap Lengkapi" style="margin-left: -5%; width: 105%;"/>
+									<input type="text" class="form-control" name="terasl2" id="terasl2" placeholder="Harap Lengkapi" style="margin-left: -5%; width: 105%;"/>
 								</div>
 							</div>
 						</div>

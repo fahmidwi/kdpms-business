@@ -4062,7 +4062,7 @@ class Home extends CI_Controller {
 			'ruang_makan_l2' => $this->input->post('ruang_makan_2'),
 			'dapur_l2' => $this->input->post('dapur_2'),
 			'kamar_l2' => $this->input->post('kamar'),
-			'teras_l2' => $this->input->post('teras'),
+			'teras_l2' => $this->input->post('terasl2'),
 			'listrik_l2' => $this->input->post('listrik'),
 			'telepon_fax_dll_l2' => $this->input->post('telpon_fax'),
 			'air_l2' => $this->input->post('air')
