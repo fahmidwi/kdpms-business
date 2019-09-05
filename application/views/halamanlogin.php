@@ -71,7 +71,7 @@
                 </div>
                 <div class="text-block text-center my-3">
                   <span class="text-small font-weight-semibold">Aplikasi bisnis</span>
-                  <a href="javascript:void(0)" class="text-black text-small" target="_blank">KDPMS V.1.0.6</a>
+                  <a href="javascript:void(0)" class="text-black text-small" target="_blank">KDPMS V.1.0.8</a>
                 </div>
               </form>
             </div><br>
