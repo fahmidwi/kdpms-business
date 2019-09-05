@@ -339,7 +339,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">Angsuran Lain Usaha</label>
+									<label class="col-sm-3 col-form-label">Angsuran Lain</label>
 									<div class="col-sm-8" style="border-bottom: 1px solid grey">
 											<div id="angsuran_lain_usaha_ca">
 											</div>
@@ -350,7 +350,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="form-group row">
-									<label class="col-sm-3 col-form-label">pengeluaran Lain Usaha</label>
+									<label class="col-sm-3 col-form-label">pengeluaran Lain</label>
 									<div class="col-sm-8" style="border-bottom: 1px solid grey">
 											<div id="pengeluaran_lain_usaha_ca">
 											</div>
