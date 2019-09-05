@@ -44,7 +44,7 @@
           <div class="container-fluid clearfix">
             <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
               <a href="https://dpmsejahtera.com" target="_blank">Koperasi dana pinjaman mandiri sejahtera</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">KDPMS BISNIS V.1.0.6
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">KDPMS BISNIS V.1.0.8
             </span>
           </div>
         </footer>
