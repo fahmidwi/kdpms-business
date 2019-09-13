@@ -890,7 +890,7 @@ class Report extends CI_Controller {
         $ceksurvey = '
    Jenis Hak / Nomor                : /'.$sertifikat->no_sertifikat.'
    Masa Berlaku Hak                : '.$masa_berlaku.'
-   Surat Ukur/Gambar Situasi   : -
+   Surat Ukur/Gambar Situasi   : '.$sertifikat->tgl_surat_ukur.' '.$sertifikat->no_surat_ukur.'
    Nama Pemegang Hak            : '.$sertifikat->atas_nama.'
    IMB                                       : '.$sertifikat->imb.'
    Legalitas                                : '.$sertifikat->legalitas.'
