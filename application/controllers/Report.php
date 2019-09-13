@@ -642,7 +642,7 @@ class Report extends CI_Controller {
  		 ';
         $pdf->Cell(10,6,'',0,1);
         $pdf->SetFont('times','',10);
-		$pdf->MultiCell(163,5,$datadebitur,'L R','L',false);
+		$pdf->MultiCell(163,5,$datadebitur,'L R B','L',false);
 
 		/*$pdf->SetFont('times','B',9);
         $pdf->Cell(163,6,'    DATA PEKERJAAN CALON DEBITUR',1,0);
@@ -741,7 +741,11 @@ class Report extends CI_Controller {
 			$rekening_tabungan = 'SUDAH';
 		}else{
 			$rekening_tabungan = 'BELUM';
-		}
+        }
+        
+        $pdf->AddPage();
+        $pdf->Cell(10,6,'',0,1);
+        $pdf->Cell(10,6,'',0,1);
 		$pdf->SetFont('times','B',9);
         $pdf->Cell(163,6,'    VERIFIKASI DATA',1,0);
         $pdf->Cell(10,6,'',0,1);
@@ -814,9 +818,6 @@ class Report extends CI_Controller {
 			$cek_lingkungan = 'TIDAK SESUAI';
 		}
 
-		$pdf->AddPage();
-        $pdf->Cell(10,6,'',0,1);
-        $pdf->Cell(10,6,'',0,1);
 		$pdf->SetFont('times','B',9);
         $pdf->Cell(163,6,'    CEK PADA SAAT SURVEY',1,0);
         $pdf->Cell(10,6,'',0,1);
@@ -879,7 +880,9 @@ class Report extends CI_Controller {
 		}else if ($sertifikat->jenis_sertifikat == 'SHMRS') {
         	$masa_berlaku = $sertifikat->masa_berlaku_shmrs;
 		}
-
+        $pdf->AddPage();
+        $pdf->Cell(10,6,'',0,1);
+        $pdf->Cell(10,6,'',0,1);
         $pdf->SetFont('times','B',9);
         $pdf->Cell(163,6,'    Aspek Hukum Kepemilikan Tanah Dan Batas Batas',1,0);
         $pdf->Cell(10,6,'',0,1);
@@ -900,9 +903,9 @@ class Report extends CI_Controller {
         $pdf->SetFont('times','',10);
         $pdf->MultiCell(163,5,$ceksurvey,'L R B','L',false);
 
-        $pdf->AddPage();
-        $pdf->Cell(10,6,'',0,1);
-        $pdf->Cell(10,6,'',0,1);
+        // $pdf->AddPage();
+        // $pdf->Cell(10,6,'',0,1);
+        // $pdf->Cell(10,6,'',0,1);
 
 
         $pdf->SetFont('times','B',9);
@@ -935,8 +938,12 @@ class Report extends CI_Controller {
         ';
         $pdf->SetFont('times','',10);
         $pdf->MultiCell(163,5,$keadaan_bangunan,'L R B','L',false);
+        
+        $pdf->AddPage();
+        $pdf->Cell(10,6,'',0,1);
+        $pdf->Cell(10,6,'',0,1);
 
-         $pdf->SetFont('times','B',9);
+        $pdf->SetFont('times','B',9);
         $pdf->Cell(163,6,'    Fasilitas Bangunan / Situasi Rumah',1,0);
         $pdf->Cell(10,6,'',0,1);
         $pdf->SetFont('times','',10);
@@ -970,9 +977,9 @@ class Report extends CI_Controller {
 
 		$lainlain = $this->business->get_where('los_memo_kredit_ca_lain_lain',null,null,array('id_order' => $ca->id_order))->row();
 		//print_r($lainlain);die();
-        $pdf->AddPage();
-        $pdf->Cell(10,6,'',0,1);
-        $pdf->Cell(10,6,'',0,1);
+        // $pdf->AddPage();
+        // $pdf->Cell(10,6,'',0,1);
+        // $pdf->Cell(10,6,'',0,1);
 
 		$pdf->SetFont('times','B',9);
         $pdf->Cell(163,6,'    KETERANGAN CALON DEBITUR',1,0);
@@ -996,7 +1003,12 @@ class Report extends CI_Controller {
  		';
         $pdf->SetFont('times','',10);
 		$pdf->MultiCell(163,5,$fasilitas_kredit,'L R B','L',false);
-		$pdf->SetFont('times','B',9);
+        
+        $pdf->AddPage();
+        $pdf->Cell(10,6,'',0,1);
+        $pdf->Cell(10,6,'',0,1);
+        
+        $pdf->SetFont('times','B',9);
         $pdf->Cell(163,6,'    STRUKTUR FASILITAS KREDIT',1,0);
         $pdf->Cell(10,6,'',0,1);
         $pdf->SetFont('times','',10);

@@ -215,7 +215,8 @@
 }
 
 </style>
-<p>Data Keseluruhan : <kt></kt> - <tg></tg></p><hr>
+<p>Data Keseluruhan : <kt></kt> - <tg></tg></p>
+<hr>
 <div class="row">
 	<div class="col-md-3">
 			<div class="stretch-card" style="height:95%">

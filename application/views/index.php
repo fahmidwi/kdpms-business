@@ -26,7 +26,6 @@
 				</div>
         <div class="content-wrapper">
           <input type="hidden" id="tamplate" value="">
-
           <input type="hidden" id="paramsID1" value="">
           <input type="hidden" id="paramsID2" value="">
           <input type="hidden" id="paramsID3" value="">
