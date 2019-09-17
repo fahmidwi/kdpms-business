@@ -850,8 +850,8 @@ class Report extends CI_Controller {
 
    Jalan yang dilalui                 :
    Akses jalan                          : '.$kondisilokasi->akses_jalan.'
-   Luas Jalan                            : '.$kondisilokasi->rawan_bancana.'
-   Rawan Bencana                   : '.$kondisilokasi->luas_jalan.'
+   Luas Jalan                            : '.$kondisilokasi->luas_jalan.'
+   Rawan Bencana                   : '.$kondisilokasi->rawan_bancana.'
    Tingkat Kepadatan              : '.$kondisilokasi->tingkat_kepadatan.'
    Pertumbuhan Lingkungan   : '.$kondisilokasi->pert_lingkungan.'
    Daerah Banjir                      : '.$kondisilokasi->daerah_banjir.'
