@@ -359,6 +359,8 @@ class Model_business extends CI_Model {
 				kc.id_order,
 				kc.proses_by,
 				los_cn.nama_identitas AS calon_debitur,
+				los_cn.no_ktp,
+				los_cn.no_kk,
 				los_or.tenor AS tenor,
 				los_jj.nama_jenis_jaminan AS jenis_jaminan,
 				kc.jenis_debitur AS jenis_debitur,
@@ -377,6 +379,8 @@ class Model_business extends CI_Model {
 				kc.id_order,
 				kc.proses_by,
 				los_cn.nama_identitas AS calon_debitur,
+				los_cn.no_ktp,
+				los_cn.no_kk,
 				los_or.tenor AS tenor,
 				los_jj.nama_jenis_jaminan AS jenis_jaminan,
 				kc.jenis_debitur AS jenis_debitur,
@@ -398,6 +402,8 @@ class Model_business extends CI_Model {
 				kc.id_order,
 				kc.proses_by,
 				los_cn.nama_identitas AS calon_debitur,
+				los_cn.no_ktp,
+				los_cn.no_kk,
 				los_or.tenor AS tenor,
 				los_jj.nama_jenis_jaminan AS jenis_jaminan,
 				kc.jenis_debitur AS jenis_debitur,
@@ -409,7 +415,9 @@ class Model_business extends CI_Model {
 				los_jenis_jaminan AS los_jj
 				WHERE kc.id_order = los_or.id
 				AND kc.id_calon_debitur = los_cn.id_calon_debitur
-				AND los_cn.nama_identitas LIKE "%'.$keysearch.'%"
+				AND (los_cn.nama_identitas LIKE "%'.$keysearch.'%"
+				OR los_cn.no_ktp LIKE "%'.$keysearch.'%"
+				OR los_cn.no_kk LIKE "%'.$keysearch.'%")
 				AND los_jj.kode_jenis_jaminan = los_or.jenis_jaminan ORDER BY kc.id DESC LIMIT '.$startlimit.',10';
 			}else{
 				$query = 'SELECT kc.id,
@@ -417,6 +425,8 @@ class Model_business extends CI_Model {
 				kc.id_order,
 				kc.proses_by,
 				los_cn.nama_identitas AS calon_debitur,
+				los_cn.no_ktp,
+				los_cn.no_kk,
 				los_or.tenor AS tenor,
 				los_jj.nama_jenis_jaminan AS jenis_jaminan,
 				kc.jenis_debitur AS jenis_debitur,
@@ -428,7 +438,9 @@ class Model_business extends CI_Model {
 				los_jenis_jaminan AS los_jj
 				WHERE kc.id_order = los_or.id
 				AND kc.id_calon_debitur = los_cn.id_calon_debitur
-				AND los_cn.nama_identitas LIKE "%'.$keysearch.'%"
+				AND (los_cn.nama_identitas LIKE "%'.$keysearch.'%"
+				OR los_cn.no_ktp LIKE "%'.$keysearch.'%"
+				OR los_cn.no_kk LIKE "%'.$keysearch.'%")
 				AND los_cn.kode_kantor = '.$areakerja.'
 				AND los_jj.kode_jenis_jaminan = los_or.jenis_jaminan ORDER BY kc.id DESC LIMIT '.$startlimit.',10';
 			}

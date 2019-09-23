@@ -14,7 +14,7 @@
 				  <div class="col-md-6">
 				  	<form id="form-search">
 				  	<input type="hidden" name="areakerja" id="v_area" value="semua">
-						<input type="text" class="form-control" name="keyword" id="search" placeholder="Cari Berdasarkan Nama Lengkap. . ." areakerja="semua">
+						<input type="text" class="form-control" name="keyword" id="search" placeholder="Cari Nama, no ktp, no kk" areakerja="semua">
 						</form>
 				  </div>
 				</div>
@@ -23,8 +23,9 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>id kredit checking</th>
               <th>id order</th>
+              <th>No NIK</th>
+              <th>No KK</th>
               <th>Calon Nasabah</th>
               <th>Tenor</th>
               <th>Kredit check</th>
@@ -360,7 +361,7 @@ $(document).ready(function () {
 		}
 
 		function dataKredit(data) {
-			console.log(data)
+			console.table(data)
      	$('#selectAreaKerja').prop('disabled',false)
      	$('#search').prop('disabled',false)
 			if (data.amount == 0) {
@@ -403,8 +404,9 @@ $(document).ready(function () {
 						}
 
 						html += '<tr>'+
-											'<td>'+data[i].id+'</td>'+
 											'<td>'+data[i].id_order+'</td>'+
+											'<td>'+data[i].no_ktp+'</td>'+
+											'<td>'+data[i].no_kk+'</td>'+
 											'<td>'+data[i].calon_debitur+'</td>'+
 											'<td>'+data[i].tenor+' Bulan </td>'+
 											'<td class="text-defau;t">'+data[i].jenis_debitur+'</td>'+
