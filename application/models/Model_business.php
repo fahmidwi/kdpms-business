@@ -85,15 +85,15 @@ class Model_business extends CI_Model {
 		}
 		if ($keysearch == '') {
 			if ($areakerja == 'semua') {
-				$query = 'SELECT los_cn.*,kre_kg2.deskripsi_group2 AS AO, app_kk.NAMA_KANTOR, app_kk.nama_area_kerja, app_kk.ALAMAT_KANTOR FROM los_calon_nasabah AS los_cn, kre_kode_group2 AS kre_kg2, app_kode_kantor AS app_kk WHERE los_cn.kode_kantor = app_kk.KODE_KANTOR AND los_cn.kode_ao = kre_kg2.KODE_GROUP2 '.$queryAo.' ORDER BY los_cn.id_calon_debitur DESC LIMIT '.$startlimit.',10';
+				$query = 'SELECT los_cn.*,kre_kg2.deskripsi_group2 AS AO, app_kk.NAMA_KANTOR, app_kk.nama_area_kerja, app_kk.ALAMAT_KANTOR FROM los_calon_nasabah AS los_cn, kre_kode_group2 AS kre_kg2, app_kode_kantor AS app_kk WHERE los_cn.kode_kantor = app_kk.KODE_KANTOR AND los_cn.kode_ao = kre_kg2.kode_group2 '.$queryAo.' ORDER BY los_cn.id_calon_debitur DESC LIMIT '.$startlimit.',10';
 			}else{
-				$query = 'SELECT los_cn.*,kre_kg2.deskripsi_group2 AS AO, app_kk.NAMA_KANTOR, app_kk.nama_area_kerja, app_kk.ALAMAT_KANTOR FROM los_calon_nasabah AS los_cn, kre_kode_group2 AS kre_kg2, app_kode_kantor AS app_kk WHERE los_cn.kode_kantor = app_kk.KODE_KANTOR AND los_cn.kode_ao = kre_kg2.KODE_GROUP2 '.$queryAo.' AND los_cn.kode_kantor = '.$areakerja.' ORDER BY los_cn.id_calon_debitur DESC LIMIT '.$startlimit.',10';
+				$query = 'SELECT los_cn.*,kre_kg2.deskripsi_group2 AS AO, app_kk.NAMA_KANTOR, app_kk.nama_area_kerja, app_kk.ALAMAT_KANTOR FROM los_calon_nasabah AS los_cn, kre_kode_group2 AS kre_kg2, app_kode_kantor AS app_kk WHERE los_cn.kode_kantor = app_kk.KODE_KANTOR AND los_cn.kode_ao = kre_kg2.kode_group2 '.$queryAo.' AND los_cn.kode_kantor = '.$areakerja.' ORDER BY los_cn.id_calon_debitur DESC LIMIT '.$startlimit.',10';
 			}
 		}else{
 			if ($areakerja == 'semua') {
-				$query = 'SELECT los_cn.*,kre_kg2.deskripsi_group2 AS AO, app_kk.NAMA_KANTOR, app_kk.nama_area_kerja, app_kk.ALAMAT_KANTOR FROM los_calon_nasabah AS los_cn, kre_kode_group2 AS kre_kg2, app_kode_kantor AS app_kk WHERE los_cn.kode_kantor = app_kk.KODE_KANTOR AND los_cn.kode_ao = kre_kg2.KODE_GROUP2 '.$queryAo.' AND los_cn.nama_identitas LIKE "%'.$keysearch.'%" ORDER BY los_cn.id_calon_debitur DESC LIMIT '.$startlimit.',10';
+				$query = 'SELECT los_cn.*,kre_kg2.deskripsi_group2 AS AO, app_kk.NAMA_KANTOR, app_kk.nama_area_kerja, app_kk.ALAMAT_KANTOR FROM los_calon_nasabah AS los_cn, kre_kode_group2 AS kre_kg2, app_kode_kantor AS app_kk WHERE los_cn.kode_kantor = app_kk.KODE_KANTOR AND los_cn.kode_ao = kre_kg2.kode_group2 '.$queryAo.' AND los_cn.nama_identitas LIKE "%'.$keysearch.'%" ORDER BY los_cn.id_calon_debitur DESC LIMIT '.$startlimit.',10';
 			}else{
-				$query = 'SELECT los_cn.*,kre_kg2.deskripsi_group2 AS AO, app_kk.NAMA_KANTOR, app_kk.nama_area_kerja, app_kk.ALAMAT_KANTOR FROM los_calon_nasabah AS los_cn, kre_kode_group2 AS kre_kg2, app_kode_kantor AS app_kk WHERE los_cn.kode_kantor = app_kk.KODE_KANTOR AND los_cn.kode_ao = kre_kg2.KODE_GROUP2 '.$queryAo.' AND los_cn.nama_identitas LIKE "%'.$keysearch.'%" AND los_cn.kode_kantor = '.$areakerja.' ORDER BY los_cn.id_calon_debitur DESC LIMIT '.$startlimit.',10';
+				$query = 'SELECT los_cn.*,kre_kg2.deskripsi_group2 AS AO, app_kk.NAMA_KANTOR, app_kk.nama_area_kerja, app_kk.ALAMAT_KANTOR FROM los_calon_nasabah AS los_cn, kre_kode_group2 AS kre_kg2, app_kode_kantor AS app_kk WHERE los_cn.kode_kantor = app_kk.KODE_KANTOR AND los_cn.kode_ao = kre_kg2.kode_group2 '.$queryAo.' AND los_cn.nama_identitas LIKE "%'.$keysearch.'%" AND los_cn.kode_kantor = '.$areakerja.' ORDER BY los_cn.id_calon_debitur DESC LIMIT '.$startlimit.',10';
 			}
 		}
 
@@ -140,7 +140,7 @@ class Model_business extends CI_Model {
 					 user
 				WHERE
 				los_cn.kode_kantor = app_kk.KODE_KANTOR
-				AND los_cn.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_cn.kode_ao = kre_kg2.kode_group2
 				AND los_cn.kode_agama = css_ka.DESKRIPSI
 				AND los_cn.pekerjaan = css_kp.KODE_PEKERJAAN
 				AND los_cn.sumber_penghasilan = css_sp.kode_sumber_penghasilan
@@ -286,7 +286,7 @@ class Model_business extends CI_Model {
 				WHERE
 				los_or.id_calon_debitur = los_cn.id_calon_debitur
 				AND los_or.jenis_jaminan = los_jj.kode_jenis_jaminan
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_or.kode_kantor = app_kk.KODE_KANTOR
 				AND los_or.jenis_pinjaman = los_jp.kode_jenis_pinjaman
 				AND los_or.sumber_aplikasi = kre_kg4.KODE_GROUP4
@@ -323,7 +323,7 @@ class Model_business extends CI_Model {
 
 	public function getTrackingOrder($id_order)
 	{
-		$query = 'SELECT los_order_tracking.*,kre_kg2.deskripsi_group2 AS AO_ORDER FROM los_order_tracking,kre_kode_group2 AS kre_kg2 WHERE los_order_tracking.kode_ao = kre_kg2.KODE_GROUP2 AND los_order_tracking.id_order = '.$id_order;
+		$query = 'SELECT los_order_tracking.*,kre_kg2.deskripsi_group2 AS AO_ORDER FROM los_order_tracking,kre_kode_group2 AS kre_kg2 WHERE los_order_tracking.kode_ao = kre_kg2.kode_group2 AND los_order_tracking.id_order = '.$id_order;
 
 		return $this->db->query($query);
 	}
@@ -344,7 +344,7 @@ class Model_business extends CI_Model {
 				kre_kode_group2 AS kre_kg2
 				WHERE los_or.id_calon_debitur = los_cn.id_calon_debitur
 				AND los_or.jenis_jaminan = los_jj.kode_jenis_jaminan
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_or.verifikasi = 1 ORDER BY id DESC';
 
 		return $this->db->query($query);
@@ -450,7 +450,7 @@ class Model_business extends CI_Model {
 
 	public function getDetailKreditChecking($id)
 	{
-		$query = ' SELECT kc.*, los_cn.nama_identitas AS calon_debitur, los_jj.nama_jenis_jaminan AS jenis_jaminan, app_kk.NAMA_KANTOR, app_kk.nama_area_kerja, app_kk.ALAMAT_KANTOR, kre_kg2.deskripsi_group2 AS AO_Kredit FROM los_kredit_checking AS kc, los_calon_nasabah AS los_cn, los_order AS los_or, los_jenis_jaminan AS los_jj, app_kode_kantor AS app_kk, kre_kode_group2 AS kre_kg2 WHERE kc.id_order = los_or.id AND kc.id_calon_debitur = los_cn.id_calon_debitur AND los_jj.kode_jenis_jaminan = los_or.jenis_jaminan AND kc.kode_kantor = app_kk.KODE_KANTOR AND kc.kode_ao = kre_kg2.KODE_GROUP2 AND kc.id ='.$id;
+		$query = ' SELECT kc.*, los_cn.nama_identitas AS calon_debitur, los_jj.nama_jenis_jaminan AS jenis_jaminan, app_kk.NAMA_KANTOR, app_kk.nama_area_kerja, app_kk.ALAMAT_KANTOR, kre_kg2.deskripsi_group2 AS AO_Kredit FROM los_kredit_checking AS kc, los_calon_nasabah AS los_cn, los_order AS los_or, los_jenis_jaminan AS los_jj, app_kode_kantor AS app_kk, kre_kode_group2 AS kre_kg2 WHERE kc.id_order = los_or.id AND kc.id_calon_debitur = los_cn.id_calon_debitur AND los_jj.kode_jenis_jaminan = los_or.jenis_jaminan AND kc.kode_kantor = app_kk.KODE_KANTOR AND kc.kode_ao = kre_kg2.kode_group2 AND kc.id ='.$id;
 
 		return $this->db->query($query);
 	}
@@ -488,7 +488,7 @@ class Model_business extends CI_Model {
 				AND kc.id_calon_debitur = los_cn.id_calon_debitur
 				AND kc.verifikasi = 1
 				AND kc.status = "DONE"
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_jj.kode_jenis_jaminan = los_or.jenis_jaminan ORDER BY kc.flg_survey ASC LIMIT '.$startlimit.',10';
 			}else{
 				$query = 'SELECT kc.id,
@@ -513,7 +513,7 @@ class Model_business extends CI_Model {
 				AND kc.id_calon_debitur = los_cn.id_calon_debitur
 				AND kc.verifikasi = 1
 				AND kc.status = "DONE"
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_cn.kode_kantor = '.$areakerja.'
 				AND los_jj.kode_jenis_jaminan = los_or.jenis_jaminan ORDER BY kc.flg_survey ASC LIMIT '.$startlimit.',10';
 			}
@@ -541,7 +541,7 @@ class Model_business extends CI_Model {
 				AND kc.id_calon_debitur = los_cn.id_calon_debitur
 				AND kc.verifikasi = 1
 				AND kc.status = "DONE"
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_cn.nama_identitas LIKE "%'.$keysearch.'%"
 				AND los_jj.kode_jenis_jaminan = los_or.jenis_jaminan ORDER BY kc.flg_survey ASC LIMIT '.$startlimit.',10';
 			}else{
@@ -567,7 +567,7 @@ class Model_business extends CI_Model {
 				AND kc.id_calon_debitur = los_cn.id_calon_debitur
 				AND kc.verifikasi = 1
 				AND kc.status = "DONE"
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_cn.nama_identitas LIKE "%'.$keysearch.'%"
 				AND los_cn.kode_kantor = '.$areakerja.'
 				AND los_jj.kode_jenis_jaminan = los_or.jenis_jaminan ORDER BY kc.flg_survey ASC LIMIT '.$startlimit.',10';
@@ -593,7 +593,7 @@ class Model_business extends CI_Model {
 			los_calon_nasabah AS los_cn,
 			kre_kode_group2 AS kre_kg2
 			WHERE kc.id_calon_debitur = los_cn.id_calon_debitur
-			AND kc.kode_ao = kre_kg2.KODE_GROUP2
+			AND kc.kode_ao = kre_kg2.kode_group2
 			AND kc.verifikasi = 1
 			AND kc.status = "DONE"
 			AND los_cn.create_by = "'.$ao.'"
@@ -783,8 +783,8 @@ class Model_business extends CI_Model {
 			AND los_cn.domisili_kecamatan_id = los_kec_dom.kecamatan_id
 			AND los_cn.domisili_kelurahan_id = los_kel_dom.kelurahan_id
 			AND los_ao.sumber_informasi = kre_kg4.KODE_GROUP4
-			AND los_cn.kode_ao = kre_kg2.KODE_GROUP2
-			AND los_or.kode_ao = kre_kg2_or.KODE_GROUP2
+			AND los_cn.kode_ao = kre_kg2.kode_group2
+			AND los_or.kode_ao = kre_kg2_or.kode_group2
 			AND los_ao.id_order = los_or.id
 			AND los_ao.kode_produk = prod.KODE_PRODUK
 			AND los_ao.id_order= '.$id_order;
@@ -979,7 +979,7 @@ class Model_business extends CI_Model {
 			AND los_ca.kotakab_id_domisili = los_kk_dom.kotakab_id
 			AND los_ca.kecamatan_id_domisili = los_kec_dom.kecamatan_id
 			AND los_ca.kelurahan_id_domisili = los_kel_dom.kelurahan_id
-			AND los_cn.kode_ao = kre_kg2.KODE_GROUP2
+			AND los_cn.kode_ao = kre_kg2.kode_group2
 			AND los_ca.sumber_informasi = kre_kg4.KODE_GROUP4
 			AND los_ca.id_order = '.$id_order;
 
@@ -1020,7 +1020,7 @@ class Model_business extends CI_Model {
 				los_memo_kredit_ca_lain_lain AS los_ca_lain,
 				los_caa
 				WHERE los_or.id_calon_debitur = los_cn.id_calon_debitur
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_or.kode_kantor = app_kk.KODE_KANTOR
 				AND los_or.jenis_jaminan = los_jj.kode_jenis_jaminan
 				AND los_ao.kode_produk = prod.KODE_PRODUK
@@ -1054,7 +1054,7 @@ class Model_business extends CI_Model {
 				los_memo_kredit_ca_lain_lain AS los_ca_lain,
 				los_caa
 				WHERE los_or.id_calon_debitur = los_cn.id_calon_debitur
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_or.kode_kantor = app_kk.KODE_KANTOR
 				AND los_or.jenis_jaminan = los_jj.kode_jenis_jaminan
 				AND los_ao.kode_produk = prod.KODE_PRODUK
@@ -1091,7 +1091,7 @@ class Model_business extends CI_Model {
 				los_memo_kredit_ca_lain_lain AS los_ca_lain,
 				los_caa
 				WHERE los_or.id_calon_debitur = los_cn.id_calon_debitur
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_or.kode_kantor = app_kk.KODE_KANTOR
 				AND los_or.jenis_jaminan = los_jj.kode_jenis_jaminan
 				AND los_ao.kode_produk = prod.KODE_PRODUK
@@ -1126,7 +1126,7 @@ class Model_business extends CI_Model {
 				los_memo_kredit_ca_lain_lain AS los_ca_lain,
 				los_caa
 				WHERE los_or.id_calon_debitur = los_cn.id_calon_debitur
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_or.kode_kantor = app_kk.KODE_KANTOR
 				AND los_or.jenis_jaminan = los_jj.kode_jenis_jaminan
 				AND los_ao.kode_produk = prod.KODE_PRODUK
@@ -1172,7 +1172,7 @@ class Model_business extends CI_Model {
 				los_caa,
 				los_caa_approval
 				WHERE los_or.id_calon_debitur = los_cn.id_calon_debitur
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_or.kode_kantor = app_kk.KODE_KANTOR
 				AND los_or.jenis_jaminan = los_jj.kode_jenis_jaminan
 				AND los_ao.kode_produk = prod.KODE_PRODUK
@@ -1208,7 +1208,7 @@ class Model_business extends CI_Model {
 				los_caa,
 				los_caa_approval
 				WHERE los_or.id_calon_debitur = los_cn.id_calon_debitur
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_or.kode_kantor = app_kk.KODE_KANTOR
 				AND los_or.jenis_jaminan = los_jj.kode_jenis_jaminan
 				AND los_ao.kode_produk = prod.KODE_PRODUK
@@ -1247,7 +1247,7 @@ class Model_business extends CI_Model {
 				los_caa,
 				los_caa_approval
 				WHERE los_or.id_calon_debitur = los_cn.id_calon_debitur
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_or.kode_kantor = app_kk.KODE_KANTOR
 				AND los_or.jenis_jaminan = los_jj.kode_jenis_jaminan
 				AND los_ao.kode_produk = prod.KODE_PRODUK
@@ -1284,7 +1284,7 @@ class Model_business extends CI_Model {
 				los_caa,
 				los_caa_approval
 				WHERE los_or.id_calon_debitur = los_cn.id_calon_debitur
-				AND los_or.kode_ao = kre_kg2.KODE_GROUP2
+				AND los_or.kode_ao = kre_kg2.kode_group2
 				AND los_or.kode_kantor = app_kk.KODE_KANTOR
 				AND los_or.jenis_jaminan = los_jj.kode_jenis_jaminan
 				AND los_ao.kode_produk = prod.KODE_PRODUK
@@ -1359,7 +1359,7 @@ class Model_business extends CI_Model {
 			AND los_ca.kotakab_id_domisili = los_kk_dom.kotakab_id
 			AND los_ca.kecamatan_id_domisili = los_kec_dom.kecamatan_id
 			AND los_ca.kelurahan_id_domisili = los_kel_dom.kelurahan_id
-			AND los_cn.kode_ao = kre_kg2.KODE_GROUP2
+			AND los_cn.kode_ao = kre_kg2.kode_group2
 			AND los_ca.sumber_informasi = kre_kg4.KODE_GROUP4
 			AND los_app.jabatan = "ketua"
 			AND los_ca.id_order = '.$id_order;

@@ -1782,7 +1782,7 @@ $(document).ready(function () {
 			success:function(data){
 				var html = ''
 				$.each(data, function(index, value ) {
-					html += '<option value="'+value.KODE_GROUP2+'">'+value.deskripsi_group2+'</option>'
+					html += '<option value="'+value.kode_group2+'">'+value.deskripsi_group2+'</option>'
 					//console.log(html)
 				})
 				$('#opt-ao').html('<select class="form-control" name="ao"><option value="null">Pilih</Option>'+html+'</select>')
