@@ -577,10 +577,10 @@ $(document).ready(function () {
 			success:function(data){
 				var html = ''
 				$.each(data, function(index, value ) {
-          if (kd_ao == value.KODE_GROUP2) {
-            html += '<option value="'+value.KODE_GROUP2+'" selected>'+value.deskripsi_group2+'</option>'
+          if (kd_ao == value.kode_group2) {
+            html += '<option value="'+value.kode_group2+'" selected>'+value.deskripsi_group2+'</option>'
           }else{
-            html += '<option value="'+value.KODE_GROUP2+'">'+value.deskripsi_group2+'</option>'
+            html += '<option value="'+value.kode_group2+'">'+value.deskripsi_group2+'</option>'
           }
 				})
 				$('#opt-ao').html('<select class="form-control" name="ao"><option value="null">Pilih</Option>'+html+'</select>')
