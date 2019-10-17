@@ -479,7 +479,7 @@ $(document).ready(function () {
 						$('#produk').html('<p>'+k.DESKRIPSI_PRODUK+'</p>')
 						$('#plafond_kredit').html('<p>Rp. '+FormatRupiah(k.plafon_kredit)+'</p>')
 						$('#jangka_waktu').html('<p>'+k.jangka_waktu+' Bulan</p>')
-						$('#suku_bunga').html('<p>'+k.suku_bunga+'</p>')
+						$('#suku_bunga').html('<p>'+k.suku_bunga+' %</p>')
 						$('#akad_kredit').html('<p>'+k.akad_kredit+'</p>')
 						$('#akad_jaminan').html('<p>'+k.akad_jaminan+'</p>')
 						$('#gaji_debitur').html('<p> Rp. '+FormatRupiah(k.gaji_debitur)+'</p>')
