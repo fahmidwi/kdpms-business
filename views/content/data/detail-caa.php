@@ -490,6 +490,7 @@ $(document).ready(function () {
 						$('#pengeluaran_pendidikan').html('<p> Rp. '+FormatRupiah(k.pengeluaran_pendidikan)+'</p>')
 						$('#pengeluaran_lainnya').html('<p> Rp. '+FormatRupiah(k.pengeluaran_lainya)+'</p>')
 						$('#angsuran_lain').html('<p> Rp. '+FormatRupiah(k.angsuran_lain)+'</p>')
+						$('#angsuran_kdpms').html('<p> Rp. '+FormatRupiah(k.angsuran_kdpms)+'</p>')
 						$('#hasil_cek_lingkungan').html(k.hasil_cek_lingkungan)
 						$('#vertifikasi_data_debitur').html('<p>'+k.vertifikasi_data_debitur+'</p>')
 						$('#ket_calon_debitur').html('<p>'+k.ket_calon_debitur+'</p>')
