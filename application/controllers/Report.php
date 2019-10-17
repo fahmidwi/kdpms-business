@@ -428,6 +428,7 @@ class Report extends CI_Controller {
     		}else if ($sertifikat->jenis_sertifikat == 'SHMRS') {
     			$detserti = 'Masa berlaku SHMRS       :  '.$sertifikat->masa_berlaku_shmrs;
     		}
+            //'.$detserti.'
 	        $jaminan = '
 				 Lokasi                                 : '.$sertifikat->lokasi.'
 				 Kepemilikan                       : '.$sertifikat->nama_kepemilikan.'
@@ -438,7 +439,6 @@ class Report extends CI_Controller {
 				 Atas Nama                          : '.$sertifikat->atas_nama.'
 				 Alamat                                : '.$sertifikat->alamat.'
 	 			Luas Tanah                         : '.$sertifikat->luas_tanah.' M                       Luas Bangunan : '.$sertifikat->luas_bangunan.' M
-	 			'.$detserti.'
 	 			Kondisi Bangunan              : '.$sertifikat->kondisi_bangunan.'
 	 			IMB                                    : '.$sertifikat->imb.'
 	 			Legalitas                             : '.$sertifikat->legalitas.'
@@ -856,9 +856,9 @@ class Report extends CI_Controller {
    Pertumbuhan Lingkungan   : '.$kondisilokasi->pert_lingkungan.'
    Daerah Banjir                      : '.$kondisilokasi->daerah_banjir.'
 
-   Luas Tanah                          : '.$ca->luas_tanah_ca.' M
+   Luas Tanah                          : '.$ca->luas_tanah_ca.' M²
    Kondisi / Bentuk Tanah       : '.$ca->kondisi_bentuk_tanah.'
-   Luas Bangunan                    : '.$ca->luas_bangunan_ca.'
+   Luas Bangunan                    : '.$ca->luas_bangunan_ca.' M²
    Dibangun Tahun                  : '.$ca->kegunaan_bangunan.'
    Kegunaan Bangunan            : '.$ca->kegunaan_bangunan.'
    Penguasaan Tanah
@@ -1086,8 +1086,8 @@ class Report extends CI_Controller {
 		$jum_nilai_taksi = $jum_hp * ($ca->nilai_taksasi/100);
 
 		$penilaian = '
-		Luas Tanah berdasarkan NJOP                       							        : '.$ca->luas_tanah_njop.'
-		Luas Bangunan berdasarkan NJOP                   								     : '.$ca->luas_bangunan_njop.'
+		Luas Tanah berdasarkan NJOP                       							        : '.$ca->luas_tanah_njop.' M²
+		Luas Bangunan berdasarkan NJOP                   								     : '.$ca->luas_bangunan_njop.' M²
 		Tahun NJOP         					                                                     : '.$ca->tahun_njop.'
 		NJOP tanah         														                                              : '.number_format($ca->njop_tanah, 2, ".", ".").'
 		NJOP bangunan         														                                       : '.number_format($ca->njop_bangunan, 2, ".", ".").'
@@ -1096,8 +1096,8 @@ class Report extends CI_Controller {
 		Jumlah NJOP 										                                                       : '.number_format($jumlah_njop, 2, ".", ".").'
 
 
-		Luas Tanah berdasarkan harga pasar                             : '.$ca->luas_tanah_ca.'
-		Luas Bangunan berdasarkan harga pasar                       : '.$ca->luas_bangunan_ca.'
+		Luas Tanah berdasarkan harga pasar                             : '.$ca->luas_tanah_ca.' M²
+		Luas Bangunan berdasarkan harga pasar                       : '.$ca->luas_bangunan_ca.' M²
 		Harga pasar tanah                                                           : '.number_format($ca->harga_pasar_tanah, 2, ".", ".").'
 		Harga pasar banguan                                                      : '.number_format($ca->harga_pasar_bangunan, 2, ".", ".").'
 		Jumlah Harga pasar Tanah                                             : '.number_format($jum_hp_tanah, 2, ".", ".").'
@@ -1493,7 +1493,7 @@ B. NOMOR MESIN : '.$data->no_mesin.'
 
 			         No. Sertifikat                                    : '.$sertifikat->no_sertifikat.'       tanggal : '.$sertifikat->tgl_sertifikat.'
 			         No. Ukur                                           : '.$sertifikat->no_surat_ukur.'       tanggal 24/12/2019/Belum dinamis
-			         An                                                     : '.$sertifikat->atas_nama.'          Luas : '.$sertifikat->luas_tanah.' M2
+			         An                                                     : '.$sertifikat->atas_nama.'          Luas : '.$sertifikat->luas_tanah.' M²
 		 		';
 
 
