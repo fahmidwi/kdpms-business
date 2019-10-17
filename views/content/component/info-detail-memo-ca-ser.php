@@ -1617,21 +1617,21 @@ $(document).ready(function() {
 					$('#alamat_usaha_debitur_ca').html('<p>'+v.alamat_usaha_debitur+'</p>')
 					$('#masa_kerja_debitur_ca').html('<p>'+v.masa_kerja_debitur+'</p>')
 					$('#no_telp_kerja_debitur_ca').html('<p>'+v.no_telp_kerja_debitur+'</p>')
-					$('#pengeluaran_lainnya_ca').html('<p>'+FormatRupiah(v.pengeluaran_lainya)+'</p>')
-					$('#pendapatan_tunai_ca').html('<p>'+FormatRupiah(v.pendapatan_tunai)+'</p>')
-					$('#pendapatan_kredit_ca').html('<p>'+FormatRupiah(v.pendapatan_kredit)+'</p>')
-					$('#pengeluaran_sewa_ca').html('<p>'+FormatRupiah(v.pengeluaran_sewa)+'</p>')
-					$('#pengeluaran_belanja_ca').html('<p>'+FormatRupiah(v.pengeluaran_belanja)+'</p>')
-					$('#pengeluaran_gaji_pegawai_ca').html('<p>'+FormatRupiah(v.pengeluaran_gaji_pegawai)+'</p>')
-					$('#angsuran_lain_usaha_ca').html('<p>'+FormatRupiah(v.angsuran_lain_usaha)+'</p>')
-					$('#pengeluaran_lain_usaha_ca').html('<p>'+FormatRupiah(v.pengeluaran_lainya_usaha)+'</p>')
-					$('#pengeluaran_telp_listrik_air_ca').html('<p>'+FormatRupiah(v.pengeluaran_telp_listrik_air)+'</p>')
+					$('#pengeluaran_lainnya_ca').html('<p> Rp. '+FormatRupiah(v.pengeluaran_lainya)+'</p>')
+					$('#pendapatan_tunai_ca').html('<p> Rp. '+FormatRupiah(v.pendapatan_tunai)+'</p>')
+					$('#pendapatan_kredit_ca').html('<p> Rp. '+FormatRupiah(v.pendapatan_kredit)+'</p>')
+					$('#pengeluaran_sewa_ca').html('<p> Rp. '+FormatRupiah(v.pengeluaran_sewa)+'</p>')
+					$('#pengeluaran_belanja_ca').html('<p> Rp. '+FormatRupiah(v.pengeluaran_belanja)+'</p>')
+					$('#pengeluaran_gaji_pegawai_ca').html('<p> Rp. '+FormatRupiah(v.pengeluaran_gaji_pegawai)+'</p>')
+					$('#angsuran_lain_usaha_ca').html('<p> Rp. '+FormatRupiah(v.angsuran_lain_usaha)+'</p>')
+					$('#pengeluaran_lain_usaha_ca').html('<p> Rp. '+FormatRupiah(v.pengeluaran_lainya_usaha)+'</p>')
+					$('#pengeluaran_telp_listrik_air_ca').html('<p> Rp. '+FormatRupiah(v.pengeluaran_telp_listrik_air)+'</p>')
 
 					$('#fasilitas_umum').html('<p>'+v.fasilitas_umum+'</p>')
-					$('#luas_tanah_njop').html('<p>'+v.luas_tanah_njop+'</p>')
-					$('#luas_bangunan_njop').html('<p>'+v.luas_bangunan_njop+'</p>')
-					$('#luas_tanah_ca').html('<p>'+v.luas_tanah_ca+'</p>')
-					$('#luas_bangunan_ca').html('<p>'+v.luas_bangunan_ca+'</p>')
+					$('#luas_tanah_njop').html('<p>'+v.luas_tanah_njop+' M²</p>')
+					$('#luas_bangunan_njop').html('<p>'+v.luas_bangunan_njop+' M²</p>')
+					$('#luas_tanah_ca').html('<p>'+v.luas_tanah_ca+' M²</p>')
+					$('#luas_bangunan_ca').html('<p>'+v.luas_bangunan_ca+' M²</p>')
 					$('#kondisi_bentuk_tanah').html('<p>'+v.kondisi_bentuk_tanah+'</p>')
 					$('#dibangun_tahun').html('<p>'+v.dibangun_tahun+'</p>')
 					$('#kegunaan_bangunan').html('<p>'+v.kegunaan_bangunan+'</p>')
@@ -1660,17 +1660,17 @@ $(document).ready(function() {
 					let jumlah_njop = jumlah_njop_bangunan + jumlah_njop_tanah
 
 
-					$('#luas_tanah_njop_pen').html('<p>'+luas_tanah_njop_ca+' M</p>')
-					$('#luas_bangunan_njop_pen').html('<p>'+luas_bangunan_njop_ca+' M</p>')
-					$('#luas_tanah_ca_pen').html('<p>'+luas_tanah_ca+' M</p>')
-					$('#luas_bangunan_ca_pen').html('<p>'+luas_bangunan_ca+' M</p>')
+					$('#luas_tanah_njop_pen').html('<p>'+luas_tanah_njop_ca+' M²</p>')
+					$('#luas_bangunan_njop_pen').html('<p>'+luas_bangunan_njop_ca+' M²</p>')
+					$('#luas_tanah_ca_pen').html('<p>'+luas_tanah_ca+' M²</p>')
+					$('#luas_bangunan_ca_pen').html('<p>'+luas_bangunan_ca+' M²</p>')
 
 					$('#tahun_njop').html('<p>'+v.tahun_njop+'</p>')
-					$('#njop_bangunan').html('<p>'+FormatRupiah(njop_bangunan)+'</p>')
-					$('#total_njop_bangunan').html(FormatRupiah(jumlah_njop_bangunan))
-					$('#njop_bumi').html('<p>'+FormatRupiah(njop_bumi)+'</p>')
-					$('#total_njop_bumi').html(FormatRupiah(jumlah_njop_tanah))
-					$('#jumlah_njop').html(FormatRupiah(jumlah_njop))
+					$('#njop_bangunan').html('<p> Rp. '+FormatRupiah(njop_bangunan)+'</p>')
+					$('#total_njop_bangunan').html('Rp. '+FormatRupiah(jumlah_njop_bangunan))
+					$('#njop_bumi').html('<p> Rp. '+FormatRupiah(njop_bumi)+'</p>')
+					$('#total_njop_bumi').html('Rp. '+FormatRupiah(jumlah_njop_tanah))
+					$('#jumlah_njop').html('Rp. '+FormatRupiah(jumlah_njop))
 
 					let harga_pasar_tanah = v.harga_pasar_tanah
 					let jum_harga_pasar_tanah = luas_tanah_ca * harga_pasar_tanah
@@ -1678,19 +1678,19 @@ $(document).ready(function() {
 					let jum_harga_pasar_bangunan = luas_bangunan_ca * harga_pasar_bangunan
 					let jumlah_harga_pasar = jum_harga_pasar_tanah + jum_harga_pasar_bangunan
 
-					$('#harga_pasar_tanah').html('<p>'+FormatRupiah(harga_pasar_tanah)+'</p>')
-					$('#jum_harga_pasar_tanah').html(FormatRupiah(jum_harga_pasar_tanah))
-					$('#harga_pasar_bangunan').html('<p>'+FormatRupiah(harga_pasar_bangunan)+'</p>')
-					$('#jum_harga_pasar_bangunan').html(FormatRupiah(jum_harga_pasar_bangunan))
-					$('.jumlah_harga_pasar').html(FormatRupiah(jumlah_harga_pasar))
+					$('#harga_pasar_tanah').html('<p>Rp. '+FormatRupiah(harga_pasar_tanah)+'</p>')
+					$('#jum_harga_pasar_tanah').html('Rp. '+FormatRupiah(jum_harga_pasar_tanah))
+					$('#harga_pasar_bangunan').html('<p> Rp. '+FormatRupiah(harga_pasar_bangunan)+'</p>')
+					$('#jum_harga_pasar_bangunan').html('Rp. '+FormatRupiah(jum_harga_pasar_bangunan))
+					$('.jumlah_harga_pasar').html('Rp. '+FormatRupiah(jumlah_harga_pasar))
 
 					$('#keterangan_penilaian').html('<p>'+v.keterangan_penilaian+'</p>')
 
 					let nilai_taksasi = v.nilai_taksasi
 					let jum_taksasi = jumlah_harga_pasar * (nilai_taksasi/100)
 
-					$('.nilai_taksasi').html(FormatRupiah(nilai_taksasi)+'%')
-					$('#jum_taksasi').html(FormatRupiah(jum_taksasi.toFixed()))
+					$('.nilai_taksasi').html('Rp. '+FormatRupiah(nilai_taksasi)+'%')
+					$('#jum_taksasi').html('Rp. '+FormatRupiah(jum_taksasi.toFixed()))
 
 					$('#sumber_harga').html('<p>'+v.sumber_harga+'</p>')
 					$('#faktor_yang_dapat_menaikan').html('<p>'+v.faktor_menaikan+'</p>')
