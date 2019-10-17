@@ -528,8 +528,8 @@ $(document).ready(function () {
 								$('#jenis_sertifikat').html('<p>'+k.jenis_sertifikat+'</p>')
 								$('#atas_nama').html('<p>'+k.atas_nama+'</p>')
 								$('#alamat-sertifikat').html('<p>'+k.alamat+'</p>')
-								$('#luas_tanah').html('<p>'+k.luas_tanah+'</p>')
-								$('#luas_bangunan').html('<p>'+k.luas_bangunan+'</p>')
+								$('#luas_tanah').html('<p>'+k.luas_tanah+' M²</p>')
+								$('#luas_bangunan').html('<p>'+k.luas_bangunan+' M²</p>')
 								$('#tgl_surat_ukur').html('<p>'+changeDate(k.tgl_surat_ukur)+'</p>')
 								$('#no_surat_ukur').html('<p>'+k.no_surat_ukur+'</p>')
 								if (k.jenis_sertifikat == 'SHM') {
