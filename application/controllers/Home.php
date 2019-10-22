@@ -3602,8 +3602,8 @@ class Home extends CI_Controller {
 	public function AddMemoKreditCaKendaraan($value='')
 	{
 		$dataMemoCa = array(
-			'id_order' => rawurldecode($this->uri->segment(7)),
-			'id_calon_debitur' => rawurldecode($this->uri->segment(8)),
+			'id_order' => $this->input->post('id_order'),
+			'id_calon_debitur' => $this->input->post('id_calon_debitur'),
 			'no_aplikasi' => $this->input->post('no_aplikasi_ca'),
 			'jaminan_utama' => $this->input->post('jaminan_utama_ca'),
 			'sumber_informasi' => $this->input->post('sumber_informasi_ca'),
