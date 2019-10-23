@@ -13,6 +13,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+  <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
   <script type="text/javascript">
   	new WOW().init()
   </script>

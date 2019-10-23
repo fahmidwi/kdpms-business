@@ -4658,6 +4658,37 @@ class Home extends CI_Controller {
 		}
 	}
 
+	public function getDataApproval($value='')
+	{
+		$id_order = $this->uri->segment(3);
+		$user_id = $this->session->userdata('id');
+		$where = array('id_order' => $id_order, 'user_id' => $user_id);
+		$data = $this->business->get_where('los_caa_approval',null,null,$where)->row();
+		echo json_encode($data);
+	}
+
+	public function ChangeApproval($value='')
+	{
+		$where = array(
+			'id_order' => $this->input->post('id_order'),
+			'user_id' => $this->session->userdata('id')
+		);
+		
+		$DataApproval = array(
+			'alasan' => $this->input->post('alasan_bag_edit'),
+			'syarat' => $this->input->post('syarat_bag_edit'),
+			'notes' => $this->input->post('notes_bag_edit'),
+			'plafon' => str_replace(".","",$this->input->post('plafond')),
+			'tenor' => $this->input->post('tenor_bag_edit'),
+		);
+
+		if ($this->business->update_data('los_caa_approval',$DataApproval,$where)) {
+			echo json_encode(array('msg' => 'success'));
+		}else{
+			echo json_encode(array('msg' => 'failed'));
+		}
+	}
+
 	public function AddCaaReject($value='')
 	{
 		$DataReject = array(
