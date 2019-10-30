@@ -84,7 +84,7 @@
                 <input type="hidden" name="nik_to_email" class="nik_to_email" value="">
                 <input type="hidden" name="plafond_to_email" class="plafond_to_email" value="">
                 <p style="color:grey;margin-top:12px;margin-left:5px;">Rekomendasi : </p>
-                <input type="text" name="plafond" class="form-control" onkeydown="return numbersonly(this, event)"
+                <input type="text" name="plafond" id="plafond_persetujuan" class="form-control" onkeydown="return numbersonly(this, event)"
                   onkeyup="javascript:tandaPemisahTitik(this)" placeholder="Masukan Plafond yang di setujui" min="5">
                 <select class="form-control" name="tenor" style="margin-top:3px;">'+
                   <option value="null">Pilih tenor</option>
@@ -683,11 +683,11 @@ $(document).ready(function() {
     var tenor = true
     var notes = true
 
-    plafond = checkEmpty('input[name=plafond')
-    tenor = checkSelect('select[name=tenor')
-    alasan = checkEmpty('textarea[name=alasan')
-    syarat = checkEmpty('textarea[name=syarat')
-    notes = checkEmpty('textarea[name=notes')
+    plafond = checkEmpty('#plafond_persetujuan')
+    tenor = checkSelect('select[name=tenor]')
+    alasan = checkEmpty('textarea[name=alasan]')
+    syarat = checkEmpty('textarea[name=syarat]')
+    notes = checkEmpty('textarea[name=notes]')
 
     if (plafond && tenor && alasan && syarat && notes) {
       Approval(data, id_order)
