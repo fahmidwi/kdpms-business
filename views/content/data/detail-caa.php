@@ -983,6 +983,7 @@ $(document).ready(function() {
 				})
       },
       success: function(res) {
+        console.log(res);
 				stateformedit = true;
 				swal.close();
         $('#load_page').val('false');
