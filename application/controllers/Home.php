@@ -4705,7 +4705,7 @@ class Home extends CI_Controller {
 		$nik_to_email =  $this->input->post('nik_to_email');
 		$plafond_to_email =  $this->input->post('plafond_to_email');
 		$notes = $this->input->post('notes');
-		echo $ao_to_email;die();
+
 		if ($this->session->userdata('jabatan') == 'manager') {
 			$whereTrack = array('id_order' => $this->input->post('id_order'));
 			$dataTracking = array(
